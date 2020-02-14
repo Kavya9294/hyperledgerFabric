@@ -49,7 +49,7 @@ createAncorPeerTx() {
 }
 
 createChannel() {
-	setGlobals 1
+	setGlobals 1 0
 
 	# Poll in case the raft leader is not set yet
 	local rc=1
@@ -63,7 +63,7 @@ createChannel() {
         set +x
 		else
 				set -x
-				peer channel create -o localhost:7050 -c $CHANNEL_NAME --ordererTLSHostnameOverride orderer.example.com -f ./channel-artifacts/${CHANNEL_NAME}.tx --outputBlock ./channel-artifacts/${CHANNEL_NAME}.block --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA >&log.txt
+				peer channel create -o localhost:7050 -c $CHANNEL_NAME --ordererTLSHostnameOverride orderer1.example.com -f ./channel-artifacts/${CHANNEL_NAME}.tx --outputBlock ./channel-artifacts/${CHANNEL_NAME}.block --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA >&log.txt
 				res=$?
 				set +x
 		fi
@@ -78,29 +78,27 @@ createChannel() {
 }
 
 # queryCommitted ORG
+
+# import utils
+. ../first-network/scripts/utils.sh
+
 joinChannel() {
-  ORG=$1
-  setGlobals $ORG
-	local rc=1
-	local COUNTER=1
-	## Sometimes Join takes time, hence retry
-	while [ $rc -ne 0 -a $COUNTER -lt $MAX_RETRY ] ; do
-    sleep $DELAY
-    set -x
-    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block >&log.txt
-    res=$?
-    set +x
-		let rc=$res
-		COUNTER=$(expr $COUNTER + 1)
+
+	[[ $1 = 1 ]] && chArr=(1 2 3) || a=(1 2)
+  	for org in 1 2; do
+	    for peer in "${chArr[@]}"; do
+		joinChannelWithRetry $peer $org
+		echo "===================== peer${peer}.org${org} joined channel '$CHANNEL_NAME' ===================== "
+		sleep $DELAY
+		echo
+	    done
 	done
-	cat log.txt
-	echo
-	verifyResult $res "After $MAX_RETRY attempts, peer0.org${ORG} has failed to join channel '$CHANNEL_NAME' "
 }
 
 updateAnchorPeers() {
   ORG=$1
-  setGlobals $ORG
+  PEER=$2
+  setGlobals $ORG $PEER
 
   if [ -z "$CORE_PEER_TLS_ENABLED" -o "$CORE_PEER_TLS_ENABLED" = "false" ]; then
     set -x
@@ -146,16 +144,14 @@ echo "Creating channel "$CHANNEL_NAME
 createChannel
 
 ## Join all the peers to the channel
-echo "Join Org1 peers to the channel..."
+echo "Join all peers to the channel..."
 joinChannel 1
-echo "Join Org2 peers to the channel..."
-joinChannel 2
 
 ## Set the anchor peers for each org in the channel
 echo "Updating anchor peers for org1..."
-updateAnchorPeers 1
+updateAnchorPeers 1 0
 echo "Updating anchor peers for org2..."
-updateAnchorPeers 2
+updateAnchorPeers 2 0
 
 echo
 echo "========= Channel successfully joined =========== "

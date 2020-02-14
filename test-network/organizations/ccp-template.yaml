@@ -8,12 +8,21 @@ client:
       peer:
         endorser: '300'
 organizations:
-  Org${ORG}:
-    mspid: Org${ORG}MSP
+  Org1:
+    mspid: Org1MSP
     peers:
-    - peer0.org${ORG}.example.com
+    - peer0.org1.example.com,
+    - peer1.org1.example.com,
+    - peer2.org1.example.com
     certificateAuthorities:
-    - ca.org${ORG}.example.com
+    - ca.org1.example.com
+  Org2:
+    mspid: Org2MSP
+    peers:
+    - peer0.org2.example.com,
+    - peer1.org2.example.com
+    certificateAuthorities:
+    - ca.org2.example.com
 peers:
   peer0.org${ORG}.example.com:
     url: grpcs://localhost:${P0PORT}
@@ -23,6 +32,22 @@ peers:
     grpcOptions:
       ssl-target-name-override: peer0.org${ORG}.example.com
       hostnameOverride: peer0.org${ORG}.example.com
+  peer1.org${ORG}.example.com:
+    url: grpcs://localhost:${P1PORT}
+    tlsCACerts:
+      pem: |
+        ${PEERPEM}
+    grpcOptions:
+      ssl-target-name-override: peer1.org${ORG}.example.com
+      hostnameOverride: peer1.org${ORG}.example.com
+  peer2.org1.example.com:
+    url: grpcs://localhost:${P2PORT}
+    tlsCACerts:
+      pem: |
+        ${PEERPEM}
+    grpcOptions:
+      ssl-target-name-override: peer2.org1.example.com
+      hostnameOverride: peer2.org1.example.com
 certificateAuthorities:
   ca.org${ORG}.example.com:
     url: https://localhost:${CAPORT}
