@@ -116,16 +116,8 @@ Orderer: &OrdererDefaults
 
     OrdererType: etcdraft
 
-    EtcdRaft:
-        Consenters:
-        - Host: orderer.example.com
-          Port: 7050
-          ClientTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer.example.com/tls/server.crt
-          ServerTLSCert: ../organizations/ordererOrganizations/example.com/orderers/orderer.example.com/tls/server.crt
     Addresses:
         - orderer1.example.com:7050
-        - orderer2.example.com:7050
-        - orderer3.example.com:7050
 
     BatchTimeout: 2s
 
@@ -167,20 +159,53 @@ Channel: &ChannelDefaults
         <<: *ChannelCapabilities
 
 Profiles:
-
-    TwoOrgsOrdererGenesis:
+    
+    SampleMultiNodeEtcdRaft:
         <<: *ChannelDefaults
+        Capabilities:
+            <<: *ChannelCapabilities
         Orderer:
             <<: *OrdererDefaults
+            OrdererType: etcdraft
+            EtcdRaft:
+                Consenters:
+                - Host: orderer1.example.com
+                  Port: 7050
+                  ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer1.example.com/tls/server.crt
+                  ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer1.example.com/tls/server.crt
+                - Host: orderer2.example.com
+                  Port: 8050
+                  ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/tls/server.crt
+                  ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/tls/server.crt
+                - Host: orderer3.example.com
+                  Port: 9050
+                  ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/tls/server.crt
+                  ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/tls/server.crt
+            Addresses:
+                - orderer1.example.com:7050
+                - orderer2.example.com:8050
+                - orderer3.example.com:9050
+
             Organizations:
-                - *OrdererOrg
+            - *OrdererOrg
             Capabilities:
                 <<: *OrdererCapabilities
-        Consortiums:
+            Consortiums:
             SampleConsortium:
                 Organizations:
                     - *Org1
                     - *Org2
+
+
+#    TwoOrgsOrdererGenesis:
+#        <<: *ChannelDefaults
+#        Orderer:
+#            <<: *OrdererDefaults
+#            Organizations:
+#                - *OrdererOrg
+#            Capabilities:
+#                <<: *OrdererCapabilities
+
     TwoOrgsChannel:
         Consortium: SampleConsortium
         <<: *ChannelDefaults

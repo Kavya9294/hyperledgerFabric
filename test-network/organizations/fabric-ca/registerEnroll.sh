@@ -451,7 +451,7 @@ function createOrderer {
 	echo "Register orderer3"
   echo
   set -x
-	fabric-ca-client register --caname ca-orderer --id.name orderer3 --id.secret ordere3rpw --id.type orderer --id.attrs '"hf.Registrar.Roles=orderer"' --tls.certfiles ${PWD}/organizations/fabric-ca/ordererOrg/tls-cert.pem
+	fabric-ca-client register --caname ca-orderer --id.name orderer3 --id.secret orderer3pw --id.type orderer --id.attrs '"hf.Registrar.Roles=orderer"' --tls.certfiles ${PWD}/organizations/fabric-ca/ordererOrg/tls-cert.pem
   set +x
 
   mkdir -p organizations/ordererOrganizations/example.com/orderers/orderer3.example.com
