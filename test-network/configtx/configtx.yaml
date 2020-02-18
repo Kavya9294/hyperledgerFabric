@@ -200,16 +200,6 @@ Profiles:
                 - *Org1
                 - *Org2
 
-
-#    TwoOrgsOrdererGenesis:
-#        <<: *ChannelDefaults
-#        Orderer:
-#            <<: *OrdererDefaults
-#            Organizations:
-#                - *OrdererOrg
-#            Capabilities:
-#                <<: *OrdererCapabilities
-
     TwoOrgsChannel:
         Consortium: SampleConsortium
         <<: *ChannelDefaults

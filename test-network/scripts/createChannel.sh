@@ -79,21 +79,69 @@ createChannel() {
 
 # queryCommitted ORG
 
-# import utils
-. ../first-network/scripts/utils.sh
 
+# joinChannel() {
+
+# 	[[ $1 = 1 ]] && chArr=(0 1 2) || a=(0 1)
+# 	echo "value if chArr is ${chArr[@]}"
+#   	for org in 1 2; do
+# 	    for peer in "${chArr[@]}"; do
+# 		joinChannelWithRetry $org $peer
+# 		echo "===================== peer${peer}.org${org} joined channel '$CHANNEL_NAME' ===================== "
+# 		sleep $DELAY
+# 		echo
+# 	    done
+# 	done
+# }
+
+# joinChannelWithRetry() {
+#   ORG=$1
+#   PEER=$2
+#   setGlobals $ORG $PEER
+
+#   set -x
+#   peer channel join -b $CHANNEL_NAME.block >&log.txt
+#   res=$?
+#   set +x
+#   cat log.txt
+#   COUNTER=1
+#   MAX_RETRY=20
+#   DELAY=3
+#   if [ $res -ne 0 -a $COUNTER -lt $MAX_RETRY ]; then
+#     COUNTER=$(expr $COUNTER + 1)
+#     echo "peer${PEER}.org${ORG} failed to join the channel, Retry after $DELAY seconds"
+#     sleep $DELAY
+#     joinChannelWithRetry $PEER $ORG
+#   else
+#     COUNTER=1
+#   fi
+#   verifyResult $res "After $MAX_RETRY attempts, peer${PEER}.org${ORG} has failed to join channel '$CHANNEL_NAME' "
+# }
+
+
+# queryCommitted ORG
 joinChannel() {
-
-	[[ $1 = 1 ]] && chArr=(1 2 3) || a=(1 2)
-  	for org in 1 2; do
-	    for peer in "${chArr[@]}"; do
-		joinChannelWithRetry $peer $org
-		echo "===================== peer${peer}.org${org} joined channel '$CHANNEL_NAME' ===================== "
-		sleep $DELAY
-		echo
-	    done
+  ORG=$1
+  PEER=$2
+  setGlobals $ORG $PEER
+	local rc=1
+	local COUNTER=1
+	## Sometimes Join takes time, hence retry
+	while [ $rc -ne 0 -a $COUNTER -lt $MAX_RETRY ] ; do
+    sleep $DELAY
+    set -x
+    peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block >&log.txt
+    res=$?
+    set +x
+		let rc=$res
+		COUNTER=$(expr $COUNTER + 1)
 	done
+	cat log.txt
+	echo
+	verifyResult $res "After $MAX_RETRY attempts, peer0.org${ORG} has failed to join channel '$CHANNEL_NAME' "
 }
+
+
 
 updateAnchorPeers() {
   ORG=$1
@@ -144,8 +192,17 @@ echo "Creating channel "$CHANNEL_NAME
 createChannel
 
 ## Join all the peers to the channel
-echo "Join all peers to the channel..."
-joinChannel 1
+echo "Join  org1 peer 0"
+joinChannel 1 0
+echo "Join  org1 peer 1"
+joinChannel 1 1
+echo "Join  org1 peer 2"
+joinChannel 1 2
+echo "Join  org2 peer 0"
+joinChannel 2 0
+echo "Join  org2 peer 1"
+joinChannel 2 1
+
 
 ## Set the anchor peers for each org in the channel
 echo "Updating anchor peers for org1..."

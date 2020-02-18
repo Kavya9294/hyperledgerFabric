@@ -35,7 +35,7 @@ setGlobals() {
     export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
     if [ $PEER -eq 0 ]; then
       CORE_PEER_ADDRESS=peer0.org1.example.com:7051
-    elif [ $PEER -eq 1]; then
+    elif [ $PEER -eq 1 ]; then
       CORE_PEER_ADDRESS=peer1.org1.example.com:8051
     else
       CORE_PEER_ADDRESS=peer2.org1.example.com:11051
@@ -46,16 +46,16 @@ setGlobals() {
     export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
     if [ $PEER -eq 0 ]; then
       CORE_PEER_ADDRESS=peer0.org2.example.com:9051
-    elif [ $PEER -eq 1]; then
+    elif [ $PEER -eq 1 ]; then
       CORE_PEER_ADDRESS=peer1.org2.example.com:10051
     fi
   elif [ $ORG -eq 3 ]; then
     export CORE_PEER_LOCALMSPID="Org3MSP"
     export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG3_CA
     export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp
-    export CORE_PEER_ADDRESS=localhost:11051
+    export CORE_PEER_ADDRESS=localhost:12051
   else
-    echo "================== ERROR !!! ORG Unknown =================="
+    echo "================== ERROR !!! ORG Unknown ${ORG}=================="
   fi
 
   if [ "$VERBOSE" == "true" ]; then
@@ -72,17 +72,19 @@ parsePeerConnectionParameters() {
 
   PEER_CONN_PARMS=""
   PEERS=""
+  echo "in parsePeerConnection"
   while [ "$#" -gt 0 ]; do
+    echo "Did enter ehilw"
     setGlobals $1 $2
     PEER="peer$2.org$1"
     PEERS="$PEERS $PEER"
     PEER_CONN_PARMS="$PEER_CONN_PARMS --peerAddresses $CORE_PEER_ADDRESS"
     if [ -z "$CORE_PEER_TLS_ENABLED" -o "$CORE_PEER_TLS_ENABLED" = "true" ]; then
+      echo "Did not enter TLS"
       TLSINFO=$(eval echo "--tlsRootCertFiles \$PEER0_ORG$1_CA")
       PEER_CONN_PARMS="$PEER_CONN_PARMS $TLSINFO"
     fi
     # shift by two to get the next pair of peer/org parameters
-    shift
     shift
   done
   # remove leading space for output

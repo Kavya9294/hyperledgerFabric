@@ -16,3 +16,6 @@ OrdererOrgs:
       - Hostname: orderer3
     Template:
       Count: 3
+      SANS:
+          - "localhost"
+          - "127.0.0.1"
