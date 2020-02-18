@@ -48,7 +48,7 @@ setGlobals() {
       CORE_PEER_ADDRESS=peer0.org2.example.com:9051
     elif [ $PEER -eq 1]; then
       CORE_PEER_ADDRESS=peer1.org2.example.com:10051
-
+    fi
   elif [ $ORG -eq 3 ]; then
     export CORE_PEER_LOCALMSPID="Org3MSP"
     export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG3_CA
