@@ -44,7 +44,7 @@ fetchChannelConfig() {
     set +x
   else
     set -x
-    peer channel fetch config config_block.pb -o orderer.example.com:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL --tls --cafile $ORDERER_CA
+    peer channel fetch config config_block.pb -o orderer1.example.com:7050 --ordererTLSHostnameOverride orderer1.example.com -c $CHANNEL --tls --cafile $ORDERER_CA
     set +x
   fi
 
