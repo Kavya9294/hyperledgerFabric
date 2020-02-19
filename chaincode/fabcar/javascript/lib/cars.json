@@ -1,0 +1,20 @@
+{
+    "1":{
+        "color": "blue",
+        "make": "Toyota",
+        "model": "Prius",
+        "owner": "Tomoko"
+    },
+    "2":{
+        "color": "red",
+        "make": "Ford",
+        "model": "Mustang",
+        "owner": "Brad"
+    },
+    "3":{
+        "color": "green",
+        "make": "Hyundai",
+        "model": "Tucson",
+        "owner": "Jin Soo"
+    }
+}
