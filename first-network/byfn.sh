@@ -159,6 +159,7 @@ function networkUp() {
   if [ "${CERTIFICATE_AUTHORITIES}" == "true" ]; then
     COMPOSE_FILES="${COMPOSE_FILES} -f ${COMPOSE_FILE_CA}"
     export BYFN_CA1_PRIVATE_KEY=$(cd crypto-config/peerOrganizations/org1.example.com/ca && ls *_sk)
+    echo "BYFN_CA1_PRIVATE_KEY: $BYFN_CA1_PRIVATE_KEY"
     export BYFN_CA2_PRIVATE_KEY=$(cd crypto-config/peerOrganizations/org2.example.com/ca && ls *_sk)
   fi
   if [ "${IF_COUCHDB}" == "couchdb" ]; then
@@ -211,6 +212,7 @@ function upgradeNetwork() {
     if [ "${CERTIFICATE_AUTHORITIES}" == "true" ]; then
       COMPOSE_FILES="${COMPOSE_FILES} -f ${COMPOSE_FILE_CA}"
       export BYFN_CA1_PRIVATE_KEY=$(cd crypto-config/peerOrganizations/org1.example.com/ca && ls *_sk)
+      echo "BYFN_CA1_PRIVATE_KEY: $BYFN_CA1_PRIVATE_KEY"
       export BYFN_CA2_PRIVATE_KEY=$(cd crypto-config/peerOrganizations/org2.example.com/ca && ls *_sk)
     fi
     if [ "${IF_COUCHDB}" == "couchdb" ]; then

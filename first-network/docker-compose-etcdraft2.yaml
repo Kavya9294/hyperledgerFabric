@@ -21,8 +21,8 @@ services:
       file: base/peer-base.yaml
       service: orderer-base
     environment:
-      - ORDERER_GENERAL_LISTENPORT=8050
-      - CORE_METRICS_PROVIDER=prometheus    
+      - CORE_METRICS_PROVIDER=prometheus   
+      - CORE_OPERATIONS_LISTENADDRESS=orderer2.example.com:9443 
     container_name: orderer2.example.com
     networks:
       - byfn
@@ -39,9 +39,8 @@ services:
       file: base/peer-base.yaml
       service: orderer-base
     environment:
-      - ORDERER_GENERAL_LISTENPORT=9050
-      - CORE_METRICS_PROVIDER=prometheus    
-
+      - CORE_METRICS_PROVIDER=prometheus 
+      - CORE_OPERATIONS_LISTENADDRESS=orderer3.example.com:9443
     container_name: orderer3.example.com
     networks:
       - byfn
@@ -58,8 +57,8 @@ services:
       file: base/peer-base.yaml
       service: orderer-base
     environment:
-      - ORDERER_GENERAL_LISTENPORT=10050
-      - CORE_METRICS_PROVIDER=prometheus    
+      - CORE_METRICS_PROVIDER=prometheus
+      - CORE_OPERATIONS_LISTENADDRESS=orderer4.example.com:9443  
     container_name: orderer4.example.com
     networks:
       - byfn
@@ -76,8 +75,8 @@ services:
       file: base/peer-base.yaml
       service: orderer-base
     environment:
-      - ORDERER_GENERAL_LISTENPORT=11050
-      - CORE_METRICS_PROVIDER=prometheus    
+      - CORE_METRICS_PROVIDER=prometheus
+      - CORE_OPERATIONS_LISTENADDRESS=orderer5.example.com:9443   
     container_name: orderer5.example.com
     networks:
       - byfn
