@@ -12,6 +12,9 @@ services:
     extends:
       file: peer-base.yaml
       service: orderer-base
+    environment:
+      - ORDERER_GENERAL_LISTENPORT=7050
+      - CORE_METRICS_PROVIDER=prometheus
     volumes:
         - ../channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
         - ../crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp:/var/hyperledger/orderer/msp
@@ -35,6 +38,7 @@ services:
       - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.org1.example.com:7051
       - CORE_PEER_LOCALMSPID=Org1MSP
       - CORE_OPERATIONS_LISTENADDRESS=peer0.org1.example.com:9443
+      - CORE_METRICS_PROVIDER=prometheus
     volumes:
         - /var/run/:/host/var/run/
         - ../crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp:/etc/hyperledger/fabric/msp
@@ -58,6 +62,7 @@ services:
       - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.org1.example.com:7051
       - CORE_PEER_LOCALMSPID=Org1MSP
       - CORE_OPERATIONS_LISTENADDRESS=peer1.org1.example.com:9443
+      - CORE_METRICS_PROVIDER=prometheus
     volumes:
         - /var/run/:/host/var/run/
         - ../crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/msp:/etc/hyperledger/fabric/msp
@@ -82,6 +87,7 @@ services:
       - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org2.example.com:10051
       - CORE_PEER_LOCALMSPID=Org2MSP
       - CORE_OPERATIONS_LISTENADDRESS=peer0.org2.example.com:9443
+      - CORE_METRICS_PROVIDER=prometheus
     volumes:
         - /var/run/:/host/var/run/
         - ../crypto-config/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/msp:/etc/hyperledger/fabric/msp
@@ -105,6 +111,7 @@ services:
       - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.org2.example.com:9051
       - CORE_PEER_LOCALMSPID=Org2MSP
       - CORE_OPERATIONS_LISTENADDRESS=peer1.org2.example.com:9443
+      - CORE_METRICS_PROVIDER=prometheus
     volumes:
         - /var/run/:/host/var/run/
         - ../crypto-config/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/msp:/etc/hyperledger/fabric/msp

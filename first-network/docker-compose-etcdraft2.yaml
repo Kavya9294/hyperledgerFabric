@@ -22,6 +22,7 @@ services:
       service: orderer-base
     environment:
       - ORDERER_GENERAL_LISTENPORT=8050
+      - CORE_METRICS_PROVIDER=prometheus    
     container_name: orderer2.example.com
     networks:
       - byfn
@@ -39,6 +40,8 @@ services:
       service: orderer-base
     environment:
       - ORDERER_GENERAL_LISTENPORT=9050
+      - CORE_METRICS_PROVIDER=prometheus    
+
     container_name: orderer3.example.com
     networks:
       - byfn
@@ -56,6 +59,7 @@ services:
       service: orderer-base
     environment:
       - ORDERER_GENERAL_LISTENPORT=10050
+      - CORE_METRICS_PROVIDER=prometheus    
     container_name: orderer4.example.com
     networks:
       - byfn
@@ -73,6 +77,7 @@ services:
       service: orderer-base
     environment:
       - ORDERER_GENERAL_LISTENPORT=11050
+      - CORE_METRICS_PROVIDER=prometheus    
     container_name: orderer5.example.com
     networks:
       - byfn
