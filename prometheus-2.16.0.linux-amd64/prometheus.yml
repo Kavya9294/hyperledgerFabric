@@ -32,11 +32,11 @@ global:
   scrape_interval: 15s
   evaluation_interval: 15s
 scrape_configs:
-  - job_name: ‘prometheus’
+  - job_name: 'prometheus'
     scrape_interval: 10s
     static_configs:
-    - targets: [‘localhost:9090’]
-  - job_name: ‘hyperledger_metrics’
+    - targets: ['localhost:9090']
+  - job_name: 'hyperledger_metrics'
     scrape_interval: 10s
     static_configs:
-      - targets: [‘peer0.org1.example.com:9443’, ‘peer1.org1.example.com:9443’, ‘peer0.org2.example.com:9443’, ‘peer1.org2.example.com:9443’, ‘orderer.example.com:9443’, ‘orderer2.example.com:9443’, ‘orderer3.example.com:9443’, ‘orderer4.example.com:9443’, ‘orderer5.example.com:9443’]
+      - targets: ['peer0.org1.example.com:9443', 'peer1.org1.example.com:9443', 'peer0.org2.example.com:9443', 'peer1.org2.example.com:9443', 'orderer.example.com:8443', 'orderer2.example.com:8443', 'orderer3.example.com:8443', 'orderer4.example.com:8443', 'orderer5.example.com:8443']
