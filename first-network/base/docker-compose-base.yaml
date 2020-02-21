@@ -13,8 +13,8 @@ services:
       file: peer-base.yaml
       service: orderer-base
     environment:
-      - CORE_OPERATIONS_LISTENADDRESS=orderer.example.com:9443
-      - CORE_METRICS_PROVIDER=prometheus
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
     volumes:
         - ../channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
         - ../crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp:/var/hyperledger/orderer/msp
