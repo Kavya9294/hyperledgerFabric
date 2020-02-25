@@ -21,6 +21,10 @@ OrdererOrgs:
       - Hostname: orderer3
       - Hostname: orderer4
       - Hostname: orderer5
+      - Hostname: orderer6
+      - Hostname: orderer7
+      - Hostname: orderer8
+      - Hostname: orderer9
 
 # ---------------------------------------------------------------------------
 # "PeerOrgs" - Definition of organizations managing peer nodes
@@ -66,7 +70,7 @@ PeerOrgs:
     # name collisions
     # ---------------------------------------------------------------------------
     Template:
-      Count: 2
+      Count: 10
       # Start: 5
       # Hostname: {{.Prefix}}{{.Index}} # default
     # ---------------------------------------------------------------------------
@@ -83,6 +87,6 @@ PeerOrgs:
     Domain: org2.example.com
     EnableNodeOUs: true
     Template:
-      Count: 2
+      Count: 10
     Users:
       Count: 1

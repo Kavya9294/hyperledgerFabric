@@ -10,6 +10,10 @@ volumes:
   orderer3.example.com:
   orderer4.example.com:
   orderer5.example.com:
+  orderer6.example.com:
+  orderer7.example.com:
+  orderer8.example.com:
+  orderer9.example.com:
 
 networks:
   byfn:
@@ -91,3 +95,80 @@ services:
       - orderer5.example.com:/var/hyperledger/production/orderer
     ports:
       - 11050:11050
+  
+  orderer6.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer6.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer6.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=12050
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/example.com/orderers/orderer6.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/example.com/orderers/orderer6.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer6.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 12050:12050
+
+  orderer7.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer7.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer7.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=13050
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/example.com/orderers/orderer7.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/example.com/orderers/orderer7.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer7.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 13050:13050
+
+  orderer8.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer8.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer8.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=14050
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/example.com/orderers/orderer8.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/example.com/orderers/orderer8.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer8.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 14050:14050
+
+
+  orderer9.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer9.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer9.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=15050
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/example.com/orderers/orderer9.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/example.com/orderers/orderer9.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer9.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 15050:15050

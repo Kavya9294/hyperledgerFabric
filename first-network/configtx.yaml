@@ -108,7 +108,7 @@ Organizations:
             # for cross org gossip communication.  Note, this value is only
             # encoded in the genesis block in the Application section context
             - Host: peer0.org2.example.com
-              Port: 9051
+              Port: 17051
 
 ################################################################################
 #
@@ -341,12 +341,32 @@ Profiles:
                   Port: 11050
                   ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer5.example.com/tls/server.crt
                   ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer5.example.com/tls/server.crt
+                - Host: orderer6.example.com
+                  Port: 12050
+                  ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer6.example.com/tls/server.crt
+                  ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer6.example.com/tls/server.crt
+                - Host: orderer7.example.com
+                  Port: 13050
+                  ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer7.example.com/tls/server.crt
+                  ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer7.example.com/tls/server.crt
+                - Host: orderer8.example.com
+                  Port: 14050
+                  ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer8.example.com/tls/server.crt
+                  ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer8.example.com/tls/server.crt
+                - Host: orderer9.example.com
+                  Port: 15050
+                  ClientTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer9.example.com/tls/server.crt
+                  ServerTLSCert: crypto-config/ordererOrganizations/example.com/orderers/orderer9.example.com/tls/server.crt
             Addresses:
                 - orderer.example.com:7050
                 - orderer2.example.com:8050
                 - orderer3.example.com:9050
                 - orderer4.example.com:10050
                 - orderer5.example.com:11050
+                - orderer6.example.com:12050
+                - orderer7.example.com:13050
+                - orderer8.example.com:14050
+                - orderer9.example.com:15050
 
             Organizations:
             - *OrdererOrg
