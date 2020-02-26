@@ -5,8 +5,8 @@ function one_line_pem {
 }
 
 function json_ccp {
-    local PP=$(one_line_pem $5)
-    local CP=$(one_line_pem $6)
+    local PP=$(one_line_pem ${13})
+    local CP=$(one_line_pem ${14})
     sed -e "s/\${ORG}/$1/" \
         -e "s/\${P0PORT}/$2/" \
         -e "s/\${P1PORT}/$3/" \
@@ -25,8 +25,8 @@ function json_ccp {
 }
 
 function yaml_ccp {
-    local PP=$(one_line_pem $5)
-    local CP=$(one_line_pem $6)
+    local PP=$(one_line_pem ${13})
+    local CP=$(one_line_pem ${14})
     sed -e "s/\${ORG}/$1/" \
         -e "s/\${P0PORT}/$2/" \
         -e "s/\${P1PORT}/$3/" \
