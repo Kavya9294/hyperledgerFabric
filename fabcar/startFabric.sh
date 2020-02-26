@@ -48,13 +48,13 @@ fi
 
 
 # clean the keystore
-#rm -rf ./hfc-key-store
+rm -rf ./hfc-key-store
 
 # launch network; create channel and join peer to channel
-#pushd ../first-network
-#echo y | ./byfn.sh down
-#echo y | ./byfn.sh up -a -n -s couchdb
-#popd
+pushd ../first-network
+echo y | ./byfn.sh down
+echo y | ./byfn.sh up -a -n -s couchdb
+popd
 
 CONFIG_ROOT=/opt/gopath/src/github.com/hyperledger/fabric/peer
 ORG1_MSPCONFIGPATH=${CONFIG_ROOT}/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
@@ -87,7 +87,7 @@ peer
 
 PEER0_ORG2="docker exec
 -e CORE_PEER_LOCALMSPID=Org2MSP
--e CORE_PEER_ADDRESS=peer0.org2.example.com:9051
+-e CORE_PEER_ADDRESS=peer0.org2.example.com:17051
 -e CORE_PEER_MSPCONFIGPATH=${ORG2_MSPCONFIGPATH}
 -e CORE_PEER_TLS_ROOTCERT_FILE=${ORG2_TLS_ROOTCERT_FILE}
 cli
@@ -98,7 +98,7 @@ peer
 
 PEER1_ORG2="docker exec
 -e CORE_PEER_LOCALMSPID=Org2MSP
--e CORE_PEER_ADDRESS=peer1.org2.example.com:10051
+-e CORE_PEER_ADDRESS=peer1.org2.example.com:18051
 -e CORE_PEER_MSPCONFIGPATH=${ORG2_MSPCONFIGPATH}
 -e CORE_PEER_TLS_ROOTCERT_FILE=${ORG2_TLS_ROOTCERT_FILE}
 cli
@@ -182,7 +182,7 @@ ${PEER0_ORG1} lifecycle chaincode commit \
   --sequence 1 \
   --waitForEvent \
   --peerAddresses peer0.org1.example.com:7051 \
-  --peerAddresses peer0.org2.example.com:9051 \
+  --peerAddresses peer0.org2.example.com:17051 \
   --tlsRootCertFiles ${ORG1_TLS_ROOTCERT_FILE} \
   --tlsRootCertFiles ${ORG2_TLS_ROOTCERT_FILE}
 
@@ -195,7 +195,7 @@ ${PEER0_ORG1} chaincode invoke \
   --waitForEvent \
   --waitForEventTimeout 300s \
   --peerAddresses peer0.org1.example.com:7051 \
-  --peerAddresses peer0.org2.example.com:9051 \
+  --peerAddresses peer0.org2.example.com:17051 \
   --tlsRootCertFiles ${ORG1_TLS_ROOTCERT_FILE} \
   --tlsRootCertFiles ${ORG2_TLS_ROOTCERT_FILE}
 
@@ -211,7 +211,7 @@ ${PEER1_ORG2} chaincode query \
   -C mychannel \
   -n fabcar \
   -c '{"function":"queryAllCars","Args":[]}' \
-  --peerAddresses peer1.org2.example.com:10051 \
+  --peerAddresses peer1.org2.example.com:18051 \
   --tlsRootCertFiles ${ORG2_TLS_ROOTCERT_FILE}
 
 cat <<EOF

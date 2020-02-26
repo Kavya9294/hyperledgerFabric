@@ -39,4 +39,4 @@ scrape_configs:
   - job_name: 'hyperledger_metrics'
     scrape_interval: 10s
     static_configs:
-      - targets: ['peer0.org1.example.com:9443', 'peer1.org1.example.com:9443', 'peer0.org2.example.com:9443', 'peer1.org2.example.com:9443', 'orderer.example.com:8443', 'orderer2.example.com:8443', 'orderer3.example.com:8443', 'orderer4.example.com:8443', 'orderer5.example.com:8443']
+      - targets: ['peer0.org1.example.com:9443', 'peer1.org1.example.com:9443', 'peer2.org1.example.com:9443', 'peer3.org1.example.com:9443', 'peer4.org1.example.com:9443','peer0.org2.example.com:9443', 'peer1.org2.example.com:9443','peer2.org2.example.com:9443','peer3.org2.example.com:9443','peer4.org2.example.com:9443', 'orderer.example.com:8443', 'orderer2.example.com:8443', 'orderer3.example.com:8443', 'orderer4.example.com:8443', 'orderer5.example.com:8443', 'orderer6.example.com:8443', 'orderer7.example.com:8443', 'orderer8.example.com:8443', 'orderer9.example.com:8443']
