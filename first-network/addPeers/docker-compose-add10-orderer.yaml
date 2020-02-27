@@ -1,0 +1,451 @@
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+version: '2'
+
+volumes:
+  orderer2.ord1.example.com:
+  orderer3.ord1.example.com:
+  orderer4.ord1.example.com:
+  orderer5.ord1.example.com:
+  orderer6.ord1.example.com:
+  orderer7.ord1.example.com:
+  orderer8.ord1.example.com:
+  orderer9.ord1.example.com:
+  orderer10.ord1.example.com:
+  orderer2.ord2.example.com:
+  orderer3.ord2.example.com:
+  orderer4.ord2.example.com:
+  orderer5.ord2.example.com:
+  orderer6.ord2.example.com:
+  orderer7.ord2.example.com:
+  orderer8.ord2.example.com:
+  orderer9.ord2.example.com:
+  orderer10.ord2.example.com:
+
+networks:
+  byfn:
+
+services:
+
+  orderer1.ord1.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer1.ord1.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer1.ord1.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=7050
+      - ORDERER_GENERAL_LOCALMSPID=Ord1MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer1.ord1.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer1.ord1.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer1.ord1.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 7050:7050
+    
+
+  orderer2.ord1.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer2.ord1.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer2.ord1.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=8050
+      - ORDERER_GENERAL_LOCALMSPID=Ord1MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer2.ord1.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer2.ord1.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer2.ord1.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 8050:8050
+    
+
+  orderer3.ord1.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer3.ord1.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer3.ord1.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=9050
+      - ORDERER_GENERAL_LOCALMSPID=Ord1MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer3.ord1.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer3.ord1.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer3.ord1.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 9050:9050
+    
+
+  orderer4.ord1.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer4.ord1.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer4.ord1.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=10050
+      - ORDERER_GENERAL_LOCALMSPID=Ord1MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer4.ord1.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer4.ord1.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer4.ord1.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 10050:10050
+    
+
+  orderer5.ord1.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer5.ord1.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer5.ord1.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=11050
+      - ORDERER_GENERAL_LOCALMSPID=Ord1MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer5.ord1.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer5.ord1.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer5.ord1.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 11050:11050
+    
+
+  orderer6.ord1.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer6.ord1.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer6.ord1.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=12050
+      - ORDERER_GENERAL_LOCALMSPID=Ord1MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer6.ord1.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer6.ord1.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer6.ord1.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 12050:12050
+    
+
+  orderer7.ord1.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer7.ord1.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer7.ord1.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=13050
+      - ORDERER_GENERAL_LOCALMSPID=Ord1MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer7.ord1.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer7.ord1.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer7.ord1.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 13050:13050
+    
+
+  orderer8.ord1.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer8.ord1.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer8.ord1.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=14050
+      - ORDERER_GENERAL_LOCALMSPID=Ord1MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer8.ord1.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer8.ord1.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer8.ord1.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 14050:14050
+    
+
+  orderer9.ord1.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer9.ord1.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer9.ord1.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=15050
+      - ORDERER_GENERAL_LOCALMSPID=Ord1MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer9.ord1.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer9.ord1.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer9.ord1.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 15050:15050
+    
+
+  orderer10.ord1.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer10.ord1.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer10.ord1.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=16050
+      - ORDERER_GENERAL_LOCALMSPID=Ord1MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer10.ord1.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer10.ord1.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer10.ord1.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 16050:16050
+    
+
+  orderer1.ord2.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer1.ord2.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer1.ord2.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=17050
+      - ORDERER_GENERAL_LOCALMSPID=Ord2MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer1.ord2.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer1.ord2.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer1.ord2.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 17050:17050
+    
+
+  orderer2.ord2.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer2.ord2.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer2.ord2.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=18050
+      - ORDERER_GENERAL_LOCALMSPID=Ord2MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer2.ord2.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer2.ord2.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer2.ord2.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 18050:18050
+    
+
+  orderer3.ord2.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer3.ord2.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer3.ord2.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=19050
+      - ORDERER_GENERAL_LOCALMSPID=Ord2MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer3.ord2.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer3.ord2.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer3.ord2.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 19050:19050
+    
+
+  orderer4.ord2.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer4.ord2.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer4.ord2.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=20050
+      - ORDERER_GENERAL_LOCALMSPID=Ord2MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer4.ord2.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer4.ord2.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer4.ord2.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 20050:20050
+    
+
+  orderer5.ord2.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer5.ord2.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer5.ord2.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=21050
+      - ORDERER_GENERAL_LOCALMSPID=Ord2MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer5.ord2.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer5.ord2.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer5.ord2.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 21050:21050
+    
+
+  orderer6.ord2.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer6.ord2.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer6.ord2.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=22050
+      - ORDERER_GENERAL_LOCALMSPID=Ord2MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer6.ord2.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer6.ord2.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer6.ord2.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 22050:22050
+    
+
+  orderer7.ord2.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer7.ord2.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer7.ord2.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=23050
+      - ORDERER_GENERAL_LOCALMSPID=Ord2MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer7.ord2.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer7.ord2.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer7.ord2.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 23050:23050
+    
+
+  orderer8.ord2.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer8.ord2.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer8.ord2.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=24050
+      - ORDERER_GENERAL_LOCALMSPID=Ord2MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer8.ord2.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer8.ord2.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer8.ord2.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 24050:24050
+    
+
+  orderer9.ord2.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer9.ord2.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer9.ord2.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=25050
+      - ORDERER_GENERAL_LOCALMSPID=Ord2MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer9.ord2.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer9.ord2.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer9.ord2.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 25050:25050
+    
+
+  orderer10.ord2.example.com:
+    extends:
+      file: base/peer-base.yaml
+      service: orderer-base 
+    container_name: orderer10.ord2.example.com
+    environment:
+      - ORDERER_OPERATIONS_LISTENADDRESS=orderer10.ord2.example.com:8443
+      - ORDERER_METRICS_PROVIDER=prometheus
+      - ORDERER_GENERAL_LISTENPORT=26050
+      - ORDERER_GENERAL_LOCALMSPID=Ord2MSP
+    networks:
+      - byfn
+    volumes:
+      - ./channel-artifacts/genesis.block:/var/hyperledger/orderer/orderer.genesis.block
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer10.ord2.example.com/msp:/var/hyperledger/orderer/msp
+      - ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer10.ord2.example.com/tls/:/var/hyperledger/orderer/tls
+      - orderer10.ord2.example.com:/var/hyperledger/production/orderer
+    ports:
+      - 26050:26050
+    

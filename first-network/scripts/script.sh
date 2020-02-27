@@ -79,8 +79,8 @@ joinChannel () {
 }
 
 ## Create channel
-echo "Creating channel..."
-createChannel
+# echo "Creating channel..."
+# createChannel
 
 ## Join all the peers to the channel
 echo "Having all peers join the channel..."

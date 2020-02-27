@@ -48,11 +48,11 @@ fi
 
 
 # clean the keystore
-rm -rf ./hfc-key-store
+#rm -rf ./hfc-key-store
 
 # launch network; create channel and join peer to channel
 pushd ../first-network
-echo y | ./byfn.sh down
+#echo y | ./byfn.sh down
 echo y | ./byfn.sh up -a -n -s couchdb
 popd
 

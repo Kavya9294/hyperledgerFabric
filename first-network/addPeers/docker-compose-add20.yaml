@@ -1,0 +1,504 @@
+
+version: '2'
+
+services:
+
+    peer20.org1.example.com:
+      container_name: peer20.org1.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer20.org1.example.com
+        - CORE_PEER_ADDRESS=peer20.org1.example.com:47051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:47051
+        - CORE_PEER_CHAINCODEADDRESS=peer20.org1example.com:47052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:47052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer20.org1.example.com:47051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer20.org1.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer20.org1.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer20.org1.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer20.org1.example.com:/var/hyperledger/production
+      ports:
+        - 47051:47051
+    
+
+    peer21.org1.example.com:
+      container_name: peer21.org1.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer21.org1.example.com
+        - CORE_PEER_ADDRESS=peer21.org1.example.com:48051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:48051
+        - CORE_PEER_CHAINCODEADDRESS=peer21.org1example.com:48052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:48052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer21.org1.example.com:48051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer21.org1.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer21.org1.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer21.org1.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer21.org1.example.com:/var/hyperledger/production
+      ports:
+        - 48051:48051
+    
+
+    peer22.org1.example.com:
+      container_name: peer22.org1.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer22.org1.example.com
+        - CORE_PEER_ADDRESS=peer22.org1.example.com:49051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:49051
+        - CORE_PEER_CHAINCODEADDRESS=peer22.org1example.com:49052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:49052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer22.org1.example.com:49051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer22.org1.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer22.org1.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer22.org1.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer22.org1.example.com:/var/hyperledger/production
+      ports:
+        - 49051:49051
+    
+
+    peer23.org1.example.com:
+      container_name: peer23.org1.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer23.org1.example.com
+        - CORE_PEER_ADDRESS=peer23.org1.example.com:50051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:50051
+        - CORE_PEER_CHAINCODEADDRESS=peer23.org1example.com:50052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:50052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer23.org1.example.com:50051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer23.org1.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer23.org1.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer23.org1.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer23.org1.example.com:/var/hyperledger/production
+      ports:
+        - 50051:50051
+    
+
+    peer24.org1.example.com:
+      container_name: peer24.org1.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer24.org1.example.com
+        - CORE_PEER_ADDRESS=peer24.org1.example.com:51051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:51051
+        - CORE_PEER_CHAINCODEADDRESS=peer24.org1example.com:51052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:51052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer24.org1.example.com:51051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer24.org1.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer24.org1.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer24.org1.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer24.org1.example.com:/var/hyperledger/production
+      ports:
+        - 51051:51051
+    
+
+    peer25.org1.example.com:
+      container_name: peer25.org1.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer25.org1.example.com
+        - CORE_PEER_ADDRESS=peer25.org1.example.com:52051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:52051
+        - CORE_PEER_CHAINCODEADDRESS=peer25.org1example.com:52052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:52052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer25.org1.example.com:52051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer25.org1.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer25.org1.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer25.org1.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer25.org1.example.com:/var/hyperledger/production
+      ports:
+        - 52051:52051
+    
+
+    peer26.org1.example.com:
+      container_name: peer26.org1.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer26.org1.example.com
+        - CORE_PEER_ADDRESS=peer26.org1.example.com:53051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:53051
+        - CORE_PEER_CHAINCODEADDRESS=peer26.org1example.com:53052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:53052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer26.org1.example.com:53051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer26.org1.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer26.org1.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer26.org1.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer26.org1.example.com:/var/hyperledger/production
+      ports:
+        - 53051:53051
+    
+
+    peer27.org1.example.com:
+      container_name: peer27.org1.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer27.org1.example.com
+        - CORE_PEER_ADDRESS=peer27.org1.example.com:54051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:54051
+        - CORE_PEER_CHAINCODEADDRESS=peer27.org1example.com:54052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:54052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer27.org1.example.com:54051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer27.org1.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer27.org1.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer27.org1.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer27.org1.example.com:/var/hyperledger/production
+      ports:
+        - 54051:54051
+    
+
+    peer28.org1.example.com:
+      container_name: peer28.org1.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer28.org1.example.com
+        - CORE_PEER_ADDRESS=peer28.org1.example.com:55051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:55051
+        - CORE_PEER_CHAINCODEADDRESS=peer28.org1example.com:55052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:55052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer28.org1.example.com:55051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer28.org1.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer28.org1.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer28.org1.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer28.org1.example.com:/var/hyperledger/production
+      ports:
+        - 55051:55051
+    
+
+    peer29.org1.example.com:
+      container_name: peer29.org1.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer29.org1.example.com
+        - CORE_PEER_ADDRESS=peer29.org1.example.com:56051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:56051
+        - CORE_PEER_CHAINCODEADDRESS=peer29.org1example.com:56052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:56052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer29.org1.example.com:56051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer29.org1.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer29.org1.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer29.org1.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer29.org1.example.com:/var/hyperledger/production
+      ports:
+        - 56051:56051
+    
+
+    peer20.org2.example.com:
+      container_name: peer20.org2.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer20.org2.example.com
+        - CORE_PEER_ADDRESS=peer20.org2.example.com:57051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:57051
+        - CORE_PEER_CHAINCODEADDRESS=peer20.org2example.com:57052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:57052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer20.org2.example.com:57051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer20.org2.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer20.org2.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer20.org2.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer20.org2.example.com:/var/hyperledger/production
+      ports:
+        - 57051:57051
+    
+
+    peer21.org2.example.com:
+      container_name: peer21.org2.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer21.org2.example.com
+        - CORE_PEER_ADDRESS=peer21.org2.example.com:58051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:58051
+        - CORE_PEER_CHAINCODEADDRESS=peer21.org2example.com:58052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:58052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer21.org2.example.com:58051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer21.org2.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer21.org2.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer21.org2.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer21.org2.example.com:/var/hyperledger/production
+      ports:
+        - 58051:58051
+    
+
+    peer22.org2.example.com:
+      container_name: peer22.org2.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer22.org2.example.com
+        - CORE_PEER_ADDRESS=peer22.org2.example.com:59051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:59051
+        - CORE_PEER_CHAINCODEADDRESS=peer22.org2example.com:59052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:59052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer22.org2.example.com:59051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer22.org2.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer22.org2.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer22.org2.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer22.org2.example.com:/var/hyperledger/production
+      ports:
+        - 59051:59051
+    
+
+    peer23.org2.example.com:
+      container_name: peer23.org2.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer23.org2.example.com
+        - CORE_PEER_ADDRESS=peer23.org2.example.com:60051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:60051
+        - CORE_PEER_CHAINCODEADDRESS=peer23.org2example.com:60052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:60052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer23.org2.example.com:60051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer23.org2.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer23.org2.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer23.org2.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer23.org2.example.com:/var/hyperledger/production
+      ports:
+        - 60051:60051
+    
+
+    peer24.org2.example.com:
+      container_name: peer24.org2.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer24.org2.example.com
+        - CORE_PEER_ADDRESS=peer24.org2.example.com:61051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:61051
+        - CORE_PEER_CHAINCODEADDRESS=peer24.org2example.com:61052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:61052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer24.org2.example.com:61051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer24.org2.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer24.org2.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer24.org2.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer24.org2.example.com:/var/hyperledger/production
+      ports:
+        - 61051:61051
+    
+
+    peer25.org2.example.com:
+      container_name: peer25.org2.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer25.org2.example.com
+        - CORE_PEER_ADDRESS=peer25.org2.example.com:62051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:62051
+        - CORE_PEER_CHAINCODEADDRESS=peer25.org2example.com:62052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:62052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer25.org2.example.com:62051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer25.org2.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer25.org2.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer25.org2.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer25.org2.example.com:/var/hyperledger/production
+      ports:
+        - 62051:62051
+    
+
+    peer26.org2.example.com:
+      container_name: peer26.org2.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer26.org2.example.com
+        - CORE_PEER_ADDRESS=peer26.org2.example.com:63051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:63051
+        - CORE_PEER_CHAINCODEADDRESS=peer26.org2example.com:63052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:63052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer26.org2.example.com:63051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer26.org2.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer26.org2.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer26.org2.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer26.org2.example.com:/var/hyperledger/production
+      ports:
+        - 63051:63051
+    
+
+    peer27.org2.example.com:
+      container_name: peer27.org2.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer27.org2.example.com
+        - CORE_PEER_ADDRESS=peer27.org2.example.com:64051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:64051
+        - CORE_PEER_CHAINCODEADDRESS=peer27.org2example.com:64052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:64052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer27.org2.example.com:64051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer27.org2.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer27.org2.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer27.org2.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer27.org2.example.com:/var/hyperledger/production
+      ports:
+        - 64051:64051
+    
+
+    peer28.org2.example.com:
+      container_name: peer28.org2.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer28.org2.example.com
+        - CORE_PEER_ADDRESS=peer28.org2.example.com:65051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:65051
+        - CORE_PEER_CHAINCODEADDRESS=peer28.org2example.com:65052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:65052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer28.org2.example.com:65051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer28.org2.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer28.org2.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer28.org2.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer28.org2.example.com:/var/hyperledger/production
+      ports:
+        - 65051:65051
+    
+
+    peer29.org2.example.com:
+      container_name: peer29.org2.example.com
+      extends:
+        file: base/peer-base.yaml
+        service: peer-base
+      environment:
+        - CORE_PEER_ID=peer29.org2.example.com
+        - CORE_PEER_ADDRESS=peer29.org2.example.com:66051
+        - CORE_PEER_LISTENADDRESS=0.0.0.0:66051
+        - CORE_PEER_CHAINCODEADDRESS=peer29.org2example.com:66052
+        - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:66052
+        - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.org1.example.com:8051
+        - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer29.org2.example.com:66051
+        - CORE_PEER_LOCALMSPID=Org1MSP
+        - CORE_OPERATIONS_LISTENADDRESS=peer29.org2.example.com:9443
+        - CORE_METRICS_PROVIDER=prometheus
+      volumes:
+          - /var/run/:/host/var/run/
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer29.org2.example.com/msp:/etc/hyperledger/fabric/msp
+          - ../crypto-config/peerOrganizations/org1.example.com/peers/peer29.org2.example.com/tls:/etc/hyperledger/fabric/tls
+          - peer29.org2.example.com:/var/hyperledger/production
+      ports:
+        - 66051:66051
+    

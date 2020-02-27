@@ -41,7 +41,7 @@ async function main() {
         // createCar transaction - requires 5 argument, ex: ('createCar', 'CAR12', 'Honda', 'Accord', 'Black', 'Tom')
         // changeCarOwner transaction - requires 2 args , ex: ('changeCarOwner', 'CAR10', 'Dave')
         var startTime=new Date();
-        await contract.submitTransaction('createCar', 'CAR20', 'Honda', 'Accent', 'Green', 'Bhavviiee');
+        await contract.submitTransaction('createCar', 'CAR18', 'Lambourghini', 'ModelP', 'Yellow', 'Rang');
         console.log('Transaction has been submitted');
         var endTime = new Date();
         var timeDiff = endTime - startTime; //in ms
@@ -50,7 +50,7 @@ async function main() {
 
         // get seconds 
         var seconds = Math.round(timeDiff);
-        console.log(timeDiff + " seconds");
+        console.log(timeDiff + " seconds to write");
 
         // Disconnect from the gateway.
         await gateway.disconnect();

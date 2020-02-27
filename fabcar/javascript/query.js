@@ -41,10 +41,21 @@ async function main() {
         // Evaluate the specified transaction.
         // queryCar transaction - requires 1 argument, ex: ('queryCar', 'CAR4')
         // queryAllCars transaction - requires no arguments, ex: ('queryAllCars')
+        var startTime=new Date();
         const result = await contract.evaluateTransaction('queryAllCars');
+        var endTime = new Date();
+        var timeDiff = endTime - startTime; //in ms
+        // strip the ms
+        timeDiff /= 1000;
+
+        // get seconds 
+        var seconds = Math.round(timeDiff);
+        
         console.log(`Transaction has been evaluated, result is: ${result.toString()}`);
+        console.log(timeDiff + " seconds to read");
 
     } catch (error) {
+        console.log(error)
         console.error(`Failed to evaluate transaction: ${error}`);
         process.exit(1);
     }

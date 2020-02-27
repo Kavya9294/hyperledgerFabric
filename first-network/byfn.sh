@@ -149,39 +149,39 @@ function checkPrereqs() {
 
 # Generate the needed certificates, the genesis block and start the network.
 function networkUp() {
-  checkPrereqs
-  # generate artifacts if they don't exist
-  if [ ! -d "crypto-config" ]; then
-    generateCerts
-    generateChannelArtifacts
-  fi
-  COMPOSE_FILES="-f ${COMPOSE_FILE} -f ${COMPOSE_FILE_RAFT2}"
-  if [ "${CERTIFICATE_AUTHORITIES}" == "true" ]; then
-    COMPOSE_FILES="${COMPOSE_FILES} -f ${COMPOSE_FILE_CA}"
-    export BYFN_CA1_PRIVATE_KEY=$(cd crypto-config/peerOrganizations/org1.example.com/ca && ls *_sk)
-    echo "BYFN_CA1_PRIVATE_KEY: $BYFN_CA1_PRIVATE_KEY"
-    export BYFN_CA2_PRIVATE_KEY=$(cd crypto-config/peerOrganizations/org2.example.com/ca && ls *_sk)
-  fi
-  if [ "${IF_COUCHDB}" == "couchdb" ]; then
-    COMPOSE_FILES="${COMPOSE_FILES} -f ${COMPOSE_FILE_COUCH}"
-  fi
-  IMAGE_TAG=$IMAGETAG docker-compose ${COMPOSE_FILES} up -d 2>&1
-  docker ps -a
-  if [ $? -ne 0 ]; then
-    echo "ERROR !!!! Unable to start network"
-    exit 1
-  fi
+  # checkPrereqs
+  # # generate artifacts if they don't exist
+  # if [ ! -d "crypto-config" ]; then
+  #   generateCerts
+  #   generateChannelArtifacts
+  # fi
+  # COMPOSE_FILES="-f ${COMPOSE_FILE} -f ${COMPOSE_FILE_RAFT2}"
+  # if [ "${CERTIFICATE_AUTHORITIES}" == "true" ]; then
+  #   COMPOSE_FILES="${COMPOSE_FILES} -f ${COMPOSE_FILE_CA}"
+  #   export BYFN_CA1_PRIVATE_KEY=$(cd crypto-config/peerOrganizations/org1.example.com/ca && ls *_sk)
+  #   echo "BYFN_CA1_PRIVATE_KEY: $BYFN_CA1_PRIVATE_KEY"
+  #   export BYFN_CA2_PRIVATE_KEY=$(cd crypto-config/peerOrganizations/org2.example.com/ca && ls *_sk)
+  # fi
+  # if [ "${IF_COUCHDB}" == "couchdb" ]; then
+  #   COMPOSE_FILES="${COMPOSE_FILES} -f ${COMPOSE_FILE_COUCH}"
+  # fi
+  # IMAGE_TAG=$IMAGETAG docker-compose ${COMPOSE_FILES} up -d 2>&1
+  # docker ps -a
+  # if [ $? -ne 0 ]; then
+  #   echo "ERROR !!!! Unable to start network"
+  #   exit 1
+  # fi
 
-  echo "Sleeping 15s to allow Raft cluster to complete booting"
-  sleep 15
+  # echo "Sleeping 15s to allow Raft cluster to complete booting"
+  # sleep 15
 
-  if [ "${NO_CHAINCODE}" != "true" ]; then
-    echo Vendoring Go dependencies ...
-    pushd ../chaincode/abstore/go
-    GO111MODULE=on go mod vendor
-    popd
-    echo Finished vendoring Go dependencies
-  fi
+  # if [ "${NO_CHAINCODE}" != "true" ]; then
+  #   echo Vendoring Go dependencies ...
+  #   pushd ../chaincode/abstore/go
+  #   GO111MODULE=on go mod vendor
+  #   popd
+  #   echo Finished vendoring Go dependencies
+  # fi
 
   # now run the end to end script
   docker exec cli scripts/script.sh $CHANNEL_NAME $CLI_DELAY $CC_SRC_LANGUAGE $CLI_TIMEOUT $VERBOSE $NO_CHAINCODE

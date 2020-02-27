@@ -1,8 +1,15 @@
 /channel-artifacts/*.tx
+/addPeers/channel-artifacts/*.tx
 /channel-artifacts/*.block
+/addPeers/channel-artifacts/*.block
 /crypto-config/*
+/addPeers/crypto-config/*
 /ledgers
+/addPeers/ledgers
 /ledgers-backup
+/addPeers/ledgers-backup
 /channel-artifacts/*.json
+/addPeers/channel-artifacts/*.json
 /org3-artifacts/crypto-config/*
 /connection-*.*
+/addPeers/connection-*.*
