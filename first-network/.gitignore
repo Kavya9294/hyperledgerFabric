@@ -13,3 +13,13 @@
 /org3-artifacts/crypto-config/*
 /connection-*.*
 /addPeers/connection-*.*
+
+
+
+/addPeers5/ledgers
+/addPeers5/channel-artifacts/*.block
+/addPeers5/crypto-config/*
+/addPeers5/channel-artifacts/*.tx
+/addPeers5/ledgers-backup
+/addPeers5/channel-artifacts/*.json
+/addPeers5/connection-*.*
