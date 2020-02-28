@@ -4,6 +4,7 @@
 .#*
 # Vim file artifacts
 .*.sw*
+/node_modules
 # installed platform-specific binaries
 /bin
 .DS_Store

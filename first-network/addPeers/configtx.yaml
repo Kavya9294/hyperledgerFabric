@@ -337,8 +337,8 @@ Profiles:
                 - orderer10.ord1.example.com:16050
                 - orderer1.ord2.example.com:17050
                 - orderer2.ord2.example.com:18050
-                - orderer3.ord2.example.com:19050
-                - orderer4.ord2.example.com:20050
+                - orderer3.ord2xample.com:24050
+                - orderer9.ord2.example.com:25050
                 - orderer5.ord2.example.com:21050
                 - orderer6.ord2.example.com:22050
                 - orderer7.ord2.example.com:23050
