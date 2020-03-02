@@ -266,17 +266,17 @@ Java:
     - Evaluate a transaction (query) to return the updated details of this car
 EOF
 
-    © 2020 GitHub, Inc.
-    Terms
-    Privacy
-    Security
-    Status
-    Help
+    # © 2020 GitHub, Inc.
+    # Terms
+    # Privacy
+    # Security
+    # Status
+    # Help
 
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
+    # Contact GitHub
+    # Pricing
+    # API
+    # Training
+    # Blog
+    # About
 

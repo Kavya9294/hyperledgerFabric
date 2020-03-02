@@ -12,7 +12,7 @@ const path = require('path');
 async function main() {
     try {
         // load the network configuration
-        const ccpPath = path.resolve(__dirname, '..', '..', 'first-network', 'connection-org1.json');
+        const ccpPath = path.resolve(__dirname, '..', '..', 'first-network/addPeers5', 'connection-org1.json');
         const ccp = JSON.parse(fs.readFileSync(ccpPath, 'utf8'));
 
         // Create a new CA client for interacting with the CA.
@@ -25,9 +25,9 @@ async function main() {
         console.log(`Wallet path: ${walletPath}`);
 
         // Check to see if we've already enrolled the user.
-        const userIdentity = await wallet.get('user1');
+        const userIdentity = await wallet.get('user2');
         if (userIdentity) {
-            console.log('An identity for the user "user1" already exists in the wallet');
+            console.log('An identity for the user "user2" already exists in the wallet');
             return;
         }
 
@@ -46,11 +46,11 @@ async function main() {
         // Register the user, enroll the user, and import the new identity into the wallet.
         const secret = await ca.register({
             affiliation: 'org1.department1',
-            enrollmentID: 'user1',
+            enrollmentID: 'user2',
             role: 'client'
         }, adminUser);
         const enrollment = await ca.enroll({
-            enrollmentID: 'user1',
+            enrollmentID: 'user2',
             enrollmentSecret: secret
         });
         const x509Identity = {
@@ -61,11 +61,11 @@ async function main() {
             mspId: 'Org1MSP',
             type: 'X.509',
         };
-        await wallet.put('user1', x509Identity);
-        console.log('Successfully registered and enrolled admin user "user1" and imported it into the wallet');
+        await wallet.put('user2', x509Identity);
+        console.log('Successfully registered and enrolled admin user "user2" and imported it into the wallet');
 
     } catch (error) {
-        console.error(`Failed to register user "user1": ${error}`);
+        console.error(`Failed to register user "user2": ${error}`);
         process.exit(1);
     }
 }
