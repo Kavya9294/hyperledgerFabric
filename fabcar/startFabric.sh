@@ -47,14 +47,14 @@ else
 fi
 
 
-# # clean the keystore
-# rm -rf ./hfc-key-store
+ # clean the keystore
+ rm -rf ./hfc-key-store
 
-# # launch network; create channel and join peer to channel
-# pushd ../first-network/addPeers5
-# echo y | ./byfn.sh down
-# echo y | ./byfn.sh up -a -n -s couchdb
-# popd
+ # launch network; create channel and join peer to channel
+ pushd ../first-network/addPeers5
+ echo y | ./byfn.sh down
+ echo y | ./byfn.sh up -a -n -s couchdb
+ popd
 
 CONFIG_ROOT=/opt/gopath/src/github.com/hyperledger/fabric/peer
 ORG1_MSPCONFIGPATH=${CONFIG_ROOT}/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
