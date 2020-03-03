@@ -293,8 +293,8 @@ Profiles:
                 - orderer5.ord1.example.com:11050
                 - orderer1.ord2.example.com:17050
                 - orderer2.ord2.example.com:18050
-                - orderer3.ord2xample.com:24050
-                - orderer9.ord2.example.com:25050
+                - orderer3.ord2.example.com:24050
+                - orderer4.ord2.example.com:25050
                 - orderer5.ord2.example.com:21050
 
             Organizations:
