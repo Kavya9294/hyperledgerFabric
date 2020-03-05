@@ -431,7 +431,7 @@ CHANNEL_NAME="mychannel"
 # use this as the default docker-compose yaml definition
 COMPOSE_FILE=docker-compose-cli10.yaml
 #
-COMPOSE_FILE_COUCH=docker-compose-add10-couchdb.yaml
+COMPOSE_FILE_COUCH=docker-compose-couch.yaml
 #Extra containers
 COMPOSE_FILE_ADD_10=docker-compose-add10.yaml
 # org3 docker compose file

@@ -41,7 +41,7 @@ async function main() {
         // createCar transaction - requires 5 argument, ex: ('createCar', 'CAR12', 'Honda', 'Accord', 'Black', 'Tom')
         // changeCarOwner transaction - requires 2 args , ex: ('changeCarOwner', 'CAR10', 'Dave')
         var startTime=new Date();
-        await contract.submitTransaction('createCar', 'CAR18', 'Lambourghini', 'ModelP', 'Yellow', 'Rang');
+        await contract.submitTransaction('createCar', 'CAR25', 'Apple', 'Mac', 'Silver', 'Kavya');
         console.log('Transaction has been submitted');
         var endTime = new Date();
         var timeDiff = endTime - startTime; //in ms

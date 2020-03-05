@@ -256,6 +256,22 @@ Profiles:
                   Port: 9050
                   ClientTLSCert: ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer3.ord1.example.com/tls/server.crt
                   ServerTLSCert: ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer3.ord1.example.com/tls/server.crt
+                - Host: orderer4.ord1.example.com
+                  Port: 10050
+                  ClientTLSCert: ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer4.ord1.example.com/tls/server.crt
+                  ServerTLSCert: ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer4.ord1.example.com/tls/server.crt
+                - Host: orderer5.ord1.example.com
+                  Port: 11050
+                  ClientTLSCert: ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer5.ord1.example.com/tls/server.crt
+                  ServerTLSCert: ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer5.ord1.example.com/tls/server.crt
+                - Host: orderer6.ord1.example.com
+                  Port: 12050
+                  ClientTLSCert: ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer6.ord1.example.com/tls/server.crt
+                  ServerTLSCert: ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer6.ord1.example.com/tls/server.crt
+                - Host: orderer7.ord1.example.com
+                  Port: 13050
+                  ClientTLSCert: ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer7.ord1.example.com/tls/server.crt
+                  ServerTLSCert: ./crypto-config/ordererOrganizations/ord1.example.com/orderers/orderer7.ord1.example.com/tls/server.crt
                 - Host: orderer1.ord2.example.com
                   Port: 17050
                   ClientTLSCert: ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer1.ord2.example.com/tls/server.crt
@@ -268,14 +284,38 @@ Profiles:
                   Port: 19050
                   ClientTLSCert: ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer3.ord2.example.com/tls/server.crt
                   ServerTLSCert: ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer3.ord2.example.com/tls/server.crt
-    
+                - Host: orderer4.ord2.example.com
+                  Port: 20050
+                  ClientTLSCert: ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer4.ord2.example.com/tls/server.crt
+                  ServerTLSCert: ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer4.ord2.example.com/tls/server.crt
+                - Host: orderer5.ord2.example.com
+                  Port: 21050
+                  ClientTLSCert: ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer5.ord2.example.com/tls/server.crt
+                  ServerTLSCert: ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer5.ord2.example.com/tls/server.crt
+                - Host: orderer6.ord2.example.com
+                  Port: 22050
+                  ClientTLSCert: ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer6.ord2.example.com/tls/server.crt
+                  ServerTLSCert: ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer6.ord2.example.com/tls/server.crt
+                - Host: orderer7.ord2.example.com
+                  Port: 23050
+                  ClientTLSCert: ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer7.ord2.example.com/tls/server.crt
+                  ServerTLSCert: ./crypto-config/ordererOrganizations/ord2.example.com/orderers/orderer7.ord2.example.com/tls/server.crt
+               
             Addresses:
                 - orderer1.ord1.example.com:7050
                 - orderer2.ord1.example.com:8050
                 - orderer3.ord1.example.com:9050
+                - orderer4.ord1.example.com:10050
+                - orderer5.ord1.example.com:11050
+                - orderer6.ord1.example.com:12050
+                - orderer7.ord1.example.com:13050
                 - orderer1.ord2.example.com:17050
                 - orderer2.ord2.example.com:18050
                 - orderer3.ord2.example.com:19050
+                - orderer4.ord2.example.com:20050
+                - orderer5.ord2.example.com:21050
+                - orderer6.ord2.example.com:22050
+                - orderer7.ord2.example.com:23050
 
             Organizations:
             - *Ord1
