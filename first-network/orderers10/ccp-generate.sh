@@ -10,7 +10,7 @@ function json_ccp {
     sed -e "s/\${ORG}/$1/" \
         -e "s/\${P0PORT}/$2/" \
         -e "s/\${P1PORT}/$3/" \
-        -e "s/\${P1PORT}/$4/" \
+        -e "s/\${P2PORT}/$4/" \
         -e "s/\${CAPORT}/$5/" \
         -e "s#\${PEERPEM}#$PP#" \
         -e "s#\${CAPEM}#$CP#" \
@@ -23,7 +23,7 @@ function yaml_ccp {
     sed -e "s/\${ORG}/$1/" \
         -e "s/\${P0PORT}/$2/" \
         -e "s/\${P1PORT}/$3/" \
-        -e "s/\${P1PORT}/$4/" \
+        -e "s/\${P2PORT}/$4/" \
         -e "s/\${CAPORT}/$5/" \
         -e "s#\${PEERPEM}#$PP#" \
         -e "s#\${CAPEM}#$CP#" \
