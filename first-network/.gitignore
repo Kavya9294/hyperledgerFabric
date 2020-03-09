@@ -23,3 +23,11 @@
 /addPeers5/ledgers-backup
 /addPeers5/channel-artifacts/*.json
 /addPeers5/connection-*.*
+
+/orderers10/ledgers
+/orderers10/channel-artifacts/*.block
+/orderers10/crypto-config/*
+/orderers10/channel-artifacts/*.tx
+/orderers10/ledgers-backup
+/orderers10/channel-artifacts/*.json
+/orderers10/connection-*.*
