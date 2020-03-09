@@ -325,7 +325,7 @@ Profiles:
                 - orderer5.ord2.example.com:21050
                 - orderer6.ord2.example.com:22050
                 - orderer7.ord2.example.com:23050
-                - orderer8.ord1.example.com:24050
+                - orderer8.ord2.example.com:24050
 
             Organizations:
             - *Ord1
