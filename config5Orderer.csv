@@ -1,4 +1,4 @@
-Time, Operation, Node, Description
+﻿Time, Operation, Node, Description
 23:19:51.539,HandleChain,s,EvictionSuspicion not set defaulting to 10m0s
 23:20:24.234,HandleChain,s,EvictionSuspicion not set defaulting to 10m0s
 23:20:24.234,createOrReadWAL,5,No WAL data found creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel 
