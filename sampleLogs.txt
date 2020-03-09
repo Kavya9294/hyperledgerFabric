@@ -1,0 +1,801 @@
+[34m2020-02-25 04:32:42.345 UTC [localconfig] completeInitialization -> INFO 001[0m Kafka.Version unset, setting to 0.10.2.0
+[34m2020-02-25 04:32:42.345 UTC [orderer.common.server] prettyPrintStruct -> INFO 002[0m Orderer config values:
+	General.ListenAddress = "0.0.0.0"
+	General.ListenPort = 14050
+	General.TLS.Enabled = true
+	General.TLS.PrivateKey = "/var/hyperledger/orderer/tls/server.key"
+	General.TLS.Certificate = "/var/hyperledger/orderer/tls/server.crt"
+	General.TLS.RootCAs = [/var/hyperledger/orderer/tls/ca.crt]
+	General.TLS.ClientAuthRequired = false
+	General.TLS.ClientRootCAs = []
+	General.Cluster.ListenAddress = ""
+	General.Cluster.ListenPort = 0
+	General.Cluster.ServerCertificate = ""
+	General.Cluster.ServerPrivateKey = ""
+	General.Cluster.ClientCertificate = "/var/hyperledger/orderer/tls/server.crt"
+	General.Cluster.ClientPrivateKey = "/var/hyperledger/orderer/tls/server.key"
+	General.Cluster.RootCAs = [/var/hyperledger/orderer/tls/ca.crt]
+	General.Cluster.DialTimeout = 5s
+	General.Cluster.RPCTimeout = 7s
+	General.Cluster.ReplicationBufferSize = 20971520
+	General.Cluster.ReplicationPullTimeout = 5s
+	General.Cluster.ReplicationRetryTimeout = 5s
+	General.Cluster.ReplicationBackgroundRefreshInterval = 5m0s
+	General.Cluster.ReplicationMaxRetries = 12
+	General.Cluster.SendBufferSize = 10
+	General.Cluster.CertExpirationWarningThreshold = 168h0m0s
+	General.Cluster.TLSHandshakeTimeShift = 0s
+	General.Keepalive.ServerMinInterval = 1m0s
+	General.Keepalive.ServerInterval = 2h0m0s
+	General.Keepalive.ServerTimeout = 20s
+	General.ConnectionTimeout = 0s
+	General.GenesisMethod = ""
+	General.GenesisFile = ""
+	General.BootstrapMethod = "file"
+	General.BootstrapFile = "/var/hyperledger/orderer/orderer.genesis.block"
+	General.Profile.Enabled = false
+	General.Profile.Address = "0.0.0.0:6060"
+	General.LocalMSPDir = "/var/hyperledger/orderer/msp"
+	General.LocalMSPID = "OrdererMSP"
+	General.BCCSP.ProviderName = "SW"
+	General.BCCSP.SwOpts.SecLevel = 256
+	General.BCCSP.SwOpts.HashFamily = "SHA2"
+	General.BCCSP.SwOpts.Ephemeral = true
+	General.BCCSP.SwOpts.FileKeystore.KeyStorePath = ""
+	General.BCCSP.SwOpts.DummyKeystore =
+	General.BCCSP.SwOpts.InmemKeystore =
+	General.Authentication.TimeWindow = 15m0s
+	General.Authentication.NoExpirationChecks = false
+	FileLedger.Location = "/var/hyperledger/production/orderer"
+	FileLedger.Prefix = "hyperledger-fabric-ordererledger"
+	Kafka.Retry.ShortInterval = 5s
+	Kafka.Retry.ShortTotal = 10m0s
+	Kafka.Retry.LongInterval = 5m0s
+	Kafka.Retry.LongTotal = 12h0m0s
+	Kafka.Retry.NetworkTimeouts.DialTimeout = 10s
+	Kafka.Retry.NetworkTimeouts.ReadTimeout = 10s
+	Kafka.Retry.NetworkTimeouts.WriteTimeout = 10s
+	Kafka.Retry.Metadata.RetryMax = 3
+	Kafka.Retry.Metadata.RetryBackoff = 250ms
+	Kafka.Retry.Producer.RetryMax = 3
+	Kafka.Retry.Producer.RetryBackoff = 100ms
+	Kafka.Retry.Consumer.RetryBackoff = 2s
+	Kafka.Verbose = false
+	Kafka.Version = 0.10.2.0
+	Kafka.TLS.Enabled = false
+	Kafka.TLS.PrivateKey = ""
+	Kafka.TLS.Certificate = ""
+	Kafka.TLS.RootCAs = []
+	Kafka.TLS.ClientAuthRequired = false
+	Kafka.TLS.ClientRootCAs = []
+	Kafka.SASLPlain.Enabled = false
+	Kafka.SASLPlain.User = ""
+	Kafka.SASLPlain.Password = ""
+	Kafka.Topic.ReplicationFactor = 3
+	Debug.BroadcastTraceDir = ""
+	Debug.DeliverTraceDir = ""
+	Consensus = map[SnapDir:/var/hyperledger/production/orderer/etcdraft/snapshot WALDir:/var/hyperledger/production/orderer/etcdraft/wal]
+	Operations.ListenAddress = "orderer8.example.com:8443"
+	Operations.TLS.Enabled = false
+	Operations.TLS.PrivateKey = ""
+	Operations.TLS.Certificate = ""
+	Operations.TLS.RootCAs = []
+	Operations.TLS.ClientAuthRequired = false
+	Operations.TLS.ClientRootCAs = []
+	Metrics.Provider = "prometheus"
+	Metrics.Statsd.Network = "udp"
+	Metrics.Statsd.Address = "127.0.0.1:8125"
+	Metrics.Statsd.WriteInterval = 30s
+	Metrics.Statsd.Prefix = ""
+[34m2020-02-25 04:32:42.568 UTC [orderer.common.server] initializeServerConfig -> INFO 003[0m Starting orderer with TLS enabled
+[34m2020-02-25 04:32:42.586 UTC [fsblkstorage] NewProvider -> INFO 004[0m Creating new file ledger directory at /var/hyperledger/production/orderer/chains
+[34m2020-02-25 04:32:42.636 UTC [orderer.common.server] extractSysChanLastConfig -> INFO 005[0m Bootstrapping because no existing channels
+[34m2020-02-25 04:32:42.686 UTC [orderer.common.server] Main -> INFO 006[0m Setting up cluster for orderer type etcdraft
+[34m2020-02-25 04:32:42.733 UTC [orderer.common.server] reuseListener -> INFO 007[0m Cluster listener is not configured, defaulting to use the general listener on port 14050
+[34m2020-02-25 04:32:42.734 UTC [fsblkstorage] newBlockfileMgr -> INFO 008[0m Getting block information from block storage
+[34m2020-02-25 04:32:42.819 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-02-25 04:32:42.819 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 00a[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/byfn-sys-channel' channel=byfn-sys-channel node=8
+[34m2020-02-25 04:32:42.842 UTC [orderer.commmon.multichannel] Initialize -> INFO 00b[0m Starting system channel 'byfn-sys-channel' with genesis block hash 2fa1881e3c3a875056d121433c5eb406f36e9460fa322463e9e876a88d4f025a and orderer type etcdraft
+[34m2020-02-25 04:32:42.842 UTC [orderer.consensus.etcdraft] Start -> INFO 00c[0m Starting Raft node channel=byfn-sys-channel node=8
+[34m2020-02-25 04:32:42.844 UTC [orderer.common.cluster] Configure -> INFO 00d[0m Entering, channel: byfn-sys-channel, nodes: [ID: 6,
+Endpoint: orderer6.example.com:12050,
+ServerTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRAIvfchSiBb32jHYRft1gZaUwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyNi5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABHJH+D3wQjqFyqJP1jEpSkuBsY+TnWLPcDhr4iI9Y/mx
+myivgciaG4kjp6Jeend+R1y0hKkCTk0EE7iNsGTYbAejgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXI2LmV4YW1wbGUuY29tgghvcmRlcmVyNoIUb3Jk
+ZXJlcjYuZXhhbXBsZS5jb22CCG9yZGVyZXI2MAoGCCqGSM49BAMCA0cAMEQCID18
+kTXZSCjL3iJzrZvTXZAI+j4WV2Ob/gelypGWI5vsAiADksaC/cEgaWI+gf6qRJjY
+8Fr3peSjoho9F4ogJPI78A==
+-----END CERTIFICATE-----
+, ClientTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRAIvfchSiBb32jHYRft1gZaUwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyNi5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABHJH+D3wQjqFyqJP1jEpSkuBsY+TnWLPcDhr4iI9Y/mx
+myivgciaG4kjp6Jeend+R1y0hKkCTk0EE7iNsGTYbAejgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXI2LmV4YW1wbGUuY29tgghvcmRlcmVyNoIUb3Jk
+ZXJlcjYuZXhhbXBsZS5jb22CCG9yZGVyZXI2MAoGCCqGSM49BAMCA0cAMEQCID18
+kTXZSCjL3iJzrZvTXZAI+j4WV2Ob/gelypGWI5vsAiADksaC/cEgaWI+gf6qRJjY
+8Fr3peSjoho9F4ogJPI78A==
+-----END CERTIFICATE-----
+ ID: 5,
+Endpoint: orderer5.example.com:11050,
+ServerTLSCert:-----BEGIN CERTIFICATE-----
+MIICezCCAiKgAwIBAgIQG1nSjWmXbqAohCUfDvOzVTAKBggqhkjOPQQDAjBsMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEUMBIGA1UEChMLZXhhbXBsZS5jb20xGjAYBgNVBAMTEXRsc2NhLmV4
+YW1wbGUuY29tMB4XDTIwMDIyNTA0MjcwMFoXDTMwMDIyMjA0MjcwMFowWTELMAkG
+A1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBGcmFu
+Y2lzY28xHTAbBgNVBAMTFG9yZGVyZXI1LmV4YW1wbGUuY29tMFkwEwYHKoZIzj0C
+AQYIKoZIzj0DAQcDQgAE0HsXO2LrkR0YrGK94xuJeH0EYarCsiQcoWWP+ikQJ6Ti
+y8YKcN5nMKCpQyjMYASTsaT3if/z7iDW87WPnVPkd6OBuDCBtTAOBgNVHQ8BAf8E
+BAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQC
+MAAwKwYDVR0jBCQwIoAgDj+ZYY3AsIQyjfeZVMHAygOYWB2kwmQXEZh0/EJvmRMw
+SQYDVR0RBEIwQIIUb3JkZXJlcjUuZXhhbXBsZS5jb22CCG9yZGVyZXI1ghRvcmRl
+cmVyNS5leGFtcGxlLmNvbYIIb3JkZXJlcjUwCgYIKoZIzj0EAwIDRwAwRAIgDRhi
+bnyIsCAiMs4qyqqJUyLw5TBAtTcZWzpHOHXId14CIF03BnZvjkxosTON2YHAmaKN
+rxO38opNYoSu8Ii0bham
+-----END CERTIFICATE-----
+, ClientTLSCert:-----BEGIN CERTIFICATE-----
+MIICezCCAiKgAwIBAgIQG1nSjWmXbqAohCUfDvOzVTAKBggqhkjOPQQDAjBsMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEUMBIGA1UEChMLZXhhbXBsZS5jb20xGjAYBgNVBAMTEXRsc2NhLmV4
+YW1wbGUuY29tMB4XDTIwMDIyNTA0MjcwMFoXDTMwMDIyMjA0MjcwMFowWTELMAkG
+A1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBGcmFu
+Y2lzY28xHTAbBgNVBAMTFG9yZGVyZXI1LmV4YW1wbGUuY29tMFkwEwYHKoZIzj0C
+AQYIKoZIzj0DAQcDQgAE0HsXO2LrkR0YrGK94xuJeH0EYarCsiQcoWWP+ikQJ6Ti
+y8YKcN5nMKCpQyjMYASTsaT3if/z7iDW87WPnVPkd6OBuDCBtTAOBgNVHQ8BAf8E
+BAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQC
+MAAwKwYDVR0jBCQwIoAgDj+ZYY3AsIQyjfeZVMHAygOYWB2kwmQXEZh0/EJvmRMw
+SQYDVR0RBEIwQIIUb3JkZXJlcjUuZXhhbXBsZS5jb22CCG9yZGVyZXI1ghRvcmRl
+cmVyNS5leGFtcGxlLmNvbYIIb3JkZXJlcjUwCgYIKoZIzj0EAwIDRwAwRAIgDRhi
+bnyIsCAiMs4qyqqJUyLw5TBAtTcZWzpHOHXId14CIF03BnZvjkxosTON2YHAmaKN
+rxO38opNYoSu8Ii0bham
+-----END CERTIFICATE-----
+ ID: 7,
+Endpoint: orderer7.example.com:13050,
+ServerTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRALK6Tr6qiJj2mppqwH3b5bowCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyNy5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABA4ZKYqzIPBHBX+ENKqCX/NrHl/UP79/eLwbJX/B6QBz
+4EjnenSO3fMrLX1m6PIrMxOHyKYU39k2zwEY/QdtNOyjgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXI3LmV4YW1wbGUuY29tgghvcmRlcmVyN4IUb3Jk
+ZXJlcjcuZXhhbXBsZS5jb22CCG9yZGVyZXI3MAoGCCqGSM49BAMCA0cAMEQCIC2t
+fNuH7gBUWodpzwONurLl8pPFd+O5thIcevoQXaHlAiAdU+t1sG0S7NDlw8f9k0ex
+glb5jyz9raKnSrk6eAagEg==
+-----END CERTIFICATE-----
+, ClientTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRALK6Tr6qiJj2mppqwH3b5bowCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyNy5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABA4ZKYqzIPBHBX+ENKqCX/NrHl/UP79/eLwbJX/B6QBz
+4EjnenSO3fMrLX1m6PIrMxOHyKYU39k2zwEY/QdtNOyjgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXI3LmV4YW1wbGUuY29tgghvcmRlcmVyN4IUb3Jk
+ZXJlcjcuZXhhbXBsZS5jb22CCG9yZGVyZXI3MAoGCCqGSM49BAMCA0cAMEQCIC2t
+fNuH7gBUWodpzwONurLl8pPFd+O5thIcevoQXaHlAiAdU+t1sG0S7NDlw8f9k0ex
+glb5jyz9raKnSrk6eAagEg==
+-----END CERTIFICATE-----
+ ID: 9,
+Endpoint: orderer9.example.com:15050,
+ServerTLSCert:-----BEGIN CERTIFICATE-----
+MIICfTCCAiOgAwIBAgIRAM9F/YtxcMb6PhxZJTYUxXUwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyOS5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABLjEW9Qk1mgve1ZwI42ZUymXh/G4qJ+2BHeaxKVr98IK
+0B5dfSbw3KJb81HzhyLnV9JEZAuXbrOQaZv+nQE5H4yjgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXI5LmV4YW1wbGUuY29tgghvcmRlcmVyOYIUb3Jk
+ZXJlcjkuZXhhbXBsZS5jb22CCG9yZGVyZXI5MAoGCCqGSM49BAMCA0gAMEUCIQDO
+55JEZd8hT5wpFiNKQzrwkoNNZq6JMmyczVM+rFAZtgIgG4xjFC9gDdpqmoDiSOo/
+ru/Xw0thByyD4cmRlpFc+Bk=
+-----END CERTIFICATE-----
+, ClientTLSCert:-----BEGIN CERTIFICATE-----
+MIICfTCCAiOgAwIBAgIRAM9F/YtxcMb6PhxZJTYUxXUwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyOS5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABLjEW9Qk1mgve1ZwI42ZUymXh/G4qJ+2BHeaxKVr98IK
+0B5dfSbw3KJb81HzhyLnV9JEZAuXbrOQaZv+nQE5H4yjgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXI5LmV4YW1wbGUuY29tgghvcmRlcmVyOYIUb3Jk
+ZXJlcjkuZXhhbXBsZS5jb22CCG9yZGVyZXI5MAoGCCqGSM49BAMCA0gAMEUCIQDO
+55JEZd8hT5wpFiNKQzrwkoNNZq6JMmyczVM+rFAZtgIgG4xjFC9gDdpqmoDiSOo/
+ru/Xw0thByyD4cmRlpFc+Bk=
+-----END CERTIFICATE-----
+ ID: 1,
+Endpoint: orderer.example.com:7050,
+ServerTLSCert:-----BEGIN CERTIFICATE-----
+MIICdzCCAh6gAwIBAgIRALv6Hyw3kAtPKor4yitrXgswCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFgxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMRwwGgYDVQQDExNvcmRlcmVyLmV4YW1wbGUuY29tMFkwEwYHKoZIzj0C
+AQYIKoZIzj0DAQcDQgAEEXzG8k3Ri9c3IeZKgittXgBwo0zN7BzVfEH6HB6m313Y
+jm0FU59tbAPxJXo3nEij8QZqJHIXf92IlfBqCv2OpqOBtDCBsTAOBgNVHQ8BAf8E
+BAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQC
+MAAwKwYDVR0jBCQwIoAgDj+ZYY3AsIQyjfeZVMHAygOYWB2kwmQXEZh0/EJvmRMw
+RQYDVR0RBD4wPIITb3JkZXJlci5leGFtcGxlLmNvbYIHb3JkZXJlcoITb3JkZXJl
+ci5leGFtcGxlLmNvbYIHb3JkZXJlcjAKBggqhkjOPQQDAgNHADBEAiBVJlhRdOZF
+sTKhLv08/GD6oX4+QIkKATe9tjIP+tawFQIgKwsywnmRkXVD4TzDrQGqa9IVZaKG
+8Mt7Lc7zSndovNA=
+-----END CERTIFICATE-----
+, ClientTLSCert:-----BEGIN CERTIFICATE-----
+MIICdzCCAh6gAwIBAgIRALv6Hyw3kAtPKor4yitrXgswCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFgxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMRwwGgYDVQQDExNvcmRlcmVyLmV4YW1wbGUuY29tMFkwEwYHKoZIzj0C
+AQYIKoZIzj0DAQcDQgAEEXzG8k3Ri9c3IeZKgittXgBwo0zN7BzVfEH6HB6m313Y
+jm0FU59tbAPxJXo3nEij8QZqJHIXf92IlfBqCv2OpqOBtDCBsTAOBgNVHQ8BAf8E
+BAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQC
+MAAwKwYDVR0jBCQwIoAgDj+ZYY3AsIQyjfeZVMHAygOYWB2kwmQXEZh0/EJvmRMw
+RQYDVR0RBD4wPIITb3JkZXJlci5leGFtcGxlLmNvbYIHb3JkZXJlcoITb3JkZXJl
+ci5leGFtcGxlLmNvbYIHb3JkZXJlcjAKBggqhkjOPQQDAgNHADBEAiBVJlhRdOZF
+sTKhLv08/GD6oX4+QIkKATe9tjIP+tawFQIgKwsywnmRkXVD4TzDrQGqa9IVZaKG
+8Mt7Lc7zSndovNA=
+-----END CERTIFICATE-----
+ ID: 2,
+Endpoint: orderer2.example.com:8050,
+ServerTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRAMea7O8oz1AFtAfzVSeWXJwwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyMi5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABJVIqxQJEtCwPUtCJ4Ym5k155hHgCpVWJzeMqUZK57Ks
+2iaz0Esy3gf4X8+sFUWXdwhGgCVlCmqXyCOGl6Uq982jgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXIyLmV4YW1wbGUuY29tgghvcmRlcmVyMoIUb3Jk
+ZXJlcjIuZXhhbXBsZS5jb22CCG9yZGVyZXIyMAoGCCqGSM49BAMCA0cAMEQCIFNY
+I8C8cYvQQK2fnyHd2OiQW8uusABSQd4oUkAFYUZYAiB/+7yXRr5CqE2lSujPIDP2
+CQhk6YKCUOhnx9fQZqm1yg==
+-----END CERTIFICATE-----
+, ClientTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRAMea7O8oz1AFtAfzVSeWXJwwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyMi5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABJVIqxQJEtCwPUtCJ4Ym5k155hHgCpVWJzeMqUZK57Ks
+2iaz0Esy3gf4X8+sFUWXdwhGgCVlCmqXyCOGl6Uq982jgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXIyLmV4YW1wbGUuY29tgghvcmRlcmVyMoIUb3Jk
+ZXJlcjIuZXhhbXBsZS5jb22CCG9yZGVyZXIyMAoGCCqGSM49BAMCA0cAMEQCIFNY
+I8C8cYvQQK2fnyHd2OiQW8uusABSQd4oUkAFYUZYAiB/+7yXRr5CqE2lSujPIDP2
+CQhk6YKCUOhnx9fQZqm1yg==
+-----END CERTIFICATE-----
+ ID: 3,
+Endpoint: orderer3.example.com:9050,
+ServerTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRAI7wnRA+uif0DB2TlVk1VfcwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyMy5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABJjg9NJzi8VFjmS7dw24umNdP1Fi7h3PpryhEt1OSX9C
+JIhgTlezMzzHJH9JUxQl7DwQqL0Hond6xkGX6E05lGujgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXIzLmV4YW1wbGUuY29tgghvcmRlcmVyM4IUb3Jk
+ZXJlcjMuZXhhbXBsZS5jb22CCG9yZGVyZXIzMAoGCCqGSM49BAMCA0cAMEQCIHAz
+GR0vSyvsoFlUiyoiJPPYVN5dM4G+sysduQpT84lfAiAmyvH0/K6F0xxTRBLu+JCD
+9gqIYsIyD/WvYdrdxLNH6A==
+-----END CERTIFICATE-----
+, ClientTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRAI7wnRA+uif0DB2TlVk1VfcwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyMy5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABJjg9NJzi8VFjmS7dw24umNdP1Fi7h3PpryhEt1OSX9C
+JIhgTlezMzzHJH9JUxQl7DwQqL0Hond6xkGX6E05lGujgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXIzLmV4YW1wbGUuY29tgghvcmRlcmVyM4IUb3Jk
+ZXJlcjMuZXhhbXBsZS5jb22CCG9yZGVyZXIzMAoGCCqGSM49BAMCA0cAMEQCIHAz
+GR0vSyvsoFlUiyoiJPPYVN5dM4G+sysduQpT84lfAiAmyvH0/K6F0xxTRBLu+JCD
+9gqIYsIyD/WvYdrdxLNH6A==
+-----END CERTIFICATE-----
+ ID: 4,
+Endpoint: orderer4.example.com:10050,
+ServerTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRAJU+FbYEnmcyIVKg4YyFsPEwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyNC5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABAUZ6h7duML0Qba2euScYmCBNKWxD4zSq/el0y23s/w0
+Gve3gTFJMK6+jHXDSGPyFH7ixcH3QGQarpUQ+l0vBsqjgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXI0LmV4YW1wbGUuY29tgghvcmRlcmVyNIIUb3Jk
+ZXJlcjQuZXhhbXBsZS5jb22CCG9yZGVyZXI0MAoGCCqGSM49BAMCA0cAMEQCIFuO
+hi/czt/XeJchwMY4a7SX9WnQo0LEuPUDgNy/VST6AiAGnnkQ+++f1jUYF6NWVDhy
+MCTqhDzD4kvnN5hy8wsp5w==
+-----END CERTIFICATE-----
+, ClientTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRAJU+FbYEnmcyIVKg4YyFsPEwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyNC5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABAUZ6h7duML0Qba2euScYmCBNKWxD4zSq/el0y23s/w0
+Gve3gTFJMK6+jHXDSGPyFH7ixcH3QGQarpUQ+l0vBsqjgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXI0LmV4YW1wbGUuY29tgghvcmRlcmVyNIIUb3Jk
+ZXJlcjQuZXhhbXBsZS5jb22CCG9yZGVyZXI0MAoGCCqGSM49BAMCA0cAMEQCIFuO
+hi/czt/XeJchwMY4a7SX9WnQo0LEuPUDgNy/VST6AiAGnnkQ+++f1jUYF6NWVDhy
+MCTqhDzD4kvnN5hy8wsp5w==
+-----END CERTIFICATE-----
+]
+[34m2020-02-25 04:32:42.845 UTC [orderer.common.cluster] updateStubInMapping -> INFO 00e[0m Allocating a new stub for node 6 with endpoint of orderer6.example.com:12050 for channel byfn-sys-channel
+[34m2020-02-25 04:32:42.845 UTC [orderer.common.cluster] updateStubInMapping -> INFO 00f[0m Deactivating node 6 in channel byfn-sys-channel with endpoint of orderer6.example.com:12050 due to TLS certificate change
+[34m2020-02-25 04:32:42.854 UTC [orderer.common.cluster] updateStubInMapping -> INFO 010[0m Allocating a new stub for node 5 with endpoint of orderer5.example.com:11050 for channel byfn-sys-channel
+[34m2020-02-25 04:32:42.855 UTC [orderer.common.cluster] updateStubInMapping -> INFO 011[0m Deactivating node 5 in channel byfn-sys-channel with endpoint of orderer5.example.com:11050 due to TLS certificate change
+[34m2020-02-25 04:32:42.858 UTC [orderer.common.cluster] updateStubInMapping -> INFO 012[0m Allocating a new stub for node 7 with endpoint of orderer7.example.com:13050 for channel byfn-sys-channel
+[34m2020-02-25 04:32:42.858 UTC [orderer.common.cluster] updateStubInMapping -> INFO 013[0m Deactivating node 7 in channel byfn-sys-channel with endpoint of orderer7.example.com:13050 due to TLS certificate change
+[34m2020-02-25 04:32:42.862 UTC [orderer.common.cluster] updateStubInMapping -> INFO 014[0m Allocating a new stub for node 9 with endpoint of orderer9.example.com:15050 for channel byfn-sys-channel
+[34m2020-02-25 04:32:42.866 UTC [orderer.common.cluster] updateStubInMapping -> INFO 015[0m Deactivating node 9 in channel byfn-sys-channel with endpoint of orderer9.example.com:15050 due to TLS certificate change
+[34m2020-02-25 04:32:42.876 UTC [orderer.common.cluster] updateStubInMapping -> INFO 016[0m Allocating a new stub for node 1 with endpoint of orderer.example.com:7050 for channel byfn-sys-channel
+[34m2020-02-25 04:32:42.876 UTC [orderer.common.cluster] updateStubInMapping -> INFO 017[0m Deactivating node 1 in channel byfn-sys-channel with endpoint of orderer.example.com:7050 due to TLS certificate change
+[34m2020-02-25 04:32:42.878 UTC [orderer.common.cluster] updateStubInMapping -> INFO 018[0m Allocating a new stub for node 2 with endpoint of orderer2.example.com:8050 for channel byfn-sys-channel
+[34m2020-02-25 04:32:42.878 UTC [orderer.common.cluster] updateStubInMapping -> INFO 019[0m Deactivating node 2 in channel byfn-sys-channel with endpoint of orderer2.example.com:8050 due to TLS certificate change
+[34m2020-02-25 04:32:42.904 UTC [orderer.common.cluster] updateStubInMapping -> INFO 01a[0m Allocating a new stub for node 3 with endpoint of orderer3.example.com:9050 for channel byfn-sys-channel
+[34m2020-02-25 04:32:42.904 UTC [orderer.common.cluster] updateStubInMapping -> INFO 01b[0m Deactivating node 3 in channel byfn-sys-channel with endpoint of orderer3.example.com:9050 due to TLS certificate change
+[34m2020-02-25 04:32:42.915 UTC [orderer.common.cluster] updateStubInMapping -> INFO 01c[0m Allocating a new stub for node 4 with endpoint of orderer4.example.com:10050 for channel byfn-sys-channel
+[34m2020-02-25 04:32:42.915 UTC [orderer.common.cluster] updateStubInMapping -> INFO 01d[0m Deactivating node 4 in channel byfn-sys-channel with endpoint of orderer4.example.com:10050 due to TLS certificate change
+[34m2020-02-25 04:32:42.923 UTC [orderer.common.cluster] applyMembershipConfig -> INFO 01e[0m 5 exists in both old and new membership for channel byfn-sys-channel , skipping its deactivation
+[34m2020-02-25 04:32:42.923 UTC [orderer.common.cluster] applyMembershipConfig -> INFO 01f[0m 7 exists in both old and new membership for channel byfn-sys-channel , skipping its deactivation
+[34m2020-02-25 04:32:42.923 UTC [orderer.common.cluster] applyMembershipConfig -> INFO 020[0m 9 exists in both old and new membership for channel byfn-sys-channel , skipping its deactivation
+[34m2020-02-25 04:32:42.923 UTC [orderer.common.cluster] applyMembershipConfig -> INFO 021[0m 1 exists in both old and new membership for channel byfn-sys-channel , skipping its deactivation
+[34m2020-02-25 04:32:42.923 UTC [orderer.common.cluster] applyMembershipConfig -> INFO 022[0m 2 exists in both old and new membership for channel byfn-sys-channel , skipping its deactivation
+[34m2020-02-25 04:32:42.923 UTC [orderer.common.cluster] applyMembershipConfig -> INFO 023[0m 3 exists in both old and new membership for channel byfn-sys-channel , skipping its deactivation
+[34m2020-02-25 04:32:42.923 UTC [orderer.common.cluster] applyMembershipConfig -> INFO 024[0m 4 exists in both old and new membership for channel byfn-sys-channel , skipping its deactivation
+[34m2020-02-25 04:32:42.923 UTC [orderer.common.cluster] applyMembershipConfig -> INFO 025[0m 6 exists in both old and new membership for channel byfn-sys-channel , skipping its deactivation
+[34m2020-02-25 04:32:42.923 UTC [orderer.common.cluster] Configure -> INFO 026[0m Exiting
+[34m2020-02-25 04:32:42.923 UTC [orderer.consensus.etcdraft] start -> INFO 027[0m Starting raft node as part of a new channel channel=byfn-sys-channel node=8
+[34m2020-02-25 04:32:42.925 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 028[0m 8 became follower at term 0 channel=byfn-sys-channel node=8
+[34m2020-02-25 04:32:42.925 UTC [orderer.consensus.etcdraft] newRaft -> INFO 029[0m newRaft 8 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=byfn-sys-channel node=8
+[34m2020-02-25 04:32:42.925 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 02a[0m 8 became follower at term 1 channel=byfn-sys-channel node=8
+[34m2020-02-25 04:32:42.931 UTC [orderer.common.server] Main -> INFO 02b[0m Starting orderer:
+ Version: 2.0.0
+ Commit SHA: 0432c3e
+ Go version: go1.13.4
+ OS/Arch: linux/amd64
+[34m2020-02-25 04:32:42.932 UTC [orderer.common.server] Main -> INFO 02c[0m Beginning to serve requests
+[34m2020-02-25 04:32:42.932 UTC [orderer.consensus.etcdraft] apply -> INFO 02d[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9] channel=byfn-sys-channel node=8
+[34m2020-02-25 04:32:42.932 UTC [orderer.consensus.etcdraft] apply -> INFO 02e[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9] channel=byfn-sys-channel node=8
+[34m2020-02-25 04:32:42.941 UTC [orderer.consensus.etcdraft] apply -> INFO 02f[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9] channel=byfn-sys-channel node=8
+[34m2020-02-25 04:32:42.941 UTC [orderer.consensus.etcdraft] apply -> INFO 030[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9] channel=byfn-sys-channel node=8
+[34m2020-02-25 04:32:42.941 UTC [orderer.consensus.etcdraft] apply -> INFO 031[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9] channel=byfn-sys-channel node=8
+[34m2020-02-25 04:32:42.958 UTC [orderer.consensus.etcdraft] apply -> INFO 032[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9] channel=byfn-sys-channel node=8
+[34m2020-02-25 04:32:42.958 UTC [orderer.consensus.etcdraft] apply -> INFO 033[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9] channel=byfn-sys-channel node=8
+[34m2020-02-25 04:32:42.964 UTC [orderer.consensus.etcdraft] apply -> INFO 034[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9] channel=byfn-sys-channel node=8
+[34m2020-02-25 04:32:42.964 UTC [orderer.consensus.etcdraft] apply -> INFO 035[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9] channel=byfn-sys-channel node=8
+[34m2020-02-25 04:32:44.098 UTC [orderer.consensus.etcdraft] Step -> INFO 036[0m 8 [term: 1] received a MsgHeartbeat message with higher term from 4 [term: 2] channel=byfn-sys-channel node=8
+[34m2020-02-25 04:32:44.098 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 037[0m 8 became follower at term 2 channel=byfn-sys-channel node=8
+[34m2020-02-25 04:32:44.098 UTC [orderer.consensus.etcdraft] run -> INFO 038[0m raft.node: 8 elected leader 4 at term 2 channel=byfn-sys-channel node=8
+[34m2020-02-25 04:32:44.101 UTC [orderer.consensus.etcdraft] run -> INFO 039[0m Raft leader changed: 0 -> 4 channel=byfn-sys-channel node=8
+[34m2020-02-25 04:33:07.908 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 03a[0m Writing block [1] (Raft index: 11) to ledger channel=byfn-sys-channel node=8
+[34m2020-02-25 04:33:07.954 UTC [fsblkstorage] newBlockfileMgr -> INFO 03b[0m Getting block information from block storage
+[34m2020-02-25 04:33:07.989 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 03c[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-02-25 04:33:07.998 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 03d[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=8
+[34m2020-02-25 04:33:08.019 UTC [orderer.commmon.multichannel] newChain -> INFO 03e[0m Created and starting new channel mychannel
+[34m2020-02-25 04:33:08.019 UTC [orderer.consensus.etcdraft] Start -> INFO 03f[0m Starting Raft node channel=mychannel node=8
+[34m2020-02-25 04:33:08.031 UTC [orderer.common.cluster] Configure -> INFO 040[0m Entering, channel: mychannel, nodes: [ID: 1,
+Endpoint: orderer.example.com:7050,
+ServerTLSCert:-----BEGIN CERTIFICATE-----
+MIICdzCCAh6gAwIBAgIRALv6Hyw3kAtPKor4yitrXgswCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFgxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMRwwGgYDVQQDExNvcmRlcmVyLmV4YW1wbGUuY29tMFkwEwYHKoZIzj0C
+AQYIKoZIzj0DAQcDQgAEEXzG8k3Ri9c3IeZKgittXgBwo0zN7BzVfEH6HB6m313Y
+jm0FU59tbAPxJXo3nEij8QZqJHIXf92IlfBqCv2OpqOBtDCBsTAOBgNVHQ8BAf8E
+BAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQC
+MAAwKwYDVR0jBCQwIoAgDj+ZYY3AsIQyjfeZVMHAygOYWB2kwmQXEZh0/EJvmRMw
+RQYDVR0RBD4wPIITb3JkZXJlci5leGFtcGxlLmNvbYIHb3JkZXJlcoITb3JkZXJl
+ci5leGFtcGxlLmNvbYIHb3JkZXJlcjAKBggqhkjOPQQDAgNHADBEAiBVJlhRdOZF
+sTKhLv08/GD6oX4+QIkKATe9tjIP+tawFQIgKwsywnmRkXVD4TzDrQGqa9IVZaKG
+8Mt7Lc7zSndovNA=
+-----END CERTIFICATE-----
+, ClientTLSCert:-----BEGIN CERTIFICATE-----
+MIICdzCCAh6gAwIBAgIRALv6Hyw3kAtPKor4yitrXgswCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFgxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMRwwGgYDVQQDExNvcmRlcmVyLmV4YW1wbGUuY29tMFkwEwYHKoZIzj0C
+AQYIKoZIzj0DAQcDQgAEEXzG8k3Ri9c3IeZKgittXgBwo0zN7BzVfEH6HB6m313Y
+jm0FU59tbAPxJXo3nEij8QZqJHIXf92IlfBqCv2OpqOBtDCBsTAOBgNVHQ8BAf8E
+BAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQC
+MAAwKwYDVR0jBCQwIoAgDj+ZYY3AsIQyjfeZVMHAygOYWB2kwmQXEZh0/EJvmRMw
+RQYDVR0RBD4wPIITb3JkZXJlci5leGFtcGxlLmNvbYIHb3JkZXJlcoITb3JkZXJl
+ci5leGFtcGxlLmNvbYIHb3JkZXJlcjAKBggqhkjOPQQDAgNHADBEAiBVJlhRdOZF
+sTKhLv08/GD6oX4+QIkKATe9tjIP+tawFQIgKwsywnmRkXVD4TzDrQGqa9IVZaKG
+8Mt7Lc7zSndovNA=
+-----END CERTIFICATE-----
+ ID: 2,
+Endpoint: orderer2.example.com:8050,
+ServerTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRAMea7O8oz1AFtAfzVSeWXJwwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyMi5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABJVIqxQJEtCwPUtCJ4Ym5k155hHgCpVWJzeMqUZK57Ks
+2iaz0Esy3gf4X8+sFUWXdwhGgCVlCmqXyCOGl6Uq982jgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXIyLmV4YW1wbGUuY29tgghvcmRlcmVyMoIUb3Jk
+ZXJlcjIuZXhhbXBsZS5jb22CCG9yZGVyZXIyMAoGCCqGSM49BAMCA0cAMEQCIFNY
+I8C8cYvQQK2fnyHd2OiQW8uusABSQd4oUkAFYUZYAiB/+7yXRr5CqE2lSujPIDP2
+CQhk6YKCUOhnx9fQZqm1yg==
+-----END CERTIFICATE-----
+, ClientTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRAMea7O8oz1AFtAfzVSeWXJwwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyMi5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABJVIqxQJEtCwPUtCJ4Ym5k155hHgCpVWJzeMqUZK57Ks
+2iaz0Esy3gf4X8+sFUWXdwhGgCVlCmqXyCOGl6Uq982jgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXIyLmV4YW1wbGUuY29tgghvcmRlcmVyMoIUb3Jk
+ZXJlcjIuZXhhbXBsZS5jb22CCG9yZGVyZXIyMAoGCCqGSM49BAMCA0cAMEQCIFNY
+I8C8cYvQQK2fnyHd2OiQW8uusABSQd4oUkAFYUZYAiB/+7yXRr5CqE2lSujPIDP2
+CQhk6YKCUOhnx9fQZqm1yg==
+-----END CERTIFICATE-----
+ ID: 3,
+Endpoint: orderer3.example.com:9050,
+ServerTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRAI7wnRA+uif0DB2TlVk1VfcwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyMy5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABJjg9NJzi8VFjmS7dw24umNdP1Fi7h3PpryhEt1OSX9C
+JIhgTlezMzzHJH9JUxQl7DwQqL0Hond6xkGX6E05lGujgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXIzLmV4YW1wbGUuY29tgghvcmRlcmVyM4IUb3Jk
+ZXJlcjMuZXhhbXBsZS5jb22CCG9yZGVyZXIzMAoGCCqGSM49BAMCA0cAMEQCIHAz
+GR0vSyvsoFlUiyoiJPPYVN5dM4G+sysduQpT84lfAiAmyvH0/K6F0xxTRBLu+JCD
+9gqIYsIyD/WvYdrdxLNH6A==
+-----END CERTIFICATE-----
+, ClientTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRAI7wnRA+uif0DB2TlVk1VfcwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyMy5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABJjg9NJzi8VFjmS7dw24umNdP1Fi7h3PpryhEt1OSX9C
+JIhgTlezMzzHJH9JUxQl7DwQqL0Hond6xkGX6E05lGujgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXIzLmV4YW1wbGUuY29tgghvcmRlcmVyM4IUb3Jk
+ZXJlcjMuZXhhbXBsZS5jb22CCG9yZGVyZXIzMAoGCCqGSM49BAMCA0cAMEQCIHAz
+GR0vSyvsoFlUiyoiJPPYVN5dM4G+sysduQpT84lfAiAmyvH0/K6F0xxTRBLu+JCD
+9gqIYsIyD/WvYdrdxLNH6A==
+-----END CERTIFICATE-----
+ ID: 4,
+Endpoint: orderer4.example.com:10050,
+ServerTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRAJU+FbYEnmcyIVKg4YyFsPEwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyNC5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABAUZ6h7duML0Qba2euScYmCBNKWxD4zSq/el0y23s/w0
+Gve3gTFJMK6+jHXDSGPyFH7ixcH3QGQarpUQ+l0vBsqjgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXI0LmV4YW1wbGUuY29tgghvcmRlcmVyNIIUb3Jk
+ZXJlcjQuZXhhbXBsZS5jb22CCG9yZGVyZXI0MAoGCCqGSM49BAMCA0cAMEQCIFuO
+hi/czt/XeJchwMY4a7SX9WnQo0LEuPUDgNy/VST6AiAGnnkQ+++f1jUYF6NWVDhy
+MCTqhDzD4kvnN5hy8wsp5w==
+-----END CERTIFICATE-----
+, ClientTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRAJU+FbYEnmcyIVKg4YyFsPEwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyNC5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABAUZ6h7duML0Qba2euScYmCBNKWxD4zSq/el0y23s/w0
+Gve3gTFJMK6+jHXDSGPyFH7ixcH3QGQarpUQ+l0vBsqjgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXI0LmV4YW1wbGUuY29tgghvcmRlcmVyNIIUb3Jk
+ZXJlcjQuZXhhbXBsZS5jb22CCG9yZGVyZXI0MAoGCCqGSM49BAMCA0cAMEQCIFuO
+hi/czt/XeJchwMY4a7SX9WnQo0LEuPUDgNy/VST6AiAGnnkQ+++f1jUYF6NWVDhy
+MCTqhDzD4kvnN5hy8wsp5w==
+-----END CERTIFICATE-----
+ ID: 9,
+Endpoint: orderer9.example.com:15050,
+ServerTLSCert:-----BEGIN CERTIFICATE-----
+MIICfTCCAiOgAwIBAgIRAM9F/YtxcMb6PhxZJTYUxXUwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyOS5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABLjEW9Qk1mgve1ZwI42ZUymXh/G4qJ+2BHeaxKVr98IK
+0B5dfSbw3KJb81HzhyLnV9JEZAuXbrOQaZv+nQE5H4yjgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXI5LmV4YW1wbGUuY29tgghvcmRlcmVyOYIUb3Jk
+ZXJlcjkuZXhhbXBsZS5jb22CCG9yZGVyZXI5MAoGCCqGSM49BAMCA0gAMEUCIQDO
+55JEZd8hT5wpFiNKQzrwkoNNZq6JMmyczVM+rFAZtgIgG4xjFC9gDdpqmoDiSOo/
+ru/Xw0thByyD4cmRlpFc+Bk=
+-----END CERTIFICATE-----
+, ClientTLSCert:-----BEGIN CERTIFICATE-----
+MIICfTCCAiOgAwIBAgIRAM9F/YtxcMb6PhxZJTYUxXUwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyOS5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABLjEW9Qk1mgve1ZwI42ZUymXh/G4qJ+2BHeaxKVr98IK
+0B5dfSbw3KJb81HzhyLnV9JEZAuXbrOQaZv+nQE5H4yjgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXI5LmV4YW1wbGUuY29tgghvcmRlcmVyOYIUb3Jk
+ZXJlcjkuZXhhbXBsZS5jb22CCG9yZGVyZXI5MAoGCCqGSM49BAMCA0gAMEUCIQDO
+55JEZd8hT5wpFiNKQzrwkoNNZq6JMmyczVM+rFAZtgIgG4xjFC9gDdpqmoDiSOo/
+ru/Xw0thByyD4cmRlpFc+Bk=
+-----END CERTIFICATE-----
+ ID: 5,
+Endpoint: orderer5.example.com:11050,
+ServerTLSCert:-----BEGIN CERTIFICATE-----
+MIICezCCAiKgAwIBAgIQG1nSjWmXbqAohCUfDvOzVTAKBggqhkjOPQQDAjBsMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEUMBIGA1UEChMLZXhhbXBsZS5jb20xGjAYBgNVBAMTEXRsc2NhLmV4
+YW1wbGUuY29tMB4XDTIwMDIyNTA0MjcwMFoXDTMwMDIyMjA0MjcwMFowWTELMAkG
+A1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBGcmFu
+Y2lzY28xHTAbBgNVBAMTFG9yZGVyZXI1LmV4YW1wbGUuY29tMFkwEwYHKoZIzj0C
+AQYIKoZIzj0DAQcDQgAE0HsXO2LrkR0YrGK94xuJeH0EYarCsiQcoWWP+ikQJ6Ti
+y8YKcN5nMKCpQyjMYASTsaT3if/z7iDW87WPnVPkd6OBuDCBtTAOBgNVHQ8BAf8E
+BAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQC
+MAAwKwYDVR0jBCQwIoAgDj+ZYY3AsIQyjfeZVMHAygOYWB2kwmQXEZh0/EJvmRMw
+SQYDVR0RBEIwQIIUb3JkZXJlcjUuZXhhbXBsZS5jb22CCG9yZGVyZXI1ghRvcmRl
+cmVyNS5leGFtcGxlLmNvbYIIb3JkZXJlcjUwCgYIKoZIzj0EAwIDRwAwRAIgDRhi
+bnyIsCAiMs4qyqqJUyLw5TBAtTcZWzpHOHXId14CIF03BnZvjkxosTON2YHAmaKN
+rxO38opNYoSu8Ii0bham
+-----END CERTIFICATE-----
+, ClientTLSCert:-----BEGIN CERTIFICATE-----
+MIICezCCAiKgAwIBAgIQG1nSjWmXbqAohCUfDvOzVTAKBggqhkjOPQQDAjBsMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+YW5jaXNjbzEUMBIGA1UEChMLZXhhbXBsZS5jb20xGjAYBgNVBAMTEXRsc2NhLmV4
+YW1wbGUuY29tMB4XDTIwMDIyNTA0MjcwMFoXDTMwMDIyMjA0MjcwMFowWTELMAkG
+A1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBGcmFu
+Y2lzY28xHTAbBgNVBAMTFG9yZGVyZXI1LmV4YW1wbGUuY29tMFkwEwYHKoZIzj0C
+AQYIKoZIzj0DAQcDQgAE0HsXO2LrkR0YrGK94xuJeH0EYarCsiQcoWWP+ikQJ6Ti
+y8YKcN5nMKCpQyjMYASTsaT3if/z7iDW87WPnVPkd6OBuDCBtTAOBgNVHQ8BAf8E
+BAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQC
+MAAwKwYDVR0jBCQwIoAgDj+ZYY3AsIQyjfeZVMHAygOYWB2kwmQXEZh0/EJvmRMw
+SQYDVR0RBEIwQIIUb3JkZXJlcjUuZXhhbXBsZS5jb22CCG9yZGVyZXI1ghRvcmRl
+cmVyNS5leGFtcGxlLmNvbYIIb3JkZXJlcjUwCgYIKoZIzj0EAwIDRwAwRAIgDRhi
+bnyIsCAiMs4qyqqJUyLw5TBAtTcZWzpHOHXId14CIF03BnZvjkxosTON2YHAmaKN
+rxO38opNYoSu8Ii0bham
+-----END CERTIFICATE-----
+ ID: 6,
+Endpoint: orderer6.example.com:12050,
+ServerTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRAIvfchSiBb32jHYRft1gZaUwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyNi5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABHJH+D3wQjqFyqJP1jEpSkuBsY+TnWLPcDhr4iI9Y/mx
+myivgciaG4kjp6Jeend+R1y0hKkCTk0EE7iNsGTYbAejgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXI2LmV4YW1wbGUuY29tgghvcmRlcmVyNoIUb3Jk
+ZXJlcjYuZXhhbXBsZS5jb22CCG9yZGVyZXI2MAoGCCqGSM49BAMCA0cAMEQCID18
+kTXZSCjL3iJzrZvTXZAI+j4WV2Ob/gelypGWI5vsAiADksaC/cEgaWI+gf6qRJjY
+8Fr3peSjoho9F4ogJPI78A==
+-----END CERTIFICATE-----
+, ClientTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRAIvfchSiBb32jHYRft1gZaUwCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyNi5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABHJH+D3wQjqFyqJP1jEpSkuBsY+TnWLPcDhr4iI9Y/mx
+myivgciaG4kjp6Jeend+R1y0hKkCTk0EE7iNsGTYbAejgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXI2LmV4YW1wbGUuY29tgghvcmRlcmVyNoIUb3Jk
+ZXJlcjYuZXhhbXBsZS5jb22CCG9yZGVyZXI2MAoGCCqGSM49BAMCA0cAMEQCID18
+kTXZSCjL3iJzrZvTXZAI+j4WV2Ob/gelypGWI5vsAiADksaC/cEgaWI+gf6qRJjY
+8Fr3peSjoho9F4ogJPI78A==
+-----END CERTIFICATE-----
+ ID: 7,
+Endpoint: orderer7.example.com:13050,
+ServerTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRALK6Tr6qiJj2mppqwH3b5bowCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyNy5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABA4ZKYqzIPBHBX+ENKqCX/NrHl/UP79/eLwbJX/B6QBz
+4EjnenSO3fMrLX1m6PIrMxOHyKYU39k2zwEY/QdtNOyjgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXI3LmV4YW1wbGUuY29tgghvcmRlcmVyN4IUb3Jk
+ZXJlcjcuZXhhbXBsZS5jb22CCG9yZGVyZXI3MAoGCCqGSM49BAMCA0cAMEQCIC2t
+fNuH7gBUWodpzwONurLl8pPFd+O5thIcevoQXaHlAiAdU+t1sG0S7NDlw8f9k0ex
+glb5jyz9raKnSrk6eAagEg==
+-----END CERTIFICATE-----
+, ClientTLSCert:-----BEGIN CERTIFICATE-----
+MIICfDCCAiOgAwIBAgIRALK6Tr6qiJj2mppqwH3b5bowCgYIKoZIzj0EAwIwbDEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xFDASBgNVBAoTC2V4YW1wbGUuY29tMRowGAYDVQQDExF0bHNjYS5l
+eGFtcGxlLmNvbTAeFw0yMDAyMjUwNDI3MDBaFw0zMDAyMjIwNDI3MDBaMFkxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJh
+bmNpc2NvMR0wGwYDVQQDExRvcmRlcmVyNy5leGFtcGxlLmNvbTBZMBMGByqGSM49
+AgEGCCqGSM49AwEHA0IABA4ZKYqzIPBHBX+ENKqCX/NrHl/UP79/eLwbJX/B6QBz
+4EjnenSO3fMrLX1m6PIrMxOHyKYU39k2zwEY/QdtNOyjgbgwgbUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E
+AjAAMCsGA1UdIwQkMCKAIA4/mWGNwLCEMo33mVTBwMoDmFgdpMJkFxGYdPxCb5kT
+MEkGA1UdEQRCMECCFG9yZGVyZXI3LmV4YW1wbGUuY29tgghvcmRlcmVyN4IUb3Jk
+ZXJlcjcuZXhhbXBsZS5jb22CCG9yZGVyZXI3MAoGCCqGSM49BAMCA0cAMEQCIC2t
+fNuH7gBUWodpzwONurLl8pPFd+O5thIcevoQXaHlAiAdU+t1sG0S7NDlw8f9k0ex
+glb5jyz9raKnSrk6eAagEg==
+-----END CERTIFICATE-----
+]
+[34m2020-02-25 04:33:08.032 UTC [orderer.common.cluster] updateStubInMapping -> INFO 041[0m Allocating a new stub for node 1 with endpoint of orderer.example.com:7050 for channel mychannel
+[34m2020-02-25 04:33:08.032 UTC [orderer.common.cluster] updateStubInMapping -> INFO 042[0m Deactivating node 1 in channel mychannel with endpoint of orderer.example.com:7050 due to TLS certificate change
+[34m2020-02-25 04:33:08.032 UTC [orderer.common.cluster] updateStubInMapping -> INFO 043[0m Allocating a new stub for node 2 with endpoint of orderer2.example.com:8050 for channel mychannel
+[34m2020-02-25 04:33:08.032 UTC [orderer.common.cluster] updateStubInMapping -> INFO 044[0m Deactivating node 2 in channel mychannel with endpoint of orderer2.example.com:8050 due to TLS certificate change
+[34m2020-02-25 04:33:08.032 UTC [orderer.common.cluster] updateStubInMapping -> INFO 045[0m Allocating a new stub for node 3 with endpoint of orderer3.example.com:9050 for channel mychannel
+[34m2020-02-25 04:33:08.033 UTC [orderer.common.cluster] updateStubInMapping -> INFO 046[0m Deactivating node 3 in channel mychannel with endpoint of orderer3.example.com:9050 due to TLS certificate change
+[34m2020-02-25 04:33:08.033 UTC [orderer.common.cluster] updateStubInMapping -> INFO 047[0m Allocating a new stub for node 4 with endpoint of orderer4.example.com:10050 for channel mychannel
+[34m2020-02-25 04:33:08.033 UTC [orderer.common.cluster] updateStubInMapping -> INFO 048[0m Deactivating node 4 in channel mychannel with endpoint of orderer4.example.com:10050 due to TLS certificate change
+[34m2020-02-25 04:33:08.033 UTC [orderer.common.cluster] updateStubInMapping -> INFO 049[0m Allocating a new stub for node 9 with endpoint of orderer9.example.com:15050 for channel mychannel
+[34m2020-02-25 04:33:08.033 UTC [orderer.common.cluster] updateStubInMapping -> INFO 04a[0m Deactivating node 9 in channel mychannel with endpoint of orderer9.example.com:15050 due to TLS certificate change
+[34m2020-02-25 04:33:08.034 UTC [orderer.common.cluster] updateStubInMapping -> INFO 04b[0m Allocating a new stub for node 5 with endpoint of orderer5.example.com:11050 for channel mychannel
+[34m2020-02-25 04:33:08.038 UTC [orderer.common.cluster] updateStubInMapping -> INFO 04c[0m Deactivating node 5 in channel mychannel with endpoint of orderer5.example.com:11050 due to TLS certificate change
+[34m2020-02-25 04:33:08.039 UTC [orderer.common.cluster] updateStubInMapping -> INFO 04d[0m Allocating a new stub for node 6 with endpoint of orderer6.example.com:12050 for channel mychannel
+[34m2020-02-25 04:33:08.040 UTC [orderer.common.cluster] updateStubInMapping -> INFO 04e[0m Deactivating node 6 in channel mychannel with endpoint of orderer6.example.com:12050 due to TLS certificate change
+[34m2020-02-25 04:33:08.040 UTC [orderer.common.cluster] updateStubInMapping -> INFO 04f[0m Allocating a new stub for node 7 with endpoint of orderer7.example.com:13050 for channel mychannel
+[34m2020-02-25 04:33:08.040 UTC [orderer.common.cluster] updateStubInMapping -> INFO 050[0m Deactivating node 7 in channel mychannel with endpoint of orderer7.example.com:13050 due to TLS certificate change
+[34m2020-02-25 04:33:08.042 UTC [orderer.common.cluster] applyMembershipConfig -> INFO 051[0m 2 exists in both old and new membership for channel mychannel , skipping its deactivation
+[34m2020-02-25 04:33:08.042 UTC [orderer.common.cluster] applyMembershipConfig -> INFO 052[0m 3 exists in both old and new membership for channel mychannel , skipping its deactivation
+[34m2020-02-25 04:33:08.042 UTC [orderer.common.cluster] applyMembershipConfig -> INFO 053[0m 4 exists in both old and new membership for channel mychannel , skipping its deactivation
+[34m2020-02-25 04:33:08.042 UTC [orderer.common.cluster] applyMembershipConfig -> INFO 054[0m 9 exists in both old and new membership for channel mychannel , skipping its deactivation
+[34m2020-02-25 04:33:08.043 UTC [orderer.common.cluster] applyMembershipConfig -> INFO 055[0m 5 exists in both old and new membership for channel mychannel , skipping its deactivation
+[34m2020-02-25 04:33:08.043 UTC [orderer.common.cluster] applyMembershipConfig -> INFO 056[0m 6 exists in both old and new membership for channel mychannel , skipping its deactivation
+[34m2020-02-25 04:33:08.043 UTC [orderer.common.cluster] applyMembershipConfig -> INFO 057[0m 7 exists in both old and new membership for channel mychannel , skipping its deactivation
+[34m2020-02-25 04:33:08.044 UTC [orderer.common.cluster] applyMembershipConfig -> INFO 058[0m 1 exists in both old and new membership for channel mychannel , skipping its deactivation
+[34m2020-02-25 04:33:08.044 UTC [orderer.common.cluster] Configure -> INFO 059[0m Exiting
+[34m2020-02-25 04:33:08.044 UTC [orderer.consensus.etcdraft] start -> INFO 05a[0m Starting raft node as part of a new channel channel=mychannel node=8
+[34m2020-02-25 04:33:08.044 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 05b[0m 8 became follower at term 0 channel=mychannel node=8
+[34m2020-02-25 04:33:08.047 UTC [orderer.consensus.etcdraft] newRaft -> INFO 05c[0m newRaft 8 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=8
+[34m2020-02-25 04:33:08.050 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 05d[0m 8 became follower at term 1 channel=mychannel node=8
+[34m2020-02-25 04:33:08.051 UTC [orderer.consensus.etcdraft] run -> INFO 05e[0m This node is picked to start campaign channel=mychannel node=8
+[34m2020-02-25 04:33:08.063 UTC [orderer.consensus.etcdraft] apply -> INFO 05f[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9] channel=mychannel node=8
+[34m2020-02-25 04:33:08.063 UTC [orderer.consensus.etcdraft] apply -> INFO 060[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9] channel=mychannel node=8
+[34m2020-02-25 04:33:08.064 UTC [orderer.consensus.etcdraft] apply -> INFO 061[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9] channel=mychannel node=8
+[34m2020-02-25 04:33:08.064 UTC [orderer.consensus.etcdraft] apply -> INFO 062[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9] channel=mychannel node=8
+[34m2020-02-25 04:33:08.064 UTC [orderer.consensus.etcdraft] apply -> INFO 063[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9] channel=mychannel node=8
+[34m2020-02-25 04:33:08.064 UTC [orderer.consensus.etcdraft] apply -> INFO 064[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9] channel=mychannel node=8
+[34m2020-02-25 04:33:08.064 UTC [orderer.consensus.etcdraft] apply -> INFO 065[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9] channel=mychannel node=8
+[34m2020-02-25 04:33:08.064 UTC [orderer.consensus.etcdraft] apply -> INFO 066[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9] channel=mychannel node=8
+[34m2020-02-25 04:33:08.064 UTC [orderer.consensus.etcdraft] apply -> INFO 067[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9] channel=mychannel node=8
+[34m2020-02-25 04:33:09.052 UTC [orderer.consensus.etcdraft] Step -> INFO 068[0m 8 is starting a new election at term 1 channel=mychannel node=8
+[34m2020-02-25 04:33:09.052 UTC [orderer.consensus.etcdraft] becomePreCandidate -> INFO 069[0m 8 became pre-candidate at term 1 channel=mychannel node=8
+[34m2020-02-25 04:33:09.052 UTC [orderer.consensus.etcdraft] poll -> INFO 06a[0m 8 received MsgPreVoteResp from 8 at term 1 channel=mychannel node=8
+[34m2020-02-25 04:33:09.052 UTC [orderer.consensus.etcdraft] campaign -> INFO 06b[0m 8 [logterm: 1, index: 9] sent MsgPreVote request to 3 at term 1 channel=mychannel node=8
+[34m2020-02-25 04:33:09.052 UTC [orderer.consensus.etcdraft] campaign -> INFO 06c[0m 8 [logterm: 1, index: 9] sent MsgPreVote request to 4 at term 1 channel=mychannel node=8
+[34m2020-02-25 04:33:09.053 UTC [orderer.consensus.etcdraft] campaign -> INFO 06d[0m 8 [logterm: 1, index: 9] sent MsgPreVote request to 6 at term 1 channel=mychannel node=8
+[34m2020-02-25 04:33:09.053 UTC [orderer.consensus.etcdraft] campaign -> INFO 06e[0m 8 [logterm: 1, index: 9] sent MsgPreVote request to 7 at term 1 channel=mychannel node=8
+[34m2020-02-25 04:33:09.053 UTC [orderer.consensus.etcdraft] campaign -> INFO 06f[0m 8 [logterm: 1, index: 9] sent MsgPreVote request to 9 at term 1 channel=mychannel node=8
+[34m2020-02-25 04:33:09.054 UTC [orderer.consensus.etcdraft] campaign -> INFO 070[0m 8 [logterm: 1, index: 9] sent MsgPreVote request to 1 at term 1 channel=mychannel node=8
+[34m2020-02-25 04:33:09.054 UTC [orderer.consensus.etcdraft] campaign -> INFO 071[0m 8 [logterm: 1, index: 9] sent MsgPreVote request to 2 at term 1 channel=mychannel node=8
+[34m2020-02-25 04:33:09.054 UTC [orderer.consensus.etcdraft] campaign -> INFO 072[0m 8 [logterm: 1, index: 9] sent MsgPreVote request to 5 at term 1 channel=mychannel node=8
+[34m2020-02-25 04:33:09.062 UTC [orderer.consensus.etcdraft] poll -> INFO 073[0m 8 received MsgPreVoteResp from 6 at term 1 channel=mychannel node=8
+[34m2020-02-25 04:33:09.062 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 074[0m 8 [quorum:5] has received 2 MsgPreVoteResp votes and 0 vote rejections channel=mychannel node=8
+[34m2020-02-25 04:33:09.069 UTC [orderer.consensus.etcdraft] poll -> INFO 075[0m 8 received MsgPreVoteResp from 1 at term 1 channel=mychannel node=8
+[34m2020-02-25 04:33:09.069 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 076[0m 8 [quorum:5] has received 3 MsgPreVoteResp votes and 0 vote rejections channel=mychannel node=8
+[34m2020-02-25 04:33:09.072 UTC [orderer.consensus.etcdraft] poll -> INFO 077[0m 8 received MsgPreVoteResp from 3 at term 1 channel=mychannel node=8
+[34m2020-02-25 04:33:09.072 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 078[0m 8 [quorum:5] has received 4 MsgPreVoteResp votes and 0 vote rejections channel=mychannel node=8
+[34m2020-02-25 04:33:09.072 UTC [orderer.consensus.etcdraft] poll -> INFO 079[0m 8 received MsgPreVoteResp from 2 at term 1 channel=mychannel node=8
+[34m2020-02-25 04:33:09.073 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 07a[0m 8 [quorum:5] has received 5 MsgPreVoteResp votes and 0 vote rejections channel=mychannel node=8
+[34m2020-02-25 04:33:09.073 UTC [orderer.consensus.etcdraft] becomeCandidate -> INFO 07b[0m 8 became candidate at term 2 channel=mychannel node=8
+[34m2020-02-25 04:33:09.075 UTC [orderer.consensus.etcdraft] poll -> INFO 07c[0m 8 received MsgVoteResp from 8 at term 2 channel=mychannel node=8
+[34m2020-02-25 04:33:09.075 UTC [orderer.consensus.etcdraft] campaign -> INFO 07d[0m 8 [logterm: 1, index: 9] sent MsgVote request to 3 at term 2 channel=mychannel node=8
+[34m2020-02-25 04:33:09.075 UTC [orderer.consensus.etcdraft] campaign -> INFO 07e[0m 8 [logterm: 1, index: 9] sent MsgVote request to 4 at term 2 channel=mychannel node=8
+[34m2020-02-25 04:33:09.079 UTC [orderer.consensus.etcdraft] campaign -> INFO 07f[0m 8 [logterm: 1, index: 9] sent MsgVote request to 6 at term 2 channel=mychannel node=8
+[34m2020-02-25 04:33:09.079 UTC [orderer.consensus.etcdraft] campaign -> INFO 080[0m 8 [logterm: 1, index: 9] sent MsgVote request to 7 at term 2 channel=mychannel node=8
+[34m2020-02-25 04:33:09.079 UTC [orderer.consensus.etcdraft] campaign -> INFO 081[0m 8 [logterm: 1, index: 9] sent MsgVote request to 1 at term 2 channel=mychannel node=8
+[34m2020-02-25 04:33:09.079 UTC [orderer.consensus.etcdraft] campaign -> INFO 082[0m 8 [logterm: 1, index: 9] sent MsgVote request to 2 at term 2 channel=mychannel node=8
+[34m2020-02-25 04:33:09.079 UTC [orderer.consensus.etcdraft] campaign -> INFO 083[0m 8 [logterm: 1, index: 9] sent MsgVote request to 5 at term 2 channel=mychannel node=8
+[34m2020-02-25 04:33:09.079 UTC [orderer.consensus.etcdraft] campaign -> INFO 084[0m 8 [logterm: 1, index: 9] sent MsgVote request to 9 at term 2 channel=mychannel node=8
+[34m2020-02-25 04:33:09.099 UTC [orderer.consensus.etcdraft] poll -> INFO 085[0m 8 received MsgVoteResp from 3 at term 2 channel=mychannel node=8
+[34m2020-02-25 04:33:09.099 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 086[0m 8 [quorum:5] has received 2 MsgVoteResp votes and 0 vote rejections channel=mychannel node=8
+[34m2020-02-25 04:33:09.102 UTC [orderer.consensus.etcdraft] poll -> INFO 087[0m 8 received MsgVoteResp from 2 at term 2 channel=mychannel node=8
+[34m2020-02-25 04:33:09.103 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 088[0m 8 [quorum:5] has received 3 MsgVoteResp votes and 0 vote rejections channel=mychannel node=8
+[34m2020-02-25 04:33:09.103 UTC [orderer.consensus.etcdraft] poll -> INFO 089[0m 8 received MsgVoteResp from 1 at term 2 channel=mychannel node=8
+[34m2020-02-25 04:33:09.103 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 08a[0m 8 [quorum:5] has received 4 MsgVoteResp votes and 0 vote rejections channel=mychannel node=8
+[34m2020-02-25 04:33:09.104 UTC [orderer.consensus.etcdraft] poll -> INFO 08b[0m 8 received MsgVoteResp from 7 at term 2 channel=mychannel node=8
+[34m2020-02-25 04:33:09.107 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 08c[0m 8 [quorum:5] has received 5 MsgVoteResp votes and 0 vote rejections channel=mychannel node=8
+[34m2020-02-25 04:33:09.109 UTC [orderer.consensus.etcdraft] becomeLeader -> INFO 08d[0m 8 became leader at term 2 channel=mychannel node=8
+[34m2020-02-25 04:33:09.110 UTC [orderer.consensus.etcdraft] run -> INFO 08e[0m raft.node: 8 elected leader 8 at term 2 channel=mychannel node=8
+[34m2020-02-25 04:33:09.120 UTC [orderer.consensus.etcdraft] run -> INFO 08f[0m Raft leader changed: 0 -> 8 channel=mychannel node=8
+[34m2020-02-25 04:33:09.120 UTC [orderer.consensus.etcdraft] run -> INFO 090[0m Leader 8 is present, quit campaign channel=mychannel node=8
+[34m2020-02-25 04:33:09.142 UTC [orderer.consensus.etcdraft] run -> INFO 091[0m Start accepting requests as Raft leader at block [0] channel=mychannel node=8
+[34m2020-02-25 04:34:32.206 UTC [orderer.consensus.etcdraft] propose -> INFO 092[0m Created block [1], there are 0 blocks in flight channel=mychannel node=8
+[34m2020-02-25 04:34:32.207 UTC [orderer.consensus.etcdraft] run -> INFO 093[0m Received config transaction, pause accepting transaction till it is committed channel=mychannel node=8
+[34m2020-02-25 04:34:32.223 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 094[0m Writing block [1] (Raft index: 11) to ledger channel=mychannel node=8
+[34m2020-02-25 04:34:35.059 UTC [comm.grpc.server] 1 -> INFO 095[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Deliver grpc.peer_address=192.168.16.32:34248 error="context finished before block retrieved: context canceled" grpc.code=Unknown grpc.call_duration=6.5287ms
+[34m2020-02-25 04:34:35.395 UTC [orderer.consensus.etcdraft] propose -> INFO 096[0m Created block [2], there are 0 blocks in flight channel=mychannel node=8
+[34m2020-02-25 04:34:35.395 UTC [orderer.consensus.etcdraft] run -> INFO 097[0m Received config transaction, pause accepting transaction till it is committed channel=mychannel node=8
+[34m2020-02-25 04:34:35.405 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 098[0m Writing block [2] (Raft index: 12) to ledger channel=mychannel node=8
+[34m2020-02-25 04:35:51.038 UTC [orderer.consensus.etcdraft] propose -> INFO 099[0m Created block [3], there are 0 blocks in flight channel=mychannel node=8
+[34m2020-02-25 04:35:51.064 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 09a[0m Writing block [3] (Raft index: 13) to ledger channel=mychannel node=8
+[34m2020-02-25 04:37:17.033 UTC [orderer.consensus.etcdraft] propose -> INFO 09b[0m Created block [4], there are 0 blocks in flight channel=mychannel node=8
+[34m2020-02-25 04:37:17.086 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 09c[0m Writing block [4] (Raft index: 14) to ledger channel=mychannel node=8
+[34m2020-02-25 04:37:23.030 UTC [orderer.consensus.etcdraft] propose -> INFO 09d[0m Created block [5], there are 0 blocks in flight channel=mychannel node=8
+[34m2020-02-25 04:37:23.093 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 09e[0m Writing block [5] (Raft index: 15) to ledger channel=mychannel node=8
+[34m2020-02-25 04:38:00.300 UTC [orderer.consensus.etcdraft] propose -> INFO 09f[0m Created block [6], there are 0 blocks in flight channel=mychannel node=8
+[34m2020-02-25 04:38:00.527 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a0[0m Writing block [6] (Raft index: 16) to ledger channel=mychannel node=8
+[34m2020-02-25 04:42:58.068 UTC [orderer.consensus.etcdraft] propose -> INFO 0a1[0m Created block [7], there are 0 blocks in flight channel=mychannel node=8
+[34m2020-02-25 04:42:58.088 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a2[0m Writing block [7] (Raft index: 17) to ledger channel=mychannel node=8
+[34m2020-02-25 10:39:40.089 UTC [orderer.consensus.etcdraft] propose -> INFO 0a3[0m Created block [8], there are 0 blocks in flight channel=mychannel node=8
+[34m2020-02-25 10:39:40.132 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a4[0m Writing block [8] (Raft index: 18) to ledger channel=mychannel node=8
+[34m2020-02-25 11:02:37.951 UTC [orderer.consensus.etcdraft] propose -> INFO 0a5[0m Created block [9], there are 0 blocks in flight channel=mychannel node=8
+[34m2020-02-25 11:02:37.962 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a6[0m Writing block [9] (Raft index: 19) to ledger channel=mychannel node=8
