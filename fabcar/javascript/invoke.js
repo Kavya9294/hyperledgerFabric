@@ -11,7 +11,7 @@ const path = require('path');
 async function main() {
     try {
         // load the network configuration
-        const ccpPath = path.resolve(__dirname, '..', '..', 'first-network/orderers20', 'connection-org1.json');
+        const ccpPath = path.resolve(__dirname, '..', '..', 'first-network/orderers10', 'connection-org1.json');
         let ccp = JSON.parse(fs.readFileSync(ccpPath, 'utf8'));
 
         // Create a new file system based wallet for managing identities.
