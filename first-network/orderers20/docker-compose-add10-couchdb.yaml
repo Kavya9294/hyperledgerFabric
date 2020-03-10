@@ -1,0 +1,253 @@
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+version: '2'
+
+networks:
+  byfn:
+
+services:
+
+  couchdb20:
+    container_name: couchdb20
+    image: couchdb:2.3
+
+    environment:
+      - COUCHDB_USER=
+      - COUCHDB_PASSWORD=
+
+    ports:
+      - "25084:5984"
+    networks:
+      - byfn
+
+  peer10.org1.example.com:
+    environment:
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb20:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
+    depends_on:
+      - couchdb20
+    
+
+  couchdb21:
+    container_name: couchdb21
+    image: couchdb:2.3
+
+    environment:
+      - COUCHDB_USER=
+      - COUCHDB_PASSWORD=
+
+    ports:
+      - "26084:5984"
+    networks:
+      - byfn
+
+  peer11.org1.example.com:
+    environment:
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb21:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=byfn
+    depends_on:
+      - couchdb21
+    
+
+  couchdb22:
+    container_name: couchdb22
+    image: couchdb:2.3
+
+    environment:
+      - COUCHDB_USER=
+      - COUCHDB_PASSWORD=
+
+    ports:
+      - "27084:5984"
+    networks:
+      - byfn
+
+  peer12.org1.example.com:
+    environment:
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb22:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
+    depends_on:
+      - couchdb22
+    
+
+  couchdb23:
+    container_name: couchdb23
+    image: couchdb:2.3
+
+    environment:
+      - COUCHDB_USER=
+      - COUCHDB_PASSWORD=
+
+    ports:
+      - "28084:5984"
+    networks:
+      - byfn
+
+  peer13.org1.example.com:
+    environment:
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb23:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
+    depends_on:
+      - couchdb23
+    
+
+  couchdb24:
+    container_name: couchdb24
+    image: couchdb:2.3
+
+    environment:
+      - COUCHDB_USER=
+      - COUCHDB_PASSWORD=
+
+    ports:
+      - "29084:5984"
+    networks:
+      - byfn
+
+  peer14.org1.example.com:
+    environment:
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb24:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
+    depends_on:
+      - couchdb24
+    
+
+  couchdb30:
+    container_name: couchdb30
+    image: couchdb:2.3
+
+    environment:
+      - COUCHDB_USER=
+      - COUCHDB_PASSWORD=
+
+    ports:
+      - "35084:5984"
+    networks:
+      - byfn
+
+  peer10.org2.example.com:
+    environment:
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb30:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
+    depends_on:
+      - couchdb30
+
+  couchdb31:
+    container_name: couchdb31
+    image: couchdb:2.3
+
+    environment:
+      - COUCHDB_USER=
+      - COUCHDB_PASSWORD=
+
+    ports:
+      - "36084:5984"
+    networks:
+      - byfn
+
+  peer11.org2.example.com:
+    environment:
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb31:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
+    depends_on:
+      - couchdb31
+    
+
+  couchdb32:
+    container_name: couchdb32
+    image: couchdb:2.3
+
+    environment:
+      - COUCHDB_USER=
+      - COUCHDB_PASSWORD=
+
+    ports:
+      - "37084:5984"
+    networks:
+      - byfn
+
+  peer12.org2.example.com:
+    environment:
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb32:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
+    depends_on:
+      - couchdb32
+    
+
+  couchdb33:
+    container_name: couchdb33
+    image: couchdb:2.3
+
+    environment:
+      - COUCHDB_USER=
+      - COUCHDB_PASSWORD=
+
+    ports:
+      - "38084:5984"
+    networks:
+      - byfn
+
+  peer13.org2.example.com:
+    environment:
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb33:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
+    depends_on:
+      - couchdb33
+    
+
+  couchdb34:
+    container_name: couchdb34
+    image: couchdb:2.3
+
+    environment:
+      - COUCHDB_USER=
+      - COUCHDB_PASSWORD=
+
+    ports:
+      - "39084:5984"
+    networks:
+      - byfn
+
+  peer14.org2.example.com:
+    environment:
+      - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb34:5984
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=
+      - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=
+    depends_on:
+      - couchdb34
+    
+
+  couchdb35:
+    container_name: couchdb35
+    image: couchdb:2.3
+
+    environment:
+      - COUCHDB_USER=
+      - COUCHDB_PASSWORD=
+
+    ports:
+      - "40084:5984"
+    networks:
+      - byfn
