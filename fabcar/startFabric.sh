@@ -51,7 +51,7 @@ fi
  rm -rf ./hfc-key-store
 
  # launch network; create channel and join peer to channel
- pushd ../first-network/orderers16/
+ pushd ../first-network/orderers10/
  echo y | ./byfn.sh down
  echo y | ./byfn.sh up -a -n -s couchdb
  popd
