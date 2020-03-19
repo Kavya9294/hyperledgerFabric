@@ -1,0 +1,151 @@
+[34m2020-03-18 23:21:31.497 UTC [nodeCmd] serve -> INFO 001[0m Starting peer:
+ Version: 2.0.0
+ Commit SHA: 0432c3e
+ Go version: go1.13.4
+ OS/Arch: linux/amd64
+ Chaincode:
+  Base Docker Namespace: hyperledger
+  Base Docker Label: org.hyperledger.fabric
+  Docker Namespace: hyperledger
+[34m2020-03-18 23:21:31.498 UTC [peer] getLocalAddress -> INFO 002[0m Auto-detected peer address: 172.18.0.38:19051
+[34m2020-03-18 23:21:31.498 UTC [peer] getLocalAddress -> INFO 003[0m Returning peer2.org2.example.com:19051
+[34m2020-03-18 23:21:31.555 UTC [nodeCmd] serve -> INFO 004[0m Starting peer with TLS enabled
+[34m2020-03-18 23:21:32.119 UTC [gossip.service] New -> INFO 005[0m Initialize gossip with endpoint peer2.org2.example.com:19051
+[34m2020-03-18 23:21:32.121 UTC [gossip.gossip] New -> INFO 006[0m Creating gossip service with self membership of Endpoint: peer2.org2.example.com:19051, InternalEndpoint: peer2.org2.example.com:19051, PKI-ID: e487036741cd1d971492d20cc8b00829805c9d67898dc6d3434ca5ad28ecd2ff, Metadata: 
+[34m2020-03-18 23:21:32.122 UTC [gossip.gossip] start -> INFO 007[0m Gossip instance peer2.org2.example.com:19051 started
+[34m2020-03-18 23:21:32.232 UTC [ledgermgmt] NewLedgerMgr -> INFO 008[0m Initializing LedgerMgr
+[34m2020-03-18 23:21:34.201 UTC [leveldbhelper] openDBAndCheckFormat -> INFO 009[0m DB is empty Setting db format as 2.0
+[34m2020-03-18 23:21:34.333 UTC [fsblkstorage] NewProvider -> INFO 00a[0m Creating new file ledger directory at /var/hyperledger/production/ledgersData/chains/chains
+[34m2020-03-18 23:21:35.082 UTC [leveldbhelper] openDBAndCheckFormat -> INFO 00b[0m DB is empty Setting db format as 2.0
+[33m2020-03-18 23:21:35.123 UTC [gossip.discovery] func1 -> WARN 00c[0m Could not connect to Endpoint: peer0.org2.example.com:17051, InternalEndpoint: peer0.org2.example.com:17051, PKI-ID: <nil>, Metadata:  : context deadline exceeded
+[34m2020-03-18 23:21:36.021 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 00d[0m Created state database _users
+[34m2020-03-18 23:21:36.482 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 00e[0m Created state database _replicator
+[34m2020-03-18 23:21:37.117 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 00f[0m Created state database fabric__internal
+[34m2020-03-18 23:21:37.326 UTC [ledgermgmt] NewLedgerMgr -> INFO 010[0m Initialized LedgerMgr
+[34m2020-03-18 23:21:37.327 UTC [lifecycle] InitializeLocalChaincodes -> INFO 011[0m Initialized lifecycle cache with 0 already installed chaincodes
+[34m2020-03-18 23:21:37.327 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 012[0m Entering computeChaincodeEndpoint with peerHostname: peer2.org2.example.com
+[34m2020-03-18 23:21:37.328 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 013[0m Exit with ccEndpoint: peer2.org2.example.com:19052
+[34m2020-03-18 23:21:37.335 UTC [sccapi] DeploySysCC -> INFO 014[0m deploying system chaincode 'lscc'
+[34m2020-03-18 23:21:37.336 UTC [sccapi] DeploySysCC -> INFO 015[0m deploying system chaincode 'cscc'
+[34m2020-03-18 23:21:37.336 UTC [sccapi] DeploySysCC -> INFO 016[0m deploying system chaincode 'qscc'
+[34m2020-03-18 23:21:37.336 UTC [sccapi] DeploySysCC -> INFO 017[0m deploying system chaincode '_lifecycle'
+[34m2020-03-18 23:21:37.336 UTC [nodeCmd] serve -> INFO 018[0m Deployed system chaincodes
+[34m2020-03-18 23:21:37.336 UTC [discovery] NewService -> INFO 019[0m Created with config TLS: true, authCacheMaxSize: 1000, authCachePurgeRatio: 0.750000
+[34m2020-03-18 23:21:37.336 UTC [nodeCmd] registerDiscoveryService -> INFO 01a[0m Discovery service activated
+[34m2020-03-18 23:21:37.336 UTC [nodeCmd] serve -> INFO 01b[0m Starting peer with ID=[peer2.org2.example.com], network ID=[dev], address=[peer2.org2.example.com:19051]
+[34m2020-03-18 23:21:37.336 UTC [nodeCmd] serve -> INFO 01c[0m Started peer with ID=[peer2.org2.example.com], network ID=[dev], address=[peer2.org2.example.com:19051]
+[34m2020-03-18 23:21:37.336 UTC [nodeCmd] func6 -> INFO 01d[0m Starting profiling server with listenAddress = 0.0.0.0:6060
+[34m2020-03-18 23:21:37.337 UTC [kvledger] LoadPreResetHeight -> INFO 01e[0m Loading prereset height from path [/var/hyperledger/production/ledgersData/chains]
+[34m2020-03-18 23:21:37.337 UTC [fsblkstorage] preResetHtFiles -> INFO 01f[0m No active channels passed
+[34m2020-03-18 23:22:07.152 UTC [comm.grpc.server] 1 -> INFO 020[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2020-03-18T23:22:09.152Z grpc.peer_address=172.18.0.37:49904 grpc.peer_subject="CN=peer3.org2.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=126.335µs
+[34m2020-03-18 23:22:07.152 UTC [comm.grpc.server] 1 -> INFO 021[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2020-03-18T23:22:09.152Z grpc.peer_address=172.18.0.31:38996 grpc.peer_subject="CN=peer1.org2.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=66.164µs
+[34m2020-03-18 23:22:21.260 UTC [ledgermgmt] CreateLedger -> INFO 022[0m Creating ledger [mychannel] with genesis block
+[34m2020-03-18 23:22:21.297 UTC [fsblkstorage] newBlockfileMgr -> INFO 023[0m Getting block information from block storage
+[34m2020-03-18 23:22:21.810 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 024[0m Created state database mychannel_
+[34m2020-03-18 23:22:22.111 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 025[0m Created state database mychannel__lifecycle
+[34m2020-03-18 23:22:22.529 UTC [kvledger] CommitLegacy -> INFO 026[0m [mychannel] Committed block [0] with 1 transaction(s) in 393ms (state_validation=0ms block_and_pvtdata_commit=91ms state_commit=268ms) commitHash=[]
+[34m2020-03-18 23:22:22.563 UTC [ledgermgmt] CreateLedger -> INFO 027[0m Created ledger [mychannel] with genesis block
+[34m2020-03-18 23:22:22.577 UTC [gossip.gossip] JoinChan -> INFO 028[0m Joining gossip network of channel mychannel with 2 organizations
+[34m2020-03-18 23:22:22.577 UTC [gossip.gossip] learnAnchorPeers -> INFO 029[0m No configured anchor peers of Org1MSP for channel mychannel to learn about
+[34m2020-03-18 23:22:22.577 UTC [gossip.gossip] learnAnchorPeers -> INFO 02a[0m No configured anchor peers of Org2MSP for channel mychannel to learn about
+[34m2020-03-18 23:22:22.583 UTC [gossip.state] NewGossipStateProvider -> INFO 02b[0m Updating metadata information for channel mychannel, current ledger sequence is at = 0, next expected block is = 1
+[34m2020-03-18 23:22:22.583 UTC [endorser] callChaincode -> INFO 02c[0m finished chaincode: cscc duration: 1331ms channel= txID=aed679bf
+[34m2020-03-18 23:22:22.584 UTC [comm.grpc.server] 1 -> INFO 02d[0m unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=172.18.0.39:58442 grpc.code=OK grpc.call_duration=1.334422563s
+[34m2020-03-18 23:22:27.577 UTC [gossip.channel] reportMembershipChanges -> INFO 02e[0m [[mychannel] Membership view has changed. peers went online:  [[peer0.org2.example.com:17051] [peer1.org2.example.com:18051]] , current view:  [[peer0.org2.example.com:17051] [peer1.org2.example.com:18051]]]
+[34m2020-03-18 23:22:28.584 UTC [gossip.election] beLeader -> INFO 02f[0m e487036741cd1d971492d20cc8b00829805c9d67898dc6d3434ca5ad28ecd2ff : Becoming a leader
+[34m2020-03-18 23:22:28.584 UTC [gossip.service] func1 -> INFO 030[0m Elected as a leader, starting delivery service for channel mychannel
+[34m2020-03-18 23:22:28.584 UTC [deliveryClient] StartDeliverForChannel -> INFO 031[0m This peer will retrieve blocks from ordering service and disseminate to other peers in the organization for channel mychannel
+[34m2020-03-18 23:22:28.598 UTC [gossip.election] stopBeingLeader -> INFO 032[0m e487036741cd1d971492d20cc8b00829805c9d67898dc6d3434ca5ad28ecd2ff Stopped being a leader
+[34m2020-03-18 23:22:28.598 UTC [gossip.service] func1 -> INFO 033[0m Renounced leadership, stopping delivery service for channel mychannel
+[33m2020-03-18 23:22:28.598 UTC [peer.blocksprovider] func1 -> WARN 034[0m Encountered an error reading from deliver stream: rpc error: code = Canceled desc = context canceled channel=mychannel orderer-address=orderer6.ord1.example.com:12050
+[34m2020-03-18 23:22:31.035 UTC [gossip.privdata] StoreBlock -> INFO 035[0m [mychannel] Received block [1] from buffer
+[34m2020-03-18 23:22:31.085 UTC [gossip.gossip] JoinChan -> INFO 036[0m Joining gossip network of channel mychannel with 2 organizations
+[34m2020-03-18 23:22:31.085 UTC [gossip.gossip] learnAnchorPeers -> INFO 037[0m Learning about the configured anchor peers of Org1MSP for channel mychannel : [{peer0.org1.example.com 7051}]
+[34m2020-03-18 23:22:31.085 UTC [gossip.gossip] learnAnchorPeers -> INFO 038[0m No configured anchor peers of Org2MSP for channel mychannel to learn about
+[34m2020-03-18 23:22:31.105 UTC [committer.txvalidator] Validate -> INFO 039[0m [mychannel] Validated block [1] in 69ms
+[33m2020-03-18 23:22:31.105 UTC [gossip.privdata] getTxInfoFromTransactionBytes -> WARN 03a[0m Invalid transaction type: header type is not an endorser transaction
+[34m2020-03-18 23:22:31.105 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 03b[0m Successfully fetched all eligible collection private write sets for block [1] channel=mychannel
+[34m2020-03-18 23:22:32.282 UTC [kvledger] CommitLegacy -> INFO 03c[0m [mychannel] Committed block [1] with 1 transaction(s) in 1177ms (state_validation=0ms block_and_pvtdata_commit=406ms state_commit=678ms) commitHash=[47dc540c94ceb704a23875c11273e16bb0b8a87aed84de911f2133568115f254]
+[33m2020-03-18 23:22:32.442 UTC [gossip.gossip] validateMsg -> WARN 03d[0m StateInfo message GossipMessage: Channel: , nonce: 0, tag: CHAN_OR_ORG state_info_message: Timestamp:inc_num:1584573724430541747 seq_num:1584573752315979415 PKI-id:7e9895de5b710e28cebb1d6ad3a3d6256108e4cc0de8be89b64ae684fa56310f channel MAC:0aa9c4d9da663036333b2a4ecdc33ac31359060ed1d0a20fddf25bac1cb26e06 properties:ledger_height:2 chaincodes:<name:"_lifecycle" version:"1" > , Envelope: 115 bytes, Signature: 71 bytes is found invalid: PKIID wasn't found
+[33m2020-03-18 23:22:32.442 UTC [gossip.gossip] handleMessage -> WARN 03e[0m Message GossipMessage: Channel: , nonce: 0, tag: CHAN_OR_ORG state_info_message: Timestamp:inc_num:1584573724430541747 seq_num:1584573752315979415 PKI-id:7e9895de5b710e28cebb1d6ad3a3d6256108e4cc0de8be89b64ae684fa56310f channel MAC:0aa9c4d9da663036333b2a4ecdc33ac31359060ed1d0a20fddf25bac1cb26e06 properties:ledger_height:2 chaincodes:<name:"_lifecycle" version:"1" > , Envelope: 115 bytes, Signature: 71 bytes isn't valid
+[34m2020-03-18 23:22:32.577 UTC [gossip.channel] reportMembershipChanges -> INFO 03f[0m [[mychannel] Membership view has changed. peers went online:  [[peer3.org2.example.com:20051]] , current view:  [[peer1.org2.example.com:18051] [peer3.org2.example.com:20051] [peer0.org2.example.com:17051]]]
+[33m2020-03-18 23:22:33.078 UTC [gossip.gossip] validateMsg -> WARN 040[0m StateInfo message GossipMessage: Channel: , nonce: 0, tag: CHAN_OR_ORG state_info_message: Timestamp:inc_num:1584573729057575086 seq_num:1584573752282755393 PKI-id:c6325ad2cd3c0d58c79e9ad446546fe81cad950b39d17ba8e03d7bf8802a99ab channel MAC:6ceb036e5e5ea840941ec80cfc0abbc7e4d6c0af938332e18d8c030c09dbaba8 properties:ledger_height:2 chaincodes:<name:"_lifecycle" version:"1" > , Envelope: 115 bytes, Signature: 70 bytes is found invalid: PKIID wasn't found
+[33m2020-03-18 23:22:33.078 UTC [gossip.gossip] handleMessage -> WARN 041[0m Message GossipMessage: Channel: , nonce: 0, tag: CHAN_OR_ORG state_info_message: Timestamp:inc_num:1584573729057575086 seq_num:1584573752282755393 PKI-id:c6325ad2cd3c0d58c79e9ad446546fe81cad950b39d17ba8e03d7bf8802a99ab channel MAC:6ceb036e5e5ea840941ec80cfc0abbc7e4d6c0af938332e18d8c030c09dbaba8 properties:ledger_height:2 chaincodes:<name:"_lifecycle" version:"1" > , Envelope: 115 bytes, Signature: 70 bytes isn't valid
+[34m2020-03-18 23:22:34.106 UTC [gossip.privdata] StoreBlock -> INFO 042[0m [mychannel] Received block [2] from buffer
+[34m2020-03-18 23:22:34.122 UTC [gossip.gossip] JoinChan -> INFO 043[0m Joining gossip network of channel mychannel with 2 organizations
+[34m2020-03-18 23:22:34.130 UTC [gossip.gossip] learnAnchorPeers -> INFO 044[0m Learning about the configured anchor peers of Org2MSP for channel mychannel : [{peer0.org2.example.com 17051}]
+[34m2020-03-18 23:22:34.136 UTC [gossip.gossip] learnAnchorPeers -> INFO 045[0m Learning about the configured anchor peers of Org1MSP for channel mychannel : [{peer0.org1.example.com 7051}]
+[34m2020-03-18 23:22:34.153 UTC [committer.txvalidator] Validate -> INFO 046[0m [mychannel] Validated block [2] in 47ms
+[33m2020-03-18 23:22:34.153 UTC [gossip.privdata] getTxInfoFromTransactionBytes -> WARN 047[0m Invalid transaction type: header type is not an endorser transaction
+[34m2020-03-18 23:22:34.153 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 048[0m Successfully fetched all eligible collection private write sets for block [2] channel=mychannel
+[34m2020-03-18 23:22:34.202 UTC [comm.grpc.server] 1 -> INFO 049[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2020-03-18T23:22:36.202Z grpc.peer_address=172.18.0.35:45928 grpc.peer_subject="CN=peer0.org2.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=106.857µs
+[34m2020-03-18 23:22:34.206 UTC [comm.grpc.server] 1 -> INFO 04a[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2020-03-18T23:22:36.206Z grpc.peer_address=172.18.0.34:43540 grpc.peer_subject="CN=peer0.org1.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=80.678µs
+[34m2020-03-18 23:22:35.186 UTC [kvledger] CommitLegacy -> INFO 04b[0m [mychannel] Committed block [2] with 1 transaction(s) in 1032ms (state_validation=1ms block_and_pvtdata_commit=345ms state_commit=602ms) commitHash=[5f88b61407b149a48413433f4670c46531e5c4a8febdc339a9536ff8716a559e]
+[34m2020-03-18 23:22:37.579 UTC [gossip.channel] reportMembershipChanges -> INFO 04c[0m [[mychannel] Membership view has changed. peers went online:  [[peer0.org1.example.com:7051 ] [peer3.org1.example.com:10051 ] [peer1.org1.example.com:8051 ] [peer2.org1.example.com:9051 ]] , current view:  [[peer0.org2.example.com:17051] [peer1.org2.example.com:18051] [peer3.org2.example.com:20051] [peer0.org1.example.com:7051 ] [peer3.org1.example.com:10051 ] [peer1.org1.example.com:8051 ] [peer2.org1.example.com:9051 ]]]
+[34m2020-03-18 23:24:34.938 UTC [gossip.privdata] StoreBlock -> INFO 04d[0m [mychannel] Received block [3] from buffer
+[34m2020-03-18 23:24:34.940 UTC [committer.txvalidator] Validate -> INFO 04e[0m [mychannel] Validated block [3] in 1ms
+[34m2020-03-18 23:24:34.940 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 04f[0m Successfully fetched all eligible collection private write sets for block [3] channel=mychannel
+[34m2020-03-18 23:24:35.746 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 050[0m Created state database mychannel__lifecycle$$h_implicit_org_$org1$m$s$p
+[34m2020-03-18 23:24:36.476 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 051[0m Created state database mychannel_lscc
+[34m2020-03-18 23:24:37.826 UTC [kvledger] CommitLegacy -> INFO 052[0m [mychannel] Committed block [3] with 1 transaction(s) in 2885ms (state_validation=1647ms block_and_pvtdata_commit=290ms state_commit=823ms) commitHash=[fe0ae343dc08680b1ed41f149981cb651bb18ffe2ceefdb08d4fc020f338c3df]
+[34m2020-03-18 23:26:27.109 UTC [gossip.privdata] StoreBlock -> INFO 053[0m [mychannel] Received block [4] from buffer
+[34m2020-03-18 23:26:27.110 UTC [committer.txvalidator] Validate -> INFO 054[0m [mychannel] Validated block [4] in 1ms
+[34m2020-03-18 23:26:27.115 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 055[0m Successfully fetched all eligible collection private write sets for block [4] channel=mychannel
+[34m2020-03-18 23:26:28.139 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 056[0m Created state database mychannel__lifecycle$$h_implicit_org_$org2$m$s$p
+[34m2020-03-18 23:26:29.297 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 057[0m Created state database mychannel__lifecycle$$p_implicit_org_$org2$m$s$p
+[34m2020-03-18 23:26:29.983 UTC [kvledger] CommitLegacy -> INFO 058[0m [mychannel] Committed block [4] with 1 transaction(s) in 2867ms (state_validation=1160ms block_and_pvtdata_commit=391ms state_commit=1248ms) commitHash=[0d6422a91bb4cf108af426791c13c91d05571fafbb9b77f3bcb289fc991b8e2c]
+[34m2020-03-18 23:26:31.903 UTC [gossip.privdata] StoreBlock -> INFO 059[0m [mychannel] Received block [5] from buffer
+[34m2020-03-18 23:26:31.904 UTC [committer.txvalidator] Validate -> INFO 05a[0m [mychannel] Validated block [5] in 1ms
+[34m2020-03-18 23:26:31.904 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 05b[0m Successfully fetched all eligible collection private write sets for block [5] channel=mychannel
+[34m2020-03-18 23:26:31.947 UTC [lifecycle] update -> INFO 05c[0m Updating cached definition for chaincode 'fabcar' on channel 'mychannel'
+[34m2020-03-18 23:26:32.005 UTC [cceventmgmt] HandleStateUpdates -> INFO 05d[0m Channel [mychannel]: Handling deploy or update of chaincode [fabcar]
+[34m2020-03-18 23:26:33.574 UTC [kvledger] CommitLegacy -> INFO 05e[0m [mychannel] Committed block [5] with 1 transaction(s) in 1669ms (state_validation=108ms block_and_pvtdata_commit=530ms state_commit=913ms) commitHash=[4a2dae288556d5345a1e9c4e3e06faf51935e1bbd35cd282b473340c41c8fe1d]
+[34m2020-03-18 23:26:50.181 UTC [gossip.privdata] StoreBlock -> INFO 05f[0m [mychannel] Received block [6] from buffer
+[34m2020-03-18 23:26:50.255 UTC [committer.txvalidator] Validate -> INFO 060[0m [mychannel] Validated block [6] in 73ms
+[34m2020-03-18 23:26:50.255 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 061[0m Successfully fetched all eligible collection private write sets for block [6] channel=mychannel
+[34m2020-03-18 23:26:51.276 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 062[0m Created state database mychannel_fabcar
+[34m2020-03-18 23:26:51.849 UTC [kvledger] CommitLegacy -> INFO 063[0m [mychannel] Committed block [6] with 1 transaction(s) in 1594ms (state_validation=0ms block_and_pvtdata_commit=307ms state_commit=1195ms) commitHash=[dcb39fc2e3455a970c6e5bc370fa87403b7dfa0fd66c54b0c370b87028823258]
+[34m2020-03-18 23:28:53.174 UTC [gossip.privdata] StoreBlock -> INFO 064[0m [mychannel] Received block [7] from buffer
+[34m2020-03-18 23:28:53.176 UTC [committer.txvalidator] Validate -> INFO 065[0m [mychannel] Validated block [7] in 1ms
+[34m2020-03-18 23:28:53.176 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 066[0m Successfully fetched all eligible collection private write sets for block [7] channel=mychannel
+[34m2020-03-18 23:28:54.246 UTC [kvledger] CommitLegacy -> INFO 067[0m [mychannel] Committed block [7] with 1 transaction(s) in 1069ms (state_validation=0ms block_and_pvtdata_commit=267ms state_commit=720ms) commitHash=[75960047774dd39383a1da9d633851e36a0a573bd89a33ed03ba61613969b695]
+[34m2020-03-18 23:29:48.174 UTC [gossip.privdata] StoreBlock -> INFO 068[0m [mychannel] Received block [8] from buffer
+[34m2020-03-18 23:29:48.176 UTC [committer.txvalidator] Validate -> INFO 069[0m [mychannel] Validated block [8] in 2ms
+[34m2020-03-18 23:29:48.177 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 06a[0m Successfully fetched all eligible collection private write sets for block [8] channel=mychannel
+[34m2020-03-18 23:29:49.076 UTC [kvledger] CommitLegacy -> INFO 06b[0m [mychannel] Committed block [8] with 1 transaction(s) in 899ms (state_validation=0ms block_and_pvtdata_commit=295ms state_commit=532ms) commitHash=[d95d9d77a14d3063a7f0ef937728f5da85300ea13997ff3914faf8d9e6aa4deb]
+[34m2020-03-18 23:30:37.822 UTC [gossip.privdata] StoreBlock -> INFO 06c[0m [mychannel] Received block [9] from buffer
+[34m2020-03-18 23:30:37.823 UTC [committer.txvalidator] Validate -> INFO 06d[0m [mychannel] Validated block [9] in 1ms
+[34m2020-03-18 23:30:37.823 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 06e[0m Successfully fetched all eligible collection private write sets for block [9] channel=mychannel
+[34m2020-03-18 23:30:38.604 UTC [kvledger] CommitLegacy -> INFO 06f[0m [mychannel] Committed block [9] with 1 transaction(s) in 780ms (state_validation=0ms block_and_pvtdata_commit=186ms state_commit=503ms) commitHash=[ac9e26049dbf2bf06367227f8eb305a5e900ad556e373b9352a0bfc6874c4540]
+[34m2020-03-18 23:31:01.037 UTC [gossip.privdata] StoreBlock -> INFO 070[0m [mychannel] Received block [10] from buffer
+[34m2020-03-18 23:31:01.038 UTC [committer.txvalidator] Validate -> INFO 071[0m [mychannel] Validated block [10] in 0ms
+[34m2020-03-18 23:31:01.038 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 072[0m Successfully fetched all eligible collection private write sets for block [10] channel=mychannel
+[34m2020-03-18 23:31:01.913 UTC [kvledger] CommitLegacy -> INFO 073[0m [mychannel] Committed block [10] with 1 transaction(s) in 875ms (state_validation=0ms block_and_pvtdata_commit=304ms state_commit=479ms) commitHash=[03eecbee2a764e3174b34b75393ffe3ef395e3e225b6e6d3a8d98354645ce83d]
+[34m2020-03-18 23:31:25.823 UTC [gossip.privdata] StoreBlock -> INFO 074[0m [mychannel] Received block [11] from buffer
+[34m2020-03-18 23:31:25.824 UTC [committer.txvalidator] Validate -> INFO 075[0m [mychannel] Validated block [11] in 0ms
+[34m2020-03-18 23:31:25.824 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 076[0m Successfully fetched all eligible collection private write sets for block [11] channel=mychannel
+[34m2020-03-18 23:31:26.600 UTC [kvledger] CommitLegacy -> INFO 077[0m [mychannel] Committed block [11] with 1 transaction(s) in 776ms (state_validation=0ms block_and_pvtdata_commit=179ms state_commit=504ms) commitHash=[88c48140f3ac7ab1bef06d5e8922747ed457f551ec3224e83fe353a511b21b15]
+[34m2020-03-18 23:31:48.921 UTC [gossip.privdata] StoreBlock -> INFO 078[0m [mychannel] Received block [12] from buffer
+[34m2020-03-18 23:31:48.922 UTC [committer.txvalidator] Validate -> INFO 079[0m [mychannel] Validated block [12] in 0ms
+[34m2020-03-18 23:31:48.922 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 07a[0m Successfully fetched all eligible collection private write sets for block [12] channel=mychannel
+[34m2020-03-18 23:31:49.615 UTC [kvledger] CommitLegacy -> INFO 07b[0m [mychannel] Committed block [12] with 1 transaction(s) in 692ms (state_validation=0ms block_and_pvtdata_commit=248ms state_commit=360ms) commitHash=[439b221f7f48c0be1a91d5b0bb107e965ed2aba4fed5f44cd0c5fa358840e695]
+[34m2020-03-18 23:32:13.209 UTC [gossip.privdata] StoreBlock -> INFO 07c[0m [mychannel] Received block [13] from buffer
+[34m2020-03-18 23:32:13.210 UTC [committer.txvalidator] Validate -> INFO 07d[0m [mychannel] Validated block [13] in 1ms
+[34m2020-03-18 23:32:13.210 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 07e[0m Successfully fetched all eligible collection private write sets for block [13] channel=mychannel
+[34m2020-03-18 23:32:14.009 UTC [kvledger] CommitLegacy -> INFO 07f[0m [mychannel] Committed block [13] with 1 transaction(s) in 798ms (state_validation=0ms block_and_pvtdata_commit=312ms state_commit=386ms) commitHash=[62f6f750a2ee97a4ed900153889d92158ad6de81ea929b6782c0c7ffafa7548c]
+[34m2020-03-18 23:32:44.981 UTC [gossip.privdata] StoreBlock -> INFO 080[0m [mychannel] Received block [14] from buffer
+[34m2020-03-18 23:32:44.982 UTC [committer.txvalidator] Validate -> INFO 081[0m [mychannel] Validated block [14] in 0ms
+[34m2020-03-18 23:32:44.982 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 082[0m Successfully fetched all eligible collection private write sets for block [14] channel=mychannel
+[34m2020-03-18 23:32:45.865 UTC [kvledger] CommitLegacy -> INFO 083[0m [mychannel] Committed block [14] with 1 transaction(s) in 883ms (state_validation=0ms block_and_pvtdata_commit=290ms state_commit=501ms) commitHash=[ae345d649dc7a7950dceb3a33cc3f86b6945bc527d0e7e538dbc212d423b7103]
+[34m2020-03-18 23:33:01.019 UTC [gossip.privdata] StoreBlock -> INFO 084[0m [mychannel] Received block [15] from buffer
+[34m2020-03-18 23:33:01.019 UTC [committer.txvalidator] Validate -> INFO 085[0m [mychannel] Validated block [15] in 0ms
+[34m2020-03-18 23:33:01.020 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 086[0m Successfully fetched all eligible collection private write sets for block [15] channel=mychannel
+[34m2020-03-18 23:33:01.787 UTC [kvledger] CommitLegacy -> INFO 087[0m [mychannel] Committed block [15] with 1 transaction(s) in 767ms (state_validation=0ms block_and_pvtdata_commit=255ms state_commit=425ms) commitHash=[0849e248f13abaaa5d4b35c7961dab2e74c1205325ec38cc77c3e0e8ddbf80c0]
+[34m2020-03-18 23:33:39.690 UTC [gossip.privdata] StoreBlock -> INFO 088[0m [mychannel] Received block [16] from buffer
+[34m2020-03-18 23:33:39.691 UTC [committer.txvalidator] Validate -> INFO 089[0m [mychannel] Validated block [16] in 0ms
+[34m2020-03-18 23:33:39.691 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 08a[0m Successfully fetched all eligible collection private write sets for block [16] channel=mychannel
+[34m2020-03-18 23:33:40.512 UTC [kvledger] CommitLegacy -> INFO 08b[0m [mychannel] Committed block [16] with 1 transaction(s) in 820ms (state_validation=0ms block_and_pvtdata_commit=257ms state_commit=473ms) commitHash=[edc03f4334a5e87bd12485532e42fe97eb382d62783acdfa4c7e695b8f0bbe6b]
+[34m2020-03-18 23:33:54.334 UTC [gossip.privdata] StoreBlock -> INFO 08c[0m [mychannel] Received block [17] from buffer
+[34m2020-03-18 23:33:54.335 UTC [committer.txvalidator] Validate -> INFO 08d[0m [mychannel] Validated block [17] in 0ms
+[34m2020-03-18 23:33:54.335 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 08e[0m Successfully fetched all eligible collection private write sets for block [17] channel=mychannel
+[34m2020-03-18 23:33:55.174 UTC [kvledger] CommitLegacy -> INFO 08f[0m [mychannel] Committed block [17] with 1 transaction(s) in 838ms (state_validation=0ms block_and_pvtdata_commit=302ms state_commit=436ms) commitHash=[ad8d1f6b8069a6d1188402d63dac92abf19b844c06fdac1b477e7c41cf2d772e]
