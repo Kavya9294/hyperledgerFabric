@@ -19,4 +19,4 @@ cut -d' ' -f1,2,3,4,5,6,7,8 --complement sample.txt | sed 's/node=.*//g' | sed '
 
 paste -d, sample2.txt sample3.txt sample4.txt sample5.txt > sample1.txt
 sed  -i '1i Time, Operation, Node, Description' sample1.txt
-cat sample1.txt > config5Orderer.xlsx
+cat sample1.txt > config5Orderer.csv

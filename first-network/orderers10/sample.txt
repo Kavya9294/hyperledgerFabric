@@ -1,0 +1,922 @@
+[34m2020-03-19 02:51:52.879 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.731 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 043[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.731 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 044[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=1
+[34m2020-03-19 02:52:35.923 UTC [orderer.consensus.etcdraft] Start -> INFO 046[0m Starting Raft node channel=mychannel node=1
+[34m2020-03-19 02:52:35.925 UTC [orderer.consensus.etcdraft] start -> INFO 064[0m Starting raft node as part of a new channel channel=mychannel node=1
+[34m2020-03-19 02:52:35.925 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 065[0m 1 became follower at term 0 channel=mychannel node=1
+[34m2020-03-19 02:52:35.925 UTC [orderer.consensus.etcdraft] newRaft -> INFO 066[0m newRaft 1 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=1
+[34m2020-03-19 02:52:35.925 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 067[0m 1 became follower at term 1 channel=mychannel node=1
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 06a[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:36.020 UTC [orderer.consensus.etcdraft] apply -> INFO 06b[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:36.020 UTC [orderer.consensus.etcdraft] apply -> INFO 06c[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:36.020 UTC [orderer.consensus.etcdraft] apply -> INFO 06d[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:36.020 UTC [orderer.consensus.etcdraft] apply -> INFO 06e[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:36.020 UTC [orderer.consensus.etcdraft] apply -> INFO 06f[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:36.020 UTC [orderer.consensus.etcdraft] apply -> INFO 070[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:36.020 UTC [orderer.consensus.etcdraft] apply -> INFO 071[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:36.020 UTC [orderer.consensus.etcdraft] apply -> INFO 072[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:36.020 UTC [orderer.consensus.etcdraft] apply -> INFO 073[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] Step -> INFO 07e[0m 1 [logterm: 1, index: 10, vote: 0] cast MsgPreVote for 3 [logterm: 1, index: 10] at term 1 channel=mychannel node=1
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] Step -> INFO 07f[0m 1 [term: 1] received a MsgVote message with higher term from 3 [term: 2] channel=mychannel node=1
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 080[0m 1 became follower at term 2 channel=mychannel node=1
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] Step -> INFO 081[0m 1 [logterm: 1, index: 10, vote: 0] cast MsgVote for 3 [logterm: 1, index: 10] at term 2 channel=mychannel node=1
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 082[0m raft.node: 1 elected leader 3 at term 2 channel=mychannel node=1
+[34m2020-03-19 02:52:37.149 UTC [orderer.consensus.etcdraft] run -> INFO 083[0m Raft leader changed: 0 -> 3 channel=mychannel node=1
+[34m2020-03-19 02:53:04.666 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 088[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=1
+[34m2020-03-19 02:53:07.870 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08b[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=1
+[34m2020-03-19 02:54:46.653 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08c[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=1
+[34m2020-03-19 02:56:24.510 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08f[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=1
+[34m2020-03-19 02:56:29.493 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 092[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=1
+[34m2020-03-19 02:56:41.552 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 095[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=1
+[34m2020-03-19 02:58:40.939 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 09f[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=1
+[34m2020-03-19 02:59:09.314 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a6[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=1
+[34m2020-03-19 02:59:45.335 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0ad[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=1
+[34m2020-03-19 03:00:28.581 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0b4[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=1
+[34m2020-03-19 03:00:50.271 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0b5[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=1
+[34m2020-03-19 03:02:10.033 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0bd[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=1
+[34m2020-03-19 03:02:39.506 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0be[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=1
+[34m2020-03-19 03:03:02.344 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0c5[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=1
+[34m2020-03-19 03:03:30.692 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0c6[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=1
+[34m2020-03-19 03:03:54.415 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0cd[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=1
+[34m2020-03-19 02:51:53.398 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.766 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 040[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.766 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 041[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=2
+[34m2020-03-19 02:52:36.121 UTC [orderer.consensus.etcdraft] Start -> INFO 043[0m Starting Raft node channel=mychannel node=2
+[34m2020-03-19 02:52:36.123 UTC [orderer.consensus.etcdraft] start -> INFO 061[0m Starting raft node as part of a new channel channel=mychannel node=2
+[34m2020-03-19 02:52:36.123 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 062[0m 2 became follower at term 0 channel=mychannel node=2
+[34m2020-03-19 02:52:36.123 UTC [orderer.consensus.etcdraft] newRaft -> INFO 063[0m newRaft 2 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=2
+[34m2020-03-19 02:52:36.123 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 064[0m 2 became follower at term 1 channel=mychannel node=2
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 065[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 066[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 067[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 068[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 069[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 06a[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 06b[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 06c[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 06d[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 06e[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:37.018 UTC [orderer.consensus.etcdraft] Step -> INFO 06f[0m 2 [logterm: 1, index: 10, vote: 0] cast MsgPreVote for 3 [logterm: 1, index: 10] at term 1 channel=mychannel node=2
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 070[0m 2 [term: 1] received a MsgVote message with higher term from 3 [term: 2] channel=mychannel node=2
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 071[0m 2 became follower at term 2 channel=mychannel node=2
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 072[0m 2 [logterm: 1, index: 10, vote: 0] cast MsgVote for 3 [logterm: 1, index: 10] at term 2 channel=mychannel node=2
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 073[0m raft.node: 2 elected leader 3 at term 2 channel=mychannel node=2
+[34m2020-03-19 02:52:37.149 UTC [orderer.consensus.etcdraft] run -> INFO 074[0m Raft leader changed: 0 -> 3 channel=mychannel node=2
+[34m2020-03-19 02:53:04.647 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 075[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=2
+[34m2020-03-19 02:53:07.839 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 076[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=2
+[34m2020-03-19 02:54:46.654 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 077[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=2
+[34m2020-03-19 02:56:24.509 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 078[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=2
+[34m2020-03-19 02:56:29.575 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 079[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=2
+[34m2020-03-19 02:56:41.553 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07a[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=2
+[34m2020-03-19 02:58:40.937 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 080[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=2
+[34m2020-03-19 02:59:09.312 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 087[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=2
+[34m2020-03-19 02:59:45.384 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08e[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=2
+[34m2020-03-19 03:00:28.583 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 094[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=2
+[34m2020-03-19 03:00:50.308 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 096[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=2
+[34m2020-03-19 03:02:10.031 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 09c[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=2
+[34m2020-03-19 03:02:39.505 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 09e[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=2
+[34m2020-03-19 03:03:02.344 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a4[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=2
+[34m2020-03-19 03:03:30.692 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a5[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=2
+[34m2020-03-19 03:03:54.414 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0ab[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=2
+[34m2020-03-19 02:51:43.503 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.765 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 06a[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.765 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 06b[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=3
+[34m2020-03-19 02:52:36.011 UTC [orderer.consensus.etcdraft] Start -> INFO 06d[0m Starting Raft node channel=mychannel node=3
+[34m2020-03-19 02:52:36.016 UTC [orderer.consensus.etcdraft] start -> INFO 08b[0m Starting raft node as part of a new channel channel=mychannel node=3
+[34m2020-03-19 02:52:36.016 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 08c[0m 3 became follower at term 0 channel=mychannel node=3
+[34m2020-03-19 02:52:36.016 UTC [orderer.consensus.etcdraft] newRaft -> INFO 08d[0m newRaft 3 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=3
+[34m2020-03-19 02:52:36.016 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 08e[0m 3 became follower at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:36.016 UTC [orderer.consensus.etcdraft] run -> INFO 08f[0m This node is picked to start campaign channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 090[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 091[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 092[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 093[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 094[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 095[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 096[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 097[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 098[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 099[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:37.016 UTC [orderer.consensus.etcdraft] Step -> INFO 09a[0m 3 is starting a new election at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.016 UTC [orderer.consensus.etcdraft] becomePreCandidate -> INFO 09b[0m 3 became pre-candidate at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.016 UTC [orderer.consensus.etcdraft] poll -> INFO 09c[0m 3 received MsgPreVoteResp from 3 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.016 UTC [orderer.consensus.etcdraft] campaign -> INFO 09d[0m 3 [logterm: 1, index: 10] sent MsgPreVote request to 1 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.016 UTC [orderer.consensus.etcdraft] campaign -> INFO 09e[0m 3 [logterm: 1, index: 10] sent MsgPreVote request to 4 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.016 UTC [orderer.consensus.etcdraft] campaign -> INFO 09f[0m 3 [logterm: 1, index: 10] sent MsgPreVote request to a at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.016 UTC [orderer.consensus.etcdraft] campaign -> INFO 0a0[0m 3 [logterm: 1, index: 10] sent MsgPreVote request to 2 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.016 UTC [orderer.consensus.etcdraft] campaign -> INFO 0a1[0m 3 [logterm: 1, index: 10] sent MsgPreVote request to 5 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.016 UTC [orderer.consensus.etcdraft] campaign -> INFO 0a2[0m 3 [logterm: 1, index: 10] sent MsgPreVote request to 6 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.017 UTC [orderer.consensus.etcdraft] campaign -> INFO 0a3[0m 3 [logterm: 1, index: 10] sent MsgPreVote request to 7 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.017 UTC [orderer.consensus.etcdraft] campaign -> INFO 0a4[0m 3 [logterm: 1, index: 10] sent MsgPreVote request to 8 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.017 UTC [orderer.consensus.etcdraft] campaign -> INFO 0a5[0m 3 [logterm: 1, index: 10] sent MsgPreVote request to 9 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.018 UTC [orderer.consensus.etcdraft] poll -> INFO 0a6[0m 3 received MsgPreVoteResp from 6 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.018 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0a7[0m 3 [quorum:6] has received 2 MsgPreVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] poll -> INFO 0a8[0m 3 received MsgPreVoteResp from 2 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0a9[0m 3 [quorum:6] has received 3 MsgPreVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] poll -> INFO 0aa[0m 3 received MsgPreVoteResp from 9 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0ab[0m 3 [quorum:6] has received 4 MsgPreVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] poll -> INFO 0ac[0m 3 received MsgPreVoteResp from 4 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0ad[0m 3 [quorum:6] has received 5 MsgPreVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] poll -> INFO 0ae[0m 3 received MsgPreVoteResp from 5 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0af[0m 3 [quorum:6] has received 6 MsgPreVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] becomeCandidate -> INFO 0b0[0m 3 became candidate at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] poll -> INFO 0b1[0m 3 received MsgVoteResp from 3 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] campaign -> INFO 0b2[0m 3 [logterm: 1, index: 10] sent MsgVote request to a at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] campaign -> INFO 0b3[0m 3 [logterm: 1, index: 10] sent MsgVote request to 1 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] campaign -> INFO 0b4[0m 3 [logterm: 1, index: 10] sent MsgVote request to 4 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] campaign -> INFO 0b5[0m 3 [logterm: 1, index: 10] sent MsgVote request to 7 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] campaign -> INFO 0b6[0m 3 [logterm: 1, index: 10] sent MsgVote request to 8 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] campaign -> INFO 0b7[0m 3 [logterm: 1, index: 10] sent MsgVote request to 9 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] campaign -> INFO 0b8[0m 3 [logterm: 1, index: 10] sent MsgVote request to 2 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] campaign -> INFO 0b9[0m 3 [logterm: 1, index: 10] sent MsgVote request to 5 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] campaign -> INFO 0ba[0m 3 [logterm: 1, index: 10] sent MsgVote request to 6 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.059 UTC [orderer.consensus.etcdraft] poll -> INFO 0bb[0m 3 received MsgVoteResp from a at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.059 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0bc[0m 3 [quorum:6] has received 2 MsgVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.087 UTC [orderer.consensus.etcdraft] poll -> INFO 0bd[0m 3 received MsgVoteResp from 2 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.088 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0be[0m 3 [quorum:6] has received 3 MsgVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.088 UTC [orderer.consensus.etcdraft] poll -> INFO 0bf[0m 3 received MsgVoteResp from 8 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.088 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0c0[0m 3 [quorum:6] has received 4 MsgVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.088 UTC [orderer.consensus.etcdraft] poll -> INFO 0c1[0m 3 received MsgVoteResp from 4 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.088 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0c2[0m 3 [quorum:6] has received 5 MsgVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.088 UTC [orderer.consensus.etcdraft] poll -> INFO 0c3[0m 3 received MsgVoteResp from 7 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.088 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0c4[0m 3 [quorum:6] has received 6 MsgVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.088 UTC [orderer.consensus.etcdraft] becomeLeader -> INFO 0c5[0m 3 became leader at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.088 UTC [orderer.consensus.etcdraft] run -> INFO 0c6[0m raft.node: 3 elected leader 3 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 0c7[0m Leader 3 is present, quit campaign channel=mychannel node=3
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 0c8[0m Raft leader changed: 0 -> 3 channel=mychannel node=3
+[34m2020-03-19 02:52:37.150 UTC [orderer.consensus.etcdraft] run -> INFO 0c9[0m Start accepting requests as Raft leader at block [0] channel=mychannel node=3
+[34m2020-03-19 02:53:04.435 UTC [orderer.consensus.etcdraft] propose -> INFO 0ca[0m Created block [1], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 02:53:04.435 UTC [orderer.consensus.etcdraft] run -> INFO 0cb[0m Received config transaction, pause accepting transaction till it is committed channel=mychannel node=3
+[34m2020-03-19 02:53:04.640 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0cc[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=3
+[34m2020-03-19 02:53:07.666 UTC [orderer.consensus.etcdraft] propose -> INFO 0cd[0m Created block [2], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 02:53:07.666 UTC [orderer.consensus.etcdraft] run -> INFO 0ce[0m Received config transaction, pause accepting transaction till it is committed channel=mychannel node=3
+[34m2020-03-19 02:53:07.833 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0cf[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=3
+[34m2020-03-19 02:54:46.547 UTC [orderer.consensus.etcdraft] propose -> INFO 0d0[0m Created block [3], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 02:54:46.653 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0d1[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=3
+[34m2020-03-19 02:56:24.438 UTC [orderer.consensus.etcdraft] propose -> INFO 0d2[0m Created block [4], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 02:56:24.509 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0d3[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=3
+[34m2020-03-19 02:56:29.384 UTC [orderer.consensus.etcdraft] propose -> INFO 0d4[0m Created block [5], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 02:56:29.492 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0d5[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=3
+[34m2020-03-19 02:56:41.418 UTC [orderer.consensus.etcdraft] propose -> INFO 0d6[0m Created block [6], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 02:56:41.551 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0d7[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=3
+[34m2020-03-19 02:58:40.825 UTC [orderer.consensus.etcdraft] propose -> INFO 0dd[0m Created block [7], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 02:58:40.935 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0de[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=3
+[34m2020-03-19 02:59:09.149 UTC [orderer.consensus.etcdraft] propose -> INFO 0e4[0m Created block [8], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 02:59:09.310 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0e5[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=3
+[34m2020-03-19 02:59:45.219 UTC [orderer.consensus.etcdraft] propose -> INFO 0eb[0m Created block [9], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 02:59:45.335 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0ec[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=3
+[34m2020-03-19 03:00:28.455 UTC [orderer.consensus.etcdraft] propose -> INFO 0f2[0m Created block [10], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 03:00:28.579 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0f3[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=3
+[34m2020-03-19 03:00:50.169 UTC [orderer.consensus.etcdraft] propose -> INFO 0f4[0m Created block [11], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 03:00:50.267 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0f5[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=3
+[34m2020-03-19 03:02:09.878 UTC [orderer.consensus.etcdraft] propose -> INFO 0fb[0m Created block [12], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 03:02:10.030 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0fc[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=3
+[34m2020-03-19 03:02:39.388 UTC [orderer.consensus.etcdraft] propose -> INFO 0fd[0m Created block [13], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 03:02:39.504 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0fe[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=3
+[34m2020-03-19 03:03:02.194 UTC [orderer.consensus.etcdraft] propose -> INFO 104[0m Created block [14], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 03:03:02.343 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 105[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=3
+[34m2020-03-19 03:03:30.571 UTC [orderer.consensus.etcdraft] propose -> INFO 106[0m Created block [15], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 03:03:30.690 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 107[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=3
+[34m2020-03-19 03:03:54.307 UTC [orderer.consensus.etcdraft] propose -> INFO 10d[0m Created block [16], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 03:03:54.413 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 10e[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=3
+[34m2020-03-19 02:51:55.063 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.765 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 040[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.765 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 041[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=4
+[34m2020-03-19 02:52:36.012 UTC [orderer.consensus.etcdraft] Start -> INFO 043[0m Starting Raft node channel=mychannel node=4
+[34m2020-03-19 02:52:36.014 UTC [orderer.consensus.etcdraft] start -> INFO 061[0m Starting raft node as part of a new channel channel=mychannel node=4
+[34m2020-03-19 02:52:36.014 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 062[0m 4 became follower at term 0 channel=mychannel node=4
+[34m2020-03-19 02:52:36.014 UTC [orderer.consensus.etcdraft] newRaft -> INFO 063[0m newRaft 4 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=4
+[34m2020-03-19 02:52:36.014 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 064[0m 4 became follower at term 1 channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 065[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 066[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 067[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 068[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 069[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 06a[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 06b[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 06c[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 06d[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 06e[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:37.018 UTC [orderer.consensus.etcdraft] Step -> INFO 06f[0m 4 [logterm: 1, index: 10, vote: 0] cast MsgPreVote for 3 [logterm: 1, index: 10] at term 1 channel=mychannel node=4
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 070[0m 4 [term: 1] received a MsgVote message with higher term from 3 [term: 2] channel=mychannel node=4
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 071[0m 4 became follower at term 2 channel=mychannel node=4
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 072[0m 4 [logterm: 1, index: 10, vote: 0] cast MsgVote for 3 [logterm: 1, index: 10] at term 2 channel=mychannel node=4
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 073[0m raft.node: 4 elected leader 3 at term 2 channel=mychannel node=4
+[34m2020-03-19 02:52:37.149 UTC [orderer.consensus.etcdraft] run -> INFO 074[0m Raft leader changed: 0 -> 3 channel=mychannel node=4
+[34m2020-03-19 02:53:04.650 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 075[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=4
+[34m2020-03-19 02:53:07.833 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 076[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=4
+[34m2020-03-19 02:54:46.653 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 077[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=4
+[34m2020-03-19 02:56:24.510 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 078[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=4
+[34m2020-03-19 02:56:29.494 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 079[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=4
+[34m2020-03-19 02:56:41.553 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07a[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=4
+[34m2020-03-19 02:58:40.938 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 080[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=4
+[34m2020-03-19 02:59:09.319 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 085[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=4
+[34m2020-03-19 02:59:45.336 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08a[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=4
+[34m2020-03-19 03:00:28.580 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08f[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=4
+[34m2020-03-19 03:00:50.272 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 091[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=4
+[34m2020-03-19 03:02:10.031 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 096[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=4
+[34m2020-03-19 03:02:39.505 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 098[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=4
+[34m2020-03-19 03:03:02.343 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 09d[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=4
+[34m2020-03-19 03:03:30.732 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 09e[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=4
+[34m2020-03-19 03:03:54.416 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a3[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=4
+[34m2020-03-19 02:51:37.650 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.731 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 082[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.731 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 083[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=5
+[34m2020-03-19 02:52:35.921 UTC [orderer.consensus.etcdraft] Start -> INFO 085[0m Starting Raft node channel=mychannel node=5
+[34m2020-03-19 02:52:35.923 UTC [orderer.consensus.etcdraft] start -> INFO 0a3[0m Starting raft node as part of a new channel channel=mychannel node=5
+[34m2020-03-19 02:52:35.923 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 0a4[0m 5 became follower at term 0 channel=mychannel node=5
+[34m2020-03-19 02:52:35.923 UTC [orderer.consensus.etcdraft] newRaft -> INFO 0a5[0m newRaft 5 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=5
+[34m2020-03-19 02:52:35.923 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 0a6[0m 5 became follower at term 1 channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0a7[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0a8[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0a9[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0aa[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0ab[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0ac[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0ad[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0ae[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0af[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0b0[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:37.018 UTC [orderer.consensus.etcdraft] Step -> INFO 0b1[0m 5 [logterm: 1, index: 10, vote: 0] cast MsgPreVote for 3 [logterm: 1, index: 10] at term 1 channel=mychannel node=5
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] Step -> INFO 0b2[0m 5 [term: 1] received a MsgVote message with higher term from 3 [term: 2] channel=mychannel node=5
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 0b3[0m 5 became follower at term 2 channel=mychannel node=5
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] Step -> INFO 0b4[0m 5 [logterm: 1, index: 10, vote: 0] cast MsgVote for 3 [logterm: 1, index: 10] at term 2 channel=mychannel node=5
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 0b5[0m raft.node: 5 elected leader 3 at term 2 channel=mychannel node=5
+[34m2020-03-19 02:52:37.149 UTC [orderer.consensus.etcdraft] run -> INFO 0b6[0m Raft leader changed: 0 -> 3 channel=mychannel node=5
+[34m2020-03-19 02:53:04.641 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0b7[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=5
+[34m2020-03-19 02:53:07.839 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0b9[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=5
+[34m2020-03-19 02:54:46.654 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0ba[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=5
+[34m2020-03-19 02:56:24.510 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0bb[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=5
+[34m2020-03-19 02:56:29.493 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0bc[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=5
+[34m2020-03-19 02:56:41.552 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0bd[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=5
+[34m2020-03-19 02:58:40.936 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0c1[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=5
+[34m2020-03-19 02:59:09.313 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0c6[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=5
+[34m2020-03-19 02:59:45.384 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0cb[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=5
+[34m2020-03-19 03:00:28.581 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0cf[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=5
+[34m2020-03-19 03:00:50.273 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0d1[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=5
+[34m2020-03-19 03:02:10.031 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0d6[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=5
+[34m2020-03-19 03:02:39.505 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0d7[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=5
+[34m2020-03-19 03:03:02.344 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0dc[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=5
+[34m2020-03-19 03:03:30.691 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0dd[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=5
+[34m2020-03-19 03:03:54.414 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0e2[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=5
+[34m2020-03-19 02:51:40.435 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.767 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 06d[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.767 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 06e[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=6
+[34m2020-03-19 02:52:36.128 UTC [orderer.consensus.etcdraft] Start -> INFO 070[0m Starting Raft node channel=mychannel node=6
+[34m2020-03-19 02:52:36.130 UTC [orderer.consensus.etcdraft] start -> INFO 08e[0m Starting raft node as part of a new channel channel=mychannel node=6
+[34m2020-03-19 02:52:36.130 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 08f[0m 6 became follower at term 0 channel=mychannel node=6
+[34m2020-03-19 02:52:36.130 UTC [orderer.consensus.etcdraft] newRaft -> INFO 090[0m newRaft 6 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=6
+[34m2020-03-19 02:52:36.130 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 091[0m 6 became follower at term 1 channel=mychannel node=6
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 092[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 093[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 094[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 095[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 096[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 097[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 098[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 099[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 09a[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 09b[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:37.018 UTC [orderer.consensus.etcdraft] Step -> INFO 09c[0m 6 [logterm: 1, index: 10, vote: 0] cast MsgPreVote for 3 [logterm: 1, index: 10] at term 1 channel=mychannel node=6
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 09d[0m 6 [term: 1] received a MsgVote message with higher term from 3 [term: 2] channel=mychannel node=6
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 09e[0m 6 became follower at term 2 channel=mychannel node=6
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 09f[0m 6 [logterm: 1, index: 10, vote: 0] cast MsgVote for 3 [logterm: 1, index: 10] at term 2 channel=mychannel node=6
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 0a0[0m raft.node: 6 elected leader 3 at term 2 channel=mychannel node=6
+[34m2020-03-19 02:52:37.149 UTC [orderer.consensus.etcdraft] run -> INFO 0a1[0m Raft leader changed: 0 -> 3 channel=mychannel node=6
+[34m2020-03-19 02:53:04.641 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a3[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=6
+[34m2020-03-19 02:53:07.835 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a4[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=6
+[34m2020-03-19 02:54:46.654 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a5[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=6
+[34m2020-03-19 02:56:24.509 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a6[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=6
+[34m2020-03-19 02:56:29.495 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a7[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=6
+[34m2020-03-19 02:56:41.552 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a8[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=6
+[34m2020-03-19 02:58:40.937 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a9[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=6
+[34m2020-03-19 02:59:09.313 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0aa[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=6
+[34m2020-03-19 02:59:45.335 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0ab[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=6
+[34m2020-03-19 03:00:28.580 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0ac[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=6
+[34m2020-03-19 03:00:50.272 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0b3[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=6
+[34m2020-03-19 03:02:10.031 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0b4[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=6
+[34m2020-03-19 03:02:39.506 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0bc[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=6
+[34m2020-03-19 03:03:02.392 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0be[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=6
+[34m2020-03-19 03:03:30.691 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0c5[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=6
+[34m2020-03-19 03:03:54.414 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0c6[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=6
+[34m2020-03-19 02:51:59.153 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.732 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 040[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.732 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 041[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=7
+[34m2020-03-19 02:52:35.911 UTC [orderer.consensus.etcdraft] Start -> INFO 043[0m Starting Raft node channel=mychannel node=7
+[34m2020-03-19 02:52:35.913 UTC [orderer.consensus.etcdraft] start -> INFO 061[0m Starting raft node as part of a new channel channel=mychannel node=7
+[34m2020-03-19 02:52:35.913 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 062[0m 7 became follower at term 0 channel=mychannel node=7
+[34m2020-03-19 02:52:35.913 UTC [orderer.consensus.etcdraft] newRaft -> INFO 063[0m newRaft 7 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=7
+[34m2020-03-19 02:52:35.913 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 064[0m 7 became follower at term 1 channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 065[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 066[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 067[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 068[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 069[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 06a[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 06b[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 06c[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 06d[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 06e[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] Step -> INFO 06f[0m 7 [logterm: 1, index: 10, vote: 0] cast MsgPreVote for 3 [logterm: 1, index: 10] at term 1 channel=mychannel node=7
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] Step -> INFO 070[0m 7 [term: 1] received a MsgVote message with higher term from 3 [term: 2] channel=mychannel node=7
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 071[0m 7 became follower at term 2 channel=mychannel node=7
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] Step -> INFO 072[0m 7 [logterm: 1, index: 10, vote: 0] cast MsgVote for 3 [logterm: 1, index: 10] at term 2 channel=mychannel node=7
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 073[0m raft.node: 7 elected leader 3 at term 2 channel=mychannel node=7
+[34m2020-03-19 02:52:37.138 UTC [orderer.consensus.etcdraft] run -> INFO 074[0m Raft leader changed: 0 -> 3 channel=mychannel node=7
+[34m2020-03-19 02:53:04.649 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 075[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=7
+[34m2020-03-19 02:53:07.833 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 076[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=7
+[34m2020-03-19 02:54:46.654 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 077[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=7
+[34m2020-03-19 02:56:24.510 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 078[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=7
+[34m2020-03-19 02:56:29.523 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 079[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=7
+[34m2020-03-19 02:56:41.552 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07a[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=7
+[34m2020-03-19 02:58:40.936 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07b[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=7
+[34m2020-03-19 02:59:09.312 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07c[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=7
+[34m2020-03-19 02:59:45.336 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07d[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=7
+[34m2020-03-19 03:00:28.583 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07f[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=7
+[34m2020-03-19 03:00:50.272 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 085[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=7
+[34m2020-03-19 03:02:10.031 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 086[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=7
+[34m2020-03-19 03:02:39.505 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08c[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=7
+[34m2020-03-19 03:03:02.343 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08e[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=7
+[34m2020-03-19 03:03:30.691 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 094[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=7
+[34m2020-03-19 03:03:54.415 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 096[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=7
+[34m2020-03-19 02:51:52.877 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.731 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 042[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.731 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 043[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=8
+[34m2020-03-19 02:52:35.921 UTC [orderer.consensus.etcdraft] Start -> INFO 045[0m Starting Raft node channel=mychannel node=8
+[34m2020-03-19 02:52:35.926 UTC [orderer.consensus.etcdraft] start -> INFO 063[0m Starting raft node as part of a new channel channel=mychannel node=8
+[34m2020-03-19 02:52:35.926 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 064[0m 8 became follower at term 0 channel=mychannel node=8
+[34m2020-03-19 02:52:35.926 UTC [orderer.consensus.etcdraft] newRaft -> INFO 065[0m newRaft 8 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=8
+[34m2020-03-19 02:52:35.927 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 066[0m 8 became follower at term 1 channel=mychannel node=8
+[34m2020-03-19 02:52:36.103 UTC [orderer.consensus.etcdraft] apply -> INFO 067[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:36.104 UTC [orderer.consensus.etcdraft] apply -> INFO 068[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:36.104 UTC [orderer.consensus.etcdraft] apply -> INFO 069[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:36.104 UTC [orderer.consensus.etcdraft] apply -> INFO 06a[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:36.104 UTC [orderer.consensus.etcdraft] apply -> INFO 06b[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:36.104 UTC [orderer.consensus.etcdraft] apply -> INFO 06c[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:36.104 UTC [orderer.consensus.etcdraft] apply -> INFO 06d[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:36.104 UTC [orderer.consensus.etcdraft] apply -> INFO 06e[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:36.104 UTC [orderer.consensus.etcdraft] apply -> INFO 06f[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:36.104 UTC [orderer.consensus.etcdraft] apply -> INFO 070[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] Step -> INFO 071[0m 8 [logterm: 1, index: 10, vote: 0] cast MsgPreVote for 3 [logterm: 1, index: 10] at term 1 channel=mychannel node=8
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 072[0m 8 [term: 1] received a MsgVote message with higher term from 3 [term: 2] channel=mychannel node=8
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 073[0m 8 became follower at term 2 channel=mychannel node=8
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 074[0m 8 [logterm: 1, index: 10, vote: 0] cast MsgVote for 3 [logterm: 1, index: 10] at term 2 channel=mychannel node=8
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 075[0m raft.node: 8 elected leader 3 at term 2 channel=mychannel node=8
+[34m2020-03-19 02:52:37.149 UTC [orderer.consensus.etcdraft] run -> INFO 076[0m Raft leader changed: 0 -> 3 channel=mychannel node=8
+[34m2020-03-19 02:53:04.659 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 078[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=8
+[34m2020-03-19 02:53:07.842 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 079[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=8
+[34m2020-03-19 02:54:46.655 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07a[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=8
+[34m2020-03-19 02:56:24.510 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07b[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=8
+[34m2020-03-19 02:56:29.493 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07c[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=8
+[34m2020-03-19 02:56:41.553 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07d[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=8
+[34m2020-03-19 02:58:40.937 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07e[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=8
+[34m2020-03-19 02:59:09.314 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07f[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=8
+[34m2020-03-19 02:59:45.337 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 080[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=8
+[34m2020-03-19 03:00:28.580 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 081[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=8
+[34m2020-03-19 03:00:50.272 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 087[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=8
+[34m2020-03-19 03:02:10.034 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 088[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=8
+[34m2020-03-19 03:02:39.505 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08e[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=8
+[34m2020-03-19 03:03:02.392 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08f[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=8
+[34m2020-03-19 03:03:30.691 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 096[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=8
+[34m2020-03-19 03:03:54.413 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 097[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=8
+[34m2020-03-19 02:51:43.396 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.765 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 06a[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.765 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 06b[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=9
+[34m2020-03-19 02:52:36.121 UTC [orderer.consensus.etcdraft] Start -> INFO 06d[0m Starting Raft node channel=mychannel node=9
+[34m2020-03-19 02:52:36.123 UTC [orderer.consensus.etcdraft] start -> INFO 08b[0m Starting raft node as part of a new channel channel=mychannel node=9
+[34m2020-03-19 02:52:36.123 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 08c[0m 9 became follower at term 0 channel=mychannel node=9
+[34m2020-03-19 02:52:36.123 UTC [orderer.consensus.etcdraft] newRaft -> INFO 08d[0m newRaft 9 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=9
+[34m2020-03-19 02:52:36.123 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 08e[0m 9 became follower at term 1 channel=mychannel node=9
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 08f[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 090[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 091[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 092[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 093[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 094[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 095[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 096[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 097[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 098[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:37.018 UTC [orderer.consensus.etcdraft] Step -> INFO 099[0m 9 [logterm: 1, index: 10, vote: 0] cast MsgPreVote for 3 [logterm: 1, index: 10] at term 1 channel=mychannel node=9
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] Step -> INFO 09a[0m 9 [term: 1] received a MsgVote message with higher term from 3 [term: 2] channel=mychannel node=9
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 09b[0m 9 became follower at term 2 channel=mychannel node=9
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] Step -> INFO 09c[0m 9 [logterm: 1, index: 10, vote: 0] cast MsgVote for 3 [logterm: 1, index: 10] at term 2 channel=mychannel node=9
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 09d[0m raft.node: 9 elected leader 3 at term 2 channel=mychannel node=9
+[34m2020-03-19 02:52:37.149 UTC [orderer.consensus.etcdraft] run -> INFO 09e[0m Raft leader changed: 0 -> 3 channel=mychannel node=9
+[34m2020-03-19 02:53:04.651 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a0[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=9
+[34m2020-03-19 02:53:07.835 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a1[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=9
+[34m2020-03-19 02:54:46.655 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a2[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=9
+[34m2020-03-19 02:56:24.511 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a3[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=9
+[34m2020-03-19 02:56:29.575 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a4[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=9
+[34m2020-03-19 02:56:41.552 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a5[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=9
+[34m2020-03-19 02:58:40.936 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a6[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=9
+[34m2020-03-19 02:59:09.312 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a7[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=9
+[34m2020-03-19 02:59:45.384 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a8[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=9
+[34m2020-03-19 03:00:28.583 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a9[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=9
+[34m2020-03-19 03:00:50.273 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0af[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=9
+[34m2020-03-19 03:02:10.032 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0b0[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=9
+[34m2020-03-19 03:02:39.505 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0b5[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=9
+[34m2020-03-19 03:03:02.343 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0b7[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=9
+[34m2020-03-19 03:03:30.732 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0bc[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=9
+[34m2020-03-19 03:03:54.413 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0bd[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=9
+[34m2020-03-19 02:51:38.306 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.766 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 1ac[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.767 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 1ad[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=10
+[34m2020-03-19 02:52:36.125 UTC [orderer.consensus.etcdraft] Start -> INFO 1af[0m Starting Raft node channel=mychannel node=10
+[34m2020-03-19 02:52:36.127 UTC [orderer.consensus.etcdraft] start -> INFO 1cd[0m Starting raft node as part of a new channel channel=mychannel node=10
+[34m2020-03-19 02:52:36.127 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 1ce[0m a became follower at term 0 channel=mychannel node=10
+[34m2020-03-19 02:52:36.127 UTC [orderer.consensus.etcdraft] newRaft -> INFO 1cf[0m newRaft a [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=10
+[34m2020-03-19 02:52:36.127 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 1d0[0m a became follower at term 1 channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1d1[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1d2[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1d3[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1d4[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1d5[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1d6[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1d7[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1d8[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1d9[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1da[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:37.020 UTC [orderer.consensus.etcdraft] Step -> INFO 1db[0m a [logterm: 1, index: 10, vote: 0] cast MsgPreVote for 3 [logterm: 1, index: 10] at term 1 channel=mychannel node=10
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 1dc[0m a [term: 1] received a MsgVote message with higher term from 3 [term: 2] channel=mychannel node=10
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 1dd[0m a became follower at term 2 channel=mychannel node=10
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 1de[0m a [logterm: 1, index: 10, vote: 0] cast MsgVote for 3 [logterm: 1, index: 10] at term 2 channel=mychannel node=10
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 1df[0m raft.node: a elected leader 3 at term 2 channel=mychannel node=10
+[34m2020-03-19 02:52:37.149 UTC [orderer.consensus.etcdraft] run -> INFO 1e0[0m Raft leader changed: 0 -> 3 channel=mychannel node=10
+[34m2020-03-19 02:53:04.641 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1e1[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=10
+[34m2020-03-19 02:53:07.833 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1e2[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=10
+[34m2020-03-19 02:54:46.655 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1e3[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=10
+[34m2020-03-19 02:56:24.511 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1e4[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=10
+[34m2020-03-19 02:56:29.575 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1e5[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=10
+[34m2020-03-19 02:56:41.552 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1e6[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=10
+[34m2020-03-19 02:58:40.936 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1e7[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=10
+[34m2020-03-19 02:59:09.315 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1e8[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=10
+[34m2020-03-19 02:59:45.335 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1e9[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=10
+[34m2020-03-19 03:00:28.580 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1ea[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=10
+[34m2020-03-19 03:00:50.271 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1ef[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=10
+[34m2020-03-19 03:02:10.031 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1f0[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=10
+[34m2020-03-19 03:02:39.504 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1f4[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=10
+[34m2020-03-19 03:03:02.392 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1f6[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=10
+[34m2020-03-19 03:03:30.732 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1fa[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=10
+[34m2020-03-19 03:03:54.415 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1fc[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=10
+[34m2020-03-19 02:51:52.879 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.731 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 043[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.731 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 044[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=1
+[34m2020-03-19 02:52:35.923 UTC [orderer.consensus.etcdraft] Start -> INFO 046[0m Starting Raft node channel=mychannel node=1
+[34m2020-03-19 02:52:35.925 UTC [orderer.consensus.etcdraft] start -> INFO 064[0m Starting raft node as part of a new channel channel=mychannel node=1
+[34m2020-03-19 02:52:35.925 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 065[0m 1 became follower at term 0 channel=mychannel node=1
+[34m2020-03-19 02:52:35.925 UTC [orderer.consensus.etcdraft] newRaft -> INFO 066[0m newRaft 1 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=1
+[34m2020-03-19 02:52:35.925 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 067[0m 1 became follower at term 1 channel=mychannel node=1
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 06a[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:36.020 UTC [orderer.consensus.etcdraft] apply -> INFO 06b[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:36.020 UTC [orderer.consensus.etcdraft] apply -> INFO 06c[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:36.020 UTC [orderer.consensus.etcdraft] apply -> INFO 06d[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:36.020 UTC [orderer.consensus.etcdraft] apply -> INFO 06e[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:36.020 UTC [orderer.consensus.etcdraft] apply -> INFO 06f[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:36.020 UTC [orderer.consensus.etcdraft] apply -> INFO 070[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:36.020 UTC [orderer.consensus.etcdraft] apply -> INFO 071[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:36.020 UTC [orderer.consensus.etcdraft] apply -> INFO 072[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:36.020 UTC [orderer.consensus.etcdraft] apply -> INFO 073[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=1
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] Step -> INFO 07e[0m 1 [logterm: 1, index: 10, vote: 0] cast MsgPreVote for 3 [logterm: 1, index: 10] at term 1 channel=mychannel node=1
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] Step -> INFO 07f[0m 1 [term: 1] received a MsgVote message with higher term from 3 [term: 2] channel=mychannel node=1
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 080[0m 1 became follower at term 2 channel=mychannel node=1
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] Step -> INFO 081[0m 1 [logterm: 1, index: 10, vote: 0] cast MsgVote for 3 [logterm: 1, index: 10] at term 2 channel=mychannel node=1
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 082[0m raft.node: 1 elected leader 3 at term 2 channel=mychannel node=1
+[34m2020-03-19 02:52:37.149 UTC [orderer.consensus.etcdraft] run -> INFO 083[0m Raft leader changed: 0 -> 3 channel=mychannel node=1
+[34m2020-03-19 02:53:04.666 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 088[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=1
+[34m2020-03-19 02:53:07.870 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08b[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=1
+[34m2020-03-19 02:54:46.653 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08c[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=1
+[34m2020-03-19 02:56:24.510 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08f[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=1
+[34m2020-03-19 02:56:29.493 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 092[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=1
+[34m2020-03-19 02:56:41.552 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 095[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=1
+[34m2020-03-19 02:58:40.939 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 09f[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=1
+[34m2020-03-19 02:59:09.314 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a6[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=1
+[34m2020-03-19 02:59:45.335 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0ad[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=1
+[34m2020-03-19 03:00:28.581 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0b4[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=1
+[34m2020-03-19 03:00:50.271 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0b5[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=1
+[34m2020-03-19 03:02:10.033 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0bd[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=1
+[34m2020-03-19 03:02:39.506 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0be[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=1
+[34m2020-03-19 03:03:02.344 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0c5[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=1
+[34m2020-03-19 03:03:30.692 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0c6[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=1
+[34m2020-03-19 03:03:54.415 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0cd[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=1
+[34m2020-03-19 02:51:53.398 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.766 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 040[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.766 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 041[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=2
+[34m2020-03-19 02:52:36.121 UTC [orderer.consensus.etcdraft] Start -> INFO 043[0m Starting Raft node channel=mychannel node=2
+[34m2020-03-19 02:52:36.123 UTC [orderer.consensus.etcdraft] start -> INFO 061[0m Starting raft node as part of a new channel channel=mychannel node=2
+[34m2020-03-19 02:52:36.123 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 062[0m 2 became follower at term 0 channel=mychannel node=2
+[34m2020-03-19 02:52:36.123 UTC [orderer.consensus.etcdraft] newRaft -> INFO 063[0m newRaft 2 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=2
+[34m2020-03-19 02:52:36.123 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 064[0m 2 became follower at term 1 channel=mychannel node=2
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 065[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 066[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 067[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 068[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 069[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 06a[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 06b[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 06c[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 06d[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 06e[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=2
+[34m2020-03-19 02:52:37.018 UTC [orderer.consensus.etcdraft] Step -> INFO 06f[0m 2 [logterm: 1, index: 10, vote: 0] cast MsgPreVote for 3 [logterm: 1, index: 10] at term 1 channel=mychannel node=2
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 070[0m 2 [term: 1] received a MsgVote message with higher term from 3 [term: 2] channel=mychannel node=2
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 071[0m 2 became follower at term 2 channel=mychannel node=2
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 072[0m 2 [logterm: 1, index: 10, vote: 0] cast MsgVote for 3 [logterm: 1, index: 10] at term 2 channel=mychannel node=2
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 073[0m raft.node: 2 elected leader 3 at term 2 channel=mychannel node=2
+[34m2020-03-19 02:52:37.149 UTC [orderer.consensus.etcdraft] run -> INFO 074[0m Raft leader changed: 0 -> 3 channel=mychannel node=2
+[34m2020-03-19 02:53:04.647 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 075[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=2
+[34m2020-03-19 02:53:07.839 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 076[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=2
+[34m2020-03-19 02:54:46.654 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 077[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=2
+[34m2020-03-19 02:56:24.509 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 078[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=2
+[34m2020-03-19 02:56:29.575 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 079[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=2
+[34m2020-03-19 02:56:41.553 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07a[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=2
+[34m2020-03-19 02:58:40.937 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 080[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=2
+[34m2020-03-19 02:59:09.312 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 087[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=2
+[34m2020-03-19 02:59:45.384 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08e[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=2
+[34m2020-03-19 03:00:28.583 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 094[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=2
+[34m2020-03-19 03:00:50.308 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 096[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=2
+[34m2020-03-19 03:02:10.031 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 09c[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=2
+[34m2020-03-19 03:02:39.505 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 09e[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=2
+[34m2020-03-19 03:03:02.344 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a4[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=2
+[34m2020-03-19 03:03:30.692 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a5[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=2
+[34m2020-03-19 03:03:54.414 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0ab[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=2
+[34m2020-03-19 02:51:43.503 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.765 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 06a[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.765 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 06b[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=3
+[34m2020-03-19 02:52:36.011 UTC [orderer.consensus.etcdraft] Start -> INFO 06d[0m Starting Raft node channel=mychannel node=3
+[34m2020-03-19 02:52:36.016 UTC [orderer.consensus.etcdraft] start -> INFO 08b[0m Starting raft node as part of a new channel channel=mychannel node=3
+[34m2020-03-19 02:52:36.016 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 08c[0m 3 became follower at term 0 channel=mychannel node=3
+[34m2020-03-19 02:52:36.016 UTC [orderer.consensus.etcdraft] newRaft -> INFO 08d[0m newRaft 3 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=3
+[34m2020-03-19 02:52:36.016 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 08e[0m 3 became follower at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:36.016 UTC [orderer.consensus.etcdraft] run -> INFO 08f[0m This node is picked to start campaign channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 090[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 091[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 092[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 093[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 094[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 095[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 096[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 097[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 098[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 099[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=3
+[34m2020-03-19 02:52:37.016 UTC [orderer.consensus.etcdraft] Step -> INFO 09a[0m 3 is starting a new election at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.016 UTC [orderer.consensus.etcdraft] becomePreCandidate -> INFO 09b[0m 3 became pre-candidate at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.016 UTC [orderer.consensus.etcdraft] poll -> INFO 09c[0m 3 received MsgPreVoteResp from 3 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.016 UTC [orderer.consensus.etcdraft] campaign -> INFO 09d[0m 3 [logterm: 1, index: 10] sent MsgPreVote request to 1 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.016 UTC [orderer.consensus.etcdraft] campaign -> INFO 09e[0m 3 [logterm: 1, index: 10] sent MsgPreVote request to 4 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.016 UTC [orderer.consensus.etcdraft] campaign -> INFO 09f[0m 3 [logterm: 1, index: 10] sent MsgPreVote request to a at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.016 UTC [orderer.consensus.etcdraft] campaign -> INFO 0a0[0m 3 [logterm: 1, index: 10] sent MsgPreVote request to 2 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.016 UTC [orderer.consensus.etcdraft] campaign -> INFO 0a1[0m 3 [logterm: 1, index: 10] sent MsgPreVote request to 5 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.016 UTC [orderer.consensus.etcdraft] campaign -> INFO 0a2[0m 3 [logterm: 1, index: 10] sent MsgPreVote request to 6 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.017 UTC [orderer.consensus.etcdraft] campaign -> INFO 0a3[0m 3 [logterm: 1, index: 10] sent MsgPreVote request to 7 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.017 UTC [orderer.consensus.etcdraft] campaign -> INFO 0a4[0m 3 [logterm: 1, index: 10] sent MsgPreVote request to 8 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.017 UTC [orderer.consensus.etcdraft] campaign -> INFO 0a5[0m 3 [logterm: 1, index: 10] sent MsgPreVote request to 9 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.018 UTC [orderer.consensus.etcdraft] poll -> INFO 0a6[0m 3 received MsgPreVoteResp from 6 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.018 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0a7[0m 3 [quorum:6] has received 2 MsgPreVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] poll -> INFO 0a8[0m 3 received MsgPreVoteResp from 2 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0a9[0m 3 [quorum:6] has received 3 MsgPreVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] poll -> INFO 0aa[0m 3 received MsgPreVoteResp from 9 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0ab[0m 3 [quorum:6] has received 4 MsgPreVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] poll -> INFO 0ac[0m 3 received MsgPreVoteResp from 4 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0ad[0m 3 [quorum:6] has received 5 MsgPreVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] poll -> INFO 0ae[0m 3 received MsgPreVoteResp from 5 at term 1 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0af[0m 3 [quorum:6] has received 6 MsgPreVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] becomeCandidate -> INFO 0b0[0m 3 became candidate at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] poll -> INFO 0b1[0m 3 received MsgVoteResp from 3 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] campaign -> INFO 0b2[0m 3 [logterm: 1, index: 10] sent MsgVote request to a at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] campaign -> INFO 0b3[0m 3 [logterm: 1, index: 10] sent MsgVote request to 1 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] campaign -> INFO 0b4[0m 3 [logterm: 1, index: 10] sent MsgVote request to 4 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] campaign -> INFO 0b5[0m 3 [logterm: 1, index: 10] sent MsgVote request to 7 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] campaign -> INFO 0b6[0m 3 [logterm: 1, index: 10] sent MsgVote request to 8 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] campaign -> INFO 0b7[0m 3 [logterm: 1, index: 10] sent MsgVote request to 9 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] campaign -> INFO 0b8[0m 3 [logterm: 1, index: 10] sent MsgVote request to 2 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] campaign -> INFO 0b9[0m 3 [logterm: 1, index: 10] sent MsgVote request to 5 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] campaign -> INFO 0ba[0m 3 [logterm: 1, index: 10] sent MsgVote request to 6 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.059 UTC [orderer.consensus.etcdraft] poll -> INFO 0bb[0m 3 received MsgVoteResp from a at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.059 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0bc[0m 3 [quorum:6] has received 2 MsgVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.087 UTC [orderer.consensus.etcdraft] poll -> INFO 0bd[0m 3 received MsgVoteResp from 2 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.088 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0be[0m 3 [quorum:6] has received 3 MsgVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.088 UTC [orderer.consensus.etcdraft] poll -> INFO 0bf[0m 3 received MsgVoteResp from 8 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.088 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0c0[0m 3 [quorum:6] has received 4 MsgVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.088 UTC [orderer.consensus.etcdraft] poll -> INFO 0c1[0m 3 received MsgVoteResp from 4 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.088 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0c2[0m 3 [quorum:6] has received 5 MsgVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.088 UTC [orderer.consensus.etcdraft] poll -> INFO 0c3[0m 3 received MsgVoteResp from 7 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.088 UTC [orderer.consensus.etcdraft] stepCandidate -> INFO 0c4[0m 3 [quorum:6] has received 6 MsgVoteResp votes and 0 vote rejections channel=mychannel node=3
+[34m2020-03-19 02:52:37.088 UTC [orderer.consensus.etcdraft] becomeLeader -> INFO 0c5[0m 3 became leader at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.088 UTC [orderer.consensus.etcdraft] run -> INFO 0c6[0m raft.node: 3 elected leader 3 at term 2 channel=mychannel node=3
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 0c7[0m Leader 3 is present, quit campaign channel=mychannel node=3
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 0c8[0m Raft leader changed: 0 -> 3 channel=mychannel node=3
+[34m2020-03-19 02:52:37.150 UTC [orderer.consensus.etcdraft] run -> INFO 0c9[0m Start accepting requests as Raft leader at block [0] channel=mychannel node=3
+[34m2020-03-19 02:53:04.435 UTC [orderer.consensus.etcdraft] propose -> INFO 0ca[0m Created block [1], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 02:53:04.435 UTC [orderer.consensus.etcdraft] run -> INFO 0cb[0m Received config transaction, pause accepting transaction till it is committed channel=mychannel node=3
+[34m2020-03-19 02:53:04.640 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0cc[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=3
+[34m2020-03-19 02:53:07.666 UTC [orderer.consensus.etcdraft] propose -> INFO 0cd[0m Created block [2], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 02:53:07.666 UTC [orderer.consensus.etcdraft] run -> INFO 0ce[0m Received config transaction, pause accepting transaction till it is committed channel=mychannel node=3
+[34m2020-03-19 02:53:07.833 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0cf[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=3
+[34m2020-03-19 02:54:46.547 UTC [orderer.consensus.etcdraft] propose -> INFO 0d0[0m Created block [3], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 02:54:46.653 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0d1[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=3
+[34m2020-03-19 02:56:24.438 UTC [orderer.consensus.etcdraft] propose -> INFO 0d2[0m Created block [4], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 02:56:24.509 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0d3[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=3
+[34m2020-03-19 02:56:29.384 UTC [orderer.consensus.etcdraft] propose -> INFO 0d4[0m Created block [5], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 02:56:29.492 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0d5[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=3
+[34m2020-03-19 02:56:41.418 UTC [orderer.consensus.etcdraft] propose -> INFO 0d6[0m Created block [6], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 02:56:41.551 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0d7[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=3
+[34m2020-03-19 02:58:40.825 UTC [orderer.consensus.etcdraft] propose -> INFO 0dd[0m Created block [7], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 02:58:40.935 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0de[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=3
+[34m2020-03-19 02:59:09.149 UTC [orderer.consensus.etcdraft] propose -> INFO 0e4[0m Created block [8], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 02:59:09.310 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0e5[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=3
+[34m2020-03-19 02:59:45.219 UTC [orderer.consensus.etcdraft] propose -> INFO 0eb[0m Created block [9], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 02:59:45.335 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0ec[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=3
+[34m2020-03-19 03:00:28.455 UTC [orderer.consensus.etcdraft] propose -> INFO 0f2[0m Created block [10], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 03:00:28.579 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0f3[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=3
+[34m2020-03-19 03:00:50.169 UTC [orderer.consensus.etcdraft] propose -> INFO 0f4[0m Created block [11], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 03:00:50.267 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0f5[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=3
+[34m2020-03-19 03:02:09.878 UTC [orderer.consensus.etcdraft] propose -> INFO 0fb[0m Created block [12], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 03:02:10.030 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0fc[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=3
+[34m2020-03-19 03:02:39.388 UTC [orderer.consensus.etcdraft] propose -> INFO 0fd[0m Created block [13], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 03:02:39.504 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0fe[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=3
+[34m2020-03-19 03:03:02.194 UTC [orderer.consensus.etcdraft] propose -> INFO 104[0m Created block [14], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 03:03:02.343 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 105[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=3
+[34m2020-03-19 03:03:30.571 UTC [orderer.consensus.etcdraft] propose -> INFO 106[0m Created block [15], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 03:03:30.690 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 107[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=3
+[34m2020-03-19 03:03:54.307 UTC [orderer.consensus.etcdraft] propose -> INFO 10d[0m Created block [16], there are 0 blocks in flight channel=mychannel node=3
+[34m2020-03-19 03:03:54.413 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 10e[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=3
+[34m2020-03-19 02:51:55.063 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.765 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 040[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.765 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 041[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=4
+[34m2020-03-19 02:52:36.012 UTC [orderer.consensus.etcdraft] Start -> INFO 043[0m Starting Raft node channel=mychannel node=4
+[34m2020-03-19 02:52:36.014 UTC [orderer.consensus.etcdraft] start -> INFO 061[0m Starting raft node as part of a new channel channel=mychannel node=4
+[34m2020-03-19 02:52:36.014 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 062[0m 4 became follower at term 0 channel=mychannel node=4
+[34m2020-03-19 02:52:36.014 UTC [orderer.consensus.etcdraft] newRaft -> INFO 063[0m newRaft 4 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=4
+[34m2020-03-19 02:52:36.014 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 064[0m 4 became follower at term 1 channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 065[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 066[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 067[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 068[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 069[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 06a[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 06b[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 06c[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 06d[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:36.137 UTC [orderer.consensus.etcdraft] apply -> INFO 06e[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=4
+[34m2020-03-19 02:52:37.018 UTC [orderer.consensus.etcdraft] Step -> INFO 06f[0m 4 [logterm: 1, index: 10, vote: 0] cast MsgPreVote for 3 [logterm: 1, index: 10] at term 1 channel=mychannel node=4
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 070[0m 4 [term: 1] received a MsgVote message with higher term from 3 [term: 2] channel=mychannel node=4
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 071[0m 4 became follower at term 2 channel=mychannel node=4
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 072[0m 4 [logterm: 1, index: 10, vote: 0] cast MsgVote for 3 [logterm: 1, index: 10] at term 2 channel=mychannel node=4
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 073[0m raft.node: 4 elected leader 3 at term 2 channel=mychannel node=4
+[34m2020-03-19 02:52:37.149 UTC [orderer.consensus.etcdraft] run -> INFO 074[0m Raft leader changed: 0 -> 3 channel=mychannel node=4
+[34m2020-03-19 02:53:04.650 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 075[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=4
+[34m2020-03-19 02:53:07.833 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 076[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=4
+[34m2020-03-19 02:54:46.653 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 077[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=4
+[34m2020-03-19 02:56:24.510 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 078[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=4
+[34m2020-03-19 02:56:29.494 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 079[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=4
+[34m2020-03-19 02:56:41.553 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07a[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=4
+[34m2020-03-19 02:58:40.938 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 080[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=4
+[34m2020-03-19 02:59:09.319 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 085[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=4
+[34m2020-03-19 02:59:45.336 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08a[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=4
+[34m2020-03-19 03:00:28.580 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08f[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=4
+[34m2020-03-19 03:00:50.272 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 091[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=4
+[34m2020-03-19 03:02:10.031 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 096[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=4
+[34m2020-03-19 03:02:39.505 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 098[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=4
+[34m2020-03-19 03:03:02.343 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 09d[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=4
+[34m2020-03-19 03:03:30.732 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 09e[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=4
+[34m2020-03-19 03:03:54.416 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a3[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=4
+[34m2020-03-19 02:51:37.650 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.731 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 082[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.731 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 083[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=5
+[34m2020-03-19 02:52:35.921 UTC [orderer.consensus.etcdraft] Start -> INFO 085[0m Starting Raft node channel=mychannel node=5
+[34m2020-03-19 02:52:35.923 UTC [orderer.consensus.etcdraft] start -> INFO 0a3[0m Starting raft node as part of a new channel channel=mychannel node=5
+[34m2020-03-19 02:52:35.923 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 0a4[0m 5 became follower at term 0 channel=mychannel node=5
+[34m2020-03-19 02:52:35.923 UTC [orderer.consensus.etcdraft] newRaft -> INFO 0a5[0m newRaft 5 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=5
+[34m2020-03-19 02:52:35.923 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 0a6[0m 5 became follower at term 1 channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0a7[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0a8[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0a9[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0aa[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0ab[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0ac[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0ad[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0ae[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0af[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 0b0[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=5
+[34m2020-03-19 02:52:37.018 UTC [orderer.consensus.etcdraft] Step -> INFO 0b1[0m 5 [logterm: 1, index: 10, vote: 0] cast MsgPreVote for 3 [logterm: 1, index: 10] at term 1 channel=mychannel node=5
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] Step -> INFO 0b2[0m 5 [term: 1] received a MsgVote message with higher term from 3 [term: 2] channel=mychannel node=5
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 0b3[0m 5 became follower at term 2 channel=mychannel node=5
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] Step -> INFO 0b4[0m 5 [logterm: 1, index: 10, vote: 0] cast MsgVote for 3 [logterm: 1, index: 10] at term 2 channel=mychannel node=5
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 0b5[0m raft.node: 5 elected leader 3 at term 2 channel=mychannel node=5
+[34m2020-03-19 02:52:37.149 UTC [orderer.consensus.etcdraft] run -> INFO 0b6[0m Raft leader changed: 0 -> 3 channel=mychannel node=5
+[34m2020-03-19 02:53:04.641 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0b7[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=5
+[34m2020-03-19 02:53:07.839 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0b9[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=5
+[34m2020-03-19 02:54:46.654 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0ba[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=5
+[34m2020-03-19 02:56:24.510 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0bb[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=5
+[34m2020-03-19 02:56:29.493 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0bc[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=5
+[34m2020-03-19 02:56:41.552 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0bd[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=5
+[34m2020-03-19 02:58:40.936 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0c1[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=5
+[34m2020-03-19 02:59:09.313 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0c6[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=5
+[34m2020-03-19 02:59:45.384 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0cb[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=5
+[34m2020-03-19 03:00:28.581 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0cf[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=5
+[34m2020-03-19 03:00:50.273 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0d1[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=5
+[34m2020-03-19 03:02:10.031 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0d6[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=5
+[34m2020-03-19 03:02:39.505 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0d7[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=5
+[34m2020-03-19 03:03:02.344 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0dc[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=5
+[34m2020-03-19 03:03:30.691 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0dd[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=5
+[34m2020-03-19 03:03:54.414 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0e2[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=5
+[34m2020-03-19 02:51:40.435 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.767 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 06d[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.767 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 06e[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=6
+[34m2020-03-19 02:52:36.128 UTC [orderer.consensus.etcdraft] Start -> INFO 070[0m Starting Raft node channel=mychannel node=6
+[34m2020-03-19 02:52:36.130 UTC [orderer.consensus.etcdraft] start -> INFO 08e[0m Starting raft node as part of a new channel channel=mychannel node=6
+[34m2020-03-19 02:52:36.130 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 08f[0m 6 became follower at term 0 channel=mychannel node=6
+[34m2020-03-19 02:52:36.130 UTC [orderer.consensus.etcdraft] newRaft -> INFO 090[0m newRaft 6 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=6
+[34m2020-03-19 02:52:36.130 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 091[0m 6 became follower at term 1 channel=mychannel node=6
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 092[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 093[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 094[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 095[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 096[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 097[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 098[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 099[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 09a[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 09b[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=6
+[34m2020-03-19 02:52:37.018 UTC [orderer.consensus.etcdraft] Step -> INFO 09c[0m 6 [logterm: 1, index: 10, vote: 0] cast MsgPreVote for 3 [logterm: 1, index: 10] at term 1 channel=mychannel node=6
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 09d[0m 6 [term: 1] received a MsgVote message with higher term from 3 [term: 2] channel=mychannel node=6
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 09e[0m 6 became follower at term 2 channel=mychannel node=6
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 09f[0m 6 [logterm: 1, index: 10, vote: 0] cast MsgVote for 3 [logterm: 1, index: 10] at term 2 channel=mychannel node=6
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 0a0[0m raft.node: 6 elected leader 3 at term 2 channel=mychannel node=6
+[34m2020-03-19 02:52:37.149 UTC [orderer.consensus.etcdraft] run -> INFO 0a1[0m Raft leader changed: 0 -> 3 channel=mychannel node=6
+[34m2020-03-19 02:53:04.641 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a3[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=6
+[34m2020-03-19 02:53:07.835 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a4[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=6
+[34m2020-03-19 02:54:46.654 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a5[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=6
+[34m2020-03-19 02:56:24.509 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a6[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=6
+[34m2020-03-19 02:56:29.495 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a7[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=6
+[34m2020-03-19 02:56:41.552 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a8[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=6
+[34m2020-03-19 02:58:40.937 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a9[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=6
+[34m2020-03-19 02:59:09.313 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0aa[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=6
+[34m2020-03-19 02:59:45.335 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0ab[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=6
+[34m2020-03-19 03:00:28.580 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0ac[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=6
+[34m2020-03-19 03:00:50.272 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0b3[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=6
+[34m2020-03-19 03:02:10.031 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0b4[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=6
+[34m2020-03-19 03:02:39.506 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0bc[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=6
+[34m2020-03-19 03:03:02.392 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0be[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=6
+[34m2020-03-19 03:03:30.691 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0c5[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=6
+[34m2020-03-19 03:03:54.414 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0c6[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=6
+[34m2020-03-19 02:51:59.153 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.732 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 040[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.732 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 041[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=7
+[34m2020-03-19 02:52:35.911 UTC [orderer.consensus.etcdraft] Start -> INFO 043[0m Starting Raft node channel=mychannel node=7
+[34m2020-03-19 02:52:35.913 UTC [orderer.consensus.etcdraft] start -> INFO 061[0m Starting raft node as part of a new channel channel=mychannel node=7
+[34m2020-03-19 02:52:35.913 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 062[0m 7 became follower at term 0 channel=mychannel node=7
+[34m2020-03-19 02:52:35.913 UTC [orderer.consensus.etcdraft] newRaft -> INFO 063[0m newRaft 7 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=7
+[34m2020-03-19 02:52:35.913 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 064[0m 7 became follower at term 1 channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 065[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 066[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 067[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 068[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 069[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 06a[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 06b[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 06c[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 06d[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:36.019 UTC [orderer.consensus.etcdraft] apply -> INFO 06e[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=7
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] Step -> INFO 06f[0m 7 [logterm: 1, index: 10, vote: 0] cast MsgPreVote for 3 [logterm: 1, index: 10] at term 1 channel=mychannel node=7
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] Step -> INFO 070[0m 7 [term: 1] received a MsgVote message with higher term from 3 [term: 2] channel=mychannel node=7
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 071[0m 7 became follower at term 2 channel=mychannel node=7
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] Step -> INFO 072[0m 7 [logterm: 1, index: 10, vote: 0] cast MsgVote for 3 [logterm: 1, index: 10] at term 2 channel=mychannel node=7
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 073[0m raft.node: 7 elected leader 3 at term 2 channel=mychannel node=7
+[34m2020-03-19 02:52:37.138 UTC [orderer.consensus.etcdraft] run -> INFO 074[0m Raft leader changed: 0 -> 3 channel=mychannel node=7
+[34m2020-03-19 02:53:04.649 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 075[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=7
+[34m2020-03-19 02:53:07.833 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 076[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=7
+[34m2020-03-19 02:54:46.654 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 077[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=7
+[34m2020-03-19 02:56:24.510 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 078[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=7
+[34m2020-03-19 02:56:29.523 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 079[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=7
+[34m2020-03-19 02:56:41.552 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07a[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=7
+[34m2020-03-19 02:58:40.936 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07b[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=7
+[34m2020-03-19 02:59:09.312 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07c[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=7
+[34m2020-03-19 02:59:45.336 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07d[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=7
+[34m2020-03-19 03:00:28.583 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07f[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=7
+[34m2020-03-19 03:00:50.272 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 085[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=7
+[34m2020-03-19 03:02:10.031 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 086[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=7
+[34m2020-03-19 03:02:39.505 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08c[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=7
+[34m2020-03-19 03:03:02.343 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08e[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=7
+[34m2020-03-19 03:03:30.691 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 094[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=7
+[34m2020-03-19 03:03:54.415 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 096[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=7
+[34m2020-03-19 02:51:52.877 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.731 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 042[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.731 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 043[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=8
+[34m2020-03-19 02:52:35.921 UTC [orderer.consensus.etcdraft] Start -> INFO 045[0m Starting Raft node channel=mychannel node=8
+[34m2020-03-19 02:52:35.926 UTC [orderer.consensus.etcdraft] start -> INFO 063[0m Starting raft node as part of a new channel channel=mychannel node=8
+[34m2020-03-19 02:52:35.926 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 064[0m 8 became follower at term 0 channel=mychannel node=8
+[34m2020-03-19 02:52:35.926 UTC [orderer.consensus.etcdraft] newRaft -> INFO 065[0m newRaft 8 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=8
+[34m2020-03-19 02:52:35.927 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 066[0m 8 became follower at term 1 channel=mychannel node=8
+[34m2020-03-19 02:52:36.103 UTC [orderer.consensus.etcdraft] apply -> INFO 067[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:36.104 UTC [orderer.consensus.etcdraft] apply -> INFO 068[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:36.104 UTC [orderer.consensus.etcdraft] apply -> INFO 069[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:36.104 UTC [orderer.consensus.etcdraft] apply -> INFO 06a[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:36.104 UTC [orderer.consensus.etcdraft] apply -> INFO 06b[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:36.104 UTC [orderer.consensus.etcdraft] apply -> INFO 06c[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:36.104 UTC [orderer.consensus.etcdraft] apply -> INFO 06d[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:36.104 UTC [orderer.consensus.etcdraft] apply -> INFO 06e[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:36.104 UTC [orderer.consensus.etcdraft] apply -> INFO 06f[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:36.104 UTC [orderer.consensus.etcdraft] apply -> INFO 070[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=8
+[34m2020-03-19 02:52:37.019 UTC [orderer.consensus.etcdraft] Step -> INFO 071[0m 8 [logterm: 1, index: 10, vote: 0] cast MsgPreVote for 3 [logterm: 1, index: 10] at term 1 channel=mychannel node=8
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 072[0m 8 [term: 1] received a MsgVote message with higher term from 3 [term: 2] channel=mychannel node=8
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 073[0m 8 became follower at term 2 channel=mychannel node=8
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 074[0m 8 [logterm: 1, index: 10, vote: 0] cast MsgVote for 3 [logterm: 1, index: 10] at term 2 channel=mychannel node=8
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 075[0m raft.node: 8 elected leader 3 at term 2 channel=mychannel node=8
+[34m2020-03-19 02:52:37.149 UTC [orderer.consensus.etcdraft] run -> INFO 076[0m Raft leader changed: 0 -> 3 channel=mychannel node=8
+[34m2020-03-19 02:53:04.659 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 078[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=8
+[34m2020-03-19 02:53:07.842 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 079[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=8
+[34m2020-03-19 02:54:46.655 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07a[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=8
+[34m2020-03-19 02:56:24.510 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07b[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=8
+[34m2020-03-19 02:56:29.493 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07c[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=8
+[34m2020-03-19 02:56:41.553 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07d[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=8
+[34m2020-03-19 02:58:40.937 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07e[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=8
+[34m2020-03-19 02:59:09.314 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 07f[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=8
+[34m2020-03-19 02:59:45.337 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 080[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=8
+[34m2020-03-19 03:00:28.580 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 081[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=8
+[34m2020-03-19 03:00:50.272 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 087[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=8
+[34m2020-03-19 03:02:10.034 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 088[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=8
+[34m2020-03-19 03:02:39.505 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08e[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=8
+[34m2020-03-19 03:03:02.392 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 08f[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=8
+[34m2020-03-19 03:03:30.691 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 096[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=8
+[34m2020-03-19 03:03:54.413 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 097[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=8
+[34m2020-03-19 02:51:43.396 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.765 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 06a[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.765 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 06b[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=9
+[34m2020-03-19 02:52:36.121 UTC [orderer.consensus.etcdraft] Start -> INFO 06d[0m Starting Raft node channel=mychannel node=9
+[34m2020-03-19 02:52:36.123 UTC [orderer.consensus.etcdraft] start -> INFO 08b[0m Starting raft node as part of a new channel channel=mychannel node=9
+[34m2020-03-19 02:52:36.123 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 08c[0m 9 became follower at term 0 channel=mychannel node=9
+[34m2020-03-19 02:52:36.123 UTC [orderer.consensus.etcdraft] newRaft -> INFO 08d[0m newRaft 9 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=9
+[34m2020-03-19 02:52:36.123 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 08e[0m 9 became follower at term 1 channel=mychannel node=9
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 08f[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 090[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 091[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 092[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:36.238 UTC [orderer.consensus.etcdraft] apply -> INFO 093[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 094[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 095[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 096[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 097[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 098[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=9
+[34m2020-03-19 02:52:37.018 UTC [orderer.consensus.etcdraft] Step -> INFO 099[0m 9 [logterm: 1, index: 10, vote: 0] cast MsgPreVote for 3 [logterm: 1, index: 10] at term 1 channel=mychannel node=9
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] Step -> INFO 09a[0m 9 [term: 1] received a MsgVote message with higher term from 3 [term: 2] channel=mychannel node=9
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 09b[0m 9 became follower at term 2 channel=mychannel node=9
+[34m2020-03-19 02:52:37.032 UTC [orderer.consensus.etcdraft] Step -> INFO 09c[0m 9 [logterm: 1, index: 10, vote: 0] cast MsgVote for 3 [logterm: 1, index: 10] at term 2 channel=mychannel node=9
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 09d[0m raft.node: 9 elected leader 3 at term 2 channel=mychannel node=9
+[34m2020-03-19 02:52:37.149 UTC [orderer.consensus.etcdraft] run -> INFO 09e[0m Raft leader changed: 0 -> 3 channel=mychannel node=9
+[34m2020-03-19 02:53:04.651 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a0[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=9
+[34m2020-03-19 02:53:07.835 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a1[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=9
+[34m2020-03-19 02:54:46.655 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a2[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=9
+[34m2020-03-19 02:56:24.511 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a3[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=9
+[34m2020-03-19 02:56:29.575 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a4[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=9
+[34m2020-03-19 02:56:41.552 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a5[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=9
+[34m2020-03-19 02:58:40.936 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a6[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=9
+[34m2020-03-19 02:59:09.312 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a7[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=9
+[34m2020-03-19 02:59:45.384 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a8[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=9
+[34m2020-03-19 03:00:28.583 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0a9[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=9
+[34m2020-03-19 03:00:50.273 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0af[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=9
+[34m2020-03-19 03:02:10.032 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0b0[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=9
+[34m2020-03-19 03:02:39.505 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0b5[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=9
+[34m2020-03-19 03:03:02.343 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0b7[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=9
+[34m2020-03-19 03:03:30.732 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0bc[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=9
+[34m2020-03-19 03:03:54.413 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 0bd[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=9
+[34m2020-03-19 02:51:38.306 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 009[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.766 UTC [orderer.consensus.etcdraft] HandleChain -> INFO 1ac[0m EvictionSuspicion not set, defaulting to 10m0s
+[34m2020-03-19 02:52:35.767 UTC [orderer.consensus.etcdraft] createOrReadWAL -> INFO 1ad[0m No WAL data found, creating new WAL at path '/var/hyperledger/production/orderer/etcdraft/wal/mychannel' channel=mychannel node=10
+[34m2020-03-19 02:52:36.125 UTC [orderer.consensus.etcdraft] Start -> INFO 1af[0m Starting Raft node channel=mychannel node=10
+[34m2020-03-19 02:52:36.127 UTC [orderer.consensus.etcdraft] start -> INFO 1cd[0m Starting raft node as part of a new channel channel=mychannel node=10
+[34m2020-03-19 02:52:36.127 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 1ce[0m a became follower at term 0 channel=mychannel node=10
+[34m2020-03-19 02:52:36.127 UTC [orderer.consensus.etcdraft] newRaft -> INFO 1cf[0m newRaft a [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0] channel=mychannel node=10
+[34m2020-03-19 02:52:36.127 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 1d0[0m a became follower at term 1 channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1d1[0m Applied config change to add node 1, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1d2[0m Applied config change to add node 2, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1d3[0m Applied config change to add node 3, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1d4[0m Applied config change to add node 4, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1d5[0m Applied config change to add node 5, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1d6[0m Applied config change to add node 6, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1d7[0m Applied config change to add node 7, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1d8[0m Applied config change to add node 8, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1d9[0m Applied config change to add node 9, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:36.239 UTC [orderer.consensus.etcdraft] apply -> INFO 1da[0m Applied config change to add node 10, current nodes in channel: [1 2 3 4 5 6 7 8 9 10] channel=mychannel node=10
+[34m2020-03-19 02:52:37.020 UTC [orderer.consensus.etcdraft] Step -> INFO 1db[0m a [logterm: 1, index: 10, vote: 0] cast MsgPreVote for 3 [logterm: 1, index: 10] at term 1 channel=mychannel node=10
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 1dc[0m a [term: 1] received a MsgVote message with higher term from 3 [term: 2] channel=mychannel node=10
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] becomeFollower -> INFO 1dd[0m a became follower at term 2 channel=mychannel node=10
+[34m2020-03-19 02:52:37.031 UTC [orderer.consensus.etcdraft] Step -> INFO 1de[0m a [logterm: 1, index: 10, vote: 0] cast MsgVote for 3 [logterm: 1, index: 10] at term 2 channel=mychannel node=10
+[34m2020-03-19 02:52:37.098 UTC [orderer.consensus.etcdraft] run -> INFO 1df[0m raft.node: a elected leader 3 at term 2 channel=mychannel node=10
+[34m2020-03-19 02:52:37.149 UTC [orderer.consensus.etcdraft] run -> INFO 1e0[0m Raft leader changed: 0 -> 3 channel=mychannel node=10
+[34m2020-03-19 02:53:04.641 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1e1[0m Writing block [1] (Raft index: 12) to ledger channel=mychannel node=10
+[34m2020-03-19 02:53:07.833 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1e2[0m Writing block [2] (Raft index: 13) to ledger channel=mychannel node=10
+[34m2020-03-19 02:54:46.655 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1e3[0m Writing block [3] (Raft index: 14) to ledger channel=mychannel node=10
+[34m2020-03-19 02:56:24.511 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1e4[0m Writing block [4] (Raft index: 15) to ledger channel=mychannel node=10
+[34m2020-03-19 02:56:29.575 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1e5[0m Writing block [5] (Raft index: 16) to ledger channel=mychannel node=10
+[34m2020-03-19 02:56:41.552 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1e6[0m Writing block [6] (Raft index: 17) to ledger channel=mychannel node=10
+[34m2020-03-19 02:58:40.936 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1e7[0m Writing block [7] (Raft index: 18) to ledger channel=mychannel node=10
+[34m2020-03-19 02:59:09.315 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1e8[0m Writing block [8] (Raft index: 19) to ledger channel=mychannel node=10
+[34m2020-03-19 02:59:45.335 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1e9[0m Writing block [9] (Raft index: 20) to ledger channel=mychannel node=10
+[34m2020-03-19 03:00:28.580 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1ea[0m Writing block [10] (Raft index: 21) to ledger channel=mychannel node=10
+[34m2020-03-19 03:00:50.271 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1ef[0m Writing block [11] (Raft index: 22) to ledger channel=mychannel node=10
+[34m2020-03-19 03:02:10.031 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1f0[0m Writing block [12] (Raft index: 23) to ledger channel=mychannel node=10
+[34m2020-03-19 03:02:39.504 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1f4[0m Writing block [13] (Raft index: 24) to ledger channel=mychannel node=10
+[34m2020-03-19 03:03:02.392 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1f6[0m Writing block [14] (Raft index: 25) to ledger channel=mychannel node=10
+[34m2020-03-19 03:03:30.732 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1fa[0m Writing block [15] (Raft index: 26) to ledger channel=mychannel node=10
+[34m2020-03-19 03:03:54.415 UTC [orderer.consensus.etcdraft] writeBlock -> INFO 1fc[0m Writing block [16] (Raft index: 27) to ledger channel=mychannel node=10
