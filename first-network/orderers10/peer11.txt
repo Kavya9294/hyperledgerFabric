@@ -1,0 +1,178 @@
+[34m2020-03-19 02:52:10.340 UTC [nodeCmd] serve -> INFO 001[0m Starting peer:
+ Version: 2.0.0
+ Commit SHA: 0432c3e
+ Go version: go1.13.4
+ OS/Arch: linux/amd64
+ Chaincode:
+  Base Docker Namespace: hyperledger
+  Base Docker Label: org.hyperledger.fabric
+  Docker Namespace: hyperledger
+[34m2020-03-19 02:52:10.380 UTC [peer] getLocalAddress -> INFO 002[0m Auto-detected peer address: 172.20.0.23:8051
+[34m2020-03-19 02:52:10.380 UTC [peer] getLocalAddress -> INFO 003[0m Returning peer1.org1.example.com:8051
+[34m2020-03-19 02:52:10.396 UTC [nodeCmd] serve -> INFO 004[0m Starting peer with TLS enabled
+[34m2020-03-19 02:52:10.772 UTC [gossip.service] New -> INFO 005[0m Initialize gossip with endpoint peer1.org1.example.com:8051
+[34m2020-03-19 02:52:10.774 UTC [gossip.gossip] New -> INFO 006[0m Creating gossip service with self membership of Endpoint: peer1.org1.example.com:8051, InternalEndpoint: peer1.org1.example.com:8051, PKI-ID: 010fa5c9e09746d0b38699afcd01cb5486063d38c38c44b29ca3988348f84927, Metadata: 
+[34m2020-03-19 02:52:10.775 UTC [gossip.gossip] start -> INFO 007[0m Gossip instance peer1.org1.example.com:8051 started
+[34m2020-03-19 02:52:10.778 UTC [ledgermgmt] NewLedgerMgr -> INFO 008[0m Initializing LedgerMgr
+[33m2020-03-19 02:52:13.776 UTC [gossip.discovery] func1 -> WARN 009[0m Could not connect to Endpoint: peer0.org1.example.com:7051, InternalEndpoint: peer0.org1.example.com:7051, PKI-ID: <nil>, Metadata:  : context deadline exceeded
+[34m2020-03-19 02:52:14.062 UTC [leveldbhelper] openDBAndCheckFormat -> INFO 00a[0m DB is empty Setting db format as 2.0
+[34m2020-03-19 02:52:14.296 UTC [fsblkstorage] NewProvider -> INFO 00b[0m Creating new file ledger directory at /var/hyperledger/production/ledgersData/chains/chains
+[34m2020-03-19 02:52:15.285 UTC [leveldbhelper] openDBAndCheckFormat -> INFO 00c[0m DB is empty Setting db format as 2.0
+[34m2020-03-19 02:52:17.268 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 00d[0m Created state database _users
+[34m2020-03-19 02:52:17.930 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 00e[0m Created state database _replicator
+[34m2020-03-19 02:52:18.533 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 00f[0m Created state database fabric__internal
+[34m2020-03-19 02:52:19.096 UTC [ledgermgmt] NewLedgerMgr -> INFO 010[0m Initialized LedgerMgr
+[34m2020-03-19 02:52:19.096 UTC [lifecycle] InitializeLocalChaincodes -> INFO 011[0m Initialized lifecycle cache with 0 already installed chaincodes
+[34m2020-03-19 02:52:19.097 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 012[0m Entering computeChaincodeEndpoint with peerHostname: peer1.org1.example.com
+[34m2020-03-19 02:52:19.097 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 013[0m Exit with ccEndpoint: peer1.org1.example.com:8052
+[34m2020-03-19 02:52:19.104 UTC [sccapi] DeploySysCC -> INFO 014[0m deploying system chaincode 'lscc'
+[34m2020-03-19 02:52:19.105 UTC [sccapi] DeploySysCC -> INFO 015[0m deploying system chaincode 'cscc'
+[34m2020-03-19 02:52:19.105 UTC [sccapi] DeploySysCC -> INFO 016[0m deploying system chaincode 'qscc'
+[34m2020-03-19 02:52:19.105 UTC [sccapi] DeploySysCC -> INFO 017[0m deploying system chaincode '_lifecycle'
+[34m2020-03-19 02:52:19.105 UTC [nodeCmd] serve -> INFO 018[0m Deployed system chaincodes
+[34m2020-03-19 02:52:19.105 UTC [discovery] NewService -> INFO 019[0m Created with config TLS: true, authCacheMaxSize: 1000, authCachePurgeRatio: 0.750000
+[34m2020-03-19 02:52:19.105 UTC [nodeCmd] registerDiscoveryService -> INFO 01a[0m Discovery service activated
+[34m2020-03-19 02:52:19.105 UTC [nodeCmd] serve -> INFO 01b[0m Starting peer with ID=[peer1.org1.example.com], network ID=[dev], address=[peer1.org1.example.com:8051]
+[34m2020-03-19 02:52:19.105 UTC [nodeCmd] serve -> INFO 01c[0m Started peer with ID=[peer1.org1.example.com], network ID=[dev], address=[peer1.org1.example.com:8051]
+[34m2020-03-19 02:52:19.105 UTC [nodeCmd] func6 -> INFO 01d[0m Starting profiling server with listenAddress = 0.0.0.0:6060
+[34m2020-03-19 02:52:19.106 UTC [kvledger] LoadPreResetHeight -> INFO 01e[0m Loading prereset height from path [/var/hyperledger/production/ledgersData/chains]
+[34m2020-03-19 02:52:19.106 UTC [fsblkstorage] preResetHtFiles -> INFO 01f[0m No active channels passed
+[31m2020-03-19 02:52:19.107 UTC [core.comm] ServerHandshake -> ERRO 020[0m TLS handshake failed with error EOF server=PeerServer remoteaddress=172.20.0.22:40928
+[34m2020-03-19 02:52:37.433 UTC [comm.grpc.server] 1 -> INFO 021[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2020-03-19T02:52:39.433Z grpc.peer_address=172.20.0.22:41034 grpc.peer_subject="CN=peer0.org1.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=93.654µs
+[34m2020-03-19 02:52:37.443 UTC [comm.grpc.server] 1 -> INFO 022[0m streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2020-03-19T02:52:47.434Z grpc.peer_address=172.20.0.22:41034 grpc.peer_subject="CN=peer0.org1.example.com,L=San Francisco,ST=California,C=US" error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=9.130334ms
+[34m2020-03-19 02:52:37.453 UTC [comm.grpc.server] 1 -> INFO 023[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2020-03-19T02:52:39.453Z grpc.peer_address=172.20.0.22:41038 grpc.peer_subject="CN=peer0.org1.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=104.901µs
+[34m2020-03-19 02:52:38.787 UTC [comm.grpc.server] 1 -> INFO 024[0m streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.peer_address=172.20.0.22:41038 grpc.peer_subject="CN=peer0.org1.example.com,L=San Francisco,ST=California,C=US" error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=1.32982549s
+[34m2020-03-19 02:52:39.440 UTC [comm.grpc.server] 1 -> INFO 025[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2020-03-19T02:52:41.439Z grpc.peer_address=172.20.0.22:41046 grpc.peer_subject="CN=peer0.org1.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=95.041µs
+[34m2020-03-19 02:52:41.948 UTC [ledgermgmt] CreateLedger -> INFO 026[0m Creating ledger [mychannel] with genesis block
+[34m2020-03-19 02:52:41.988 UTC [fsblkstorage] newBlockfileMgr -> INFO 027[0m Getting block information from block storage
+[34m2020-03-19 02:52:42.383 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 028[0m Created state database mychannel_
+[34m2020-03-19 02:52:42.709 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 029[0m Created state database mychannel__lifecycle
+[34m2020-03-19 02:52:43.126 UTC [kvledger] CommitLegacy -> INFO 02a[0m [mychannel] Committed block [0] with 1 transaction(s) in 376ms (state_validation=0ms block_and_pvtdata_commit=108ms state_commit=234ms) commitHash=[]
+[34m2020-03-19 02:52:43.184 UTC [ledgermgmt] CreateLedger -> INFO 02b[0m Created ledger [mychannel] with genesis block
+[34m2020-03-19 02:52:43.197 UTC [gossip.gossip] JoinChan -> INFO 02c[0m Joining gossip network of channel mychannel with 2 organizations
+[34m2020-03-19 02:52:43.197 UTC [gossip.gossip] learnAnchorPeers -> INFO 02d[0m No configured anchor peers of Org1MSP for channel mychannel to learn about
+[34m2020-03-19 02:52:43.197 UTC [gossip.gossip] learnAnchorPeers -> INFO 02e[0m No configured anchor peers of Org2MSP for channel mychannel to learn about
+[34m2020-03-19 02:52:43.204 UTC [gossip.state] NewGossipStateProvider -> INFO 02f[0m Updating metadata information for channel mychannel, current ledger sequence is at = 0, next expected block is = 1
+[34m2020-03-19 02:52:43.204 UTC [endorser] callChaincode -> INFO 030[0m finished chaincode: cscc duration: 1262ms channel= txID=7767aa1b
+[34m2020-03-19 02:52:43.204 UTC [comm.grpc.server] 1 -> INFO 031[0m unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=172.20.0.26:34646 grpc.code=OK grpc.call_duration=1.265004495s
+[34m2020-03-19 02:52:48.197 UTC [gossip.channel] reportMembershipChanges -> INFO 032[0m [[mychannel] Membership view has changed. peers went online:  [[peer0.org1.example.com:7051]] , current view:  [[peer0.org1.example.com:7051]]]
+[34m2020-03-19 02:52:49.205 UTC [gossip.election] beLeader -> INFO 033[0m 010fa5c9e09746d0b38699afcd01cb5486063d38c38c44b29ca3988348f84927 : Becoming a leader
+[34m2020-03-19 02:52:49.205 UTC [gossip.service] func1 -> INFO 034[0m Elected as a leader, starting delivery service for channel mychannel
+[34m2020-03-19 02:52:49.205 UTC [deliveryClient] StartDeliverForChannel -> INFO 035[0m This peer will retrieve blocks from ordering service and disseminate to other peers in the organization for channel mychannel
+[34m2020-03-19 02:52:53.197 UTC [gossip.channel] reportMembershipChanges -> INFO 036[0m [[mychannel] Membership view has changed. peers went online:  [[peer2.org1.example.com:9051]] , current view:  [[peer0.org1.example.com:7051] [peer2.org1.example.com:9051]]]
+[34m2020-03-19 02:53:04.920 UTC [gossip.privdata] StoreBlock -> INFO 037[0m [mychannel] Received block [1] from buffer
+[34m2020-03-19 02:53:04.947 UTC [gossip.gossip] JoinChan -> INFO 038[0m Joining gossip network of channel mychannel with 2 organizations
+[34m2020-03-19 02:53:04.947 UTC [gossip.gossip] learnAnchorPeers -> INFO 039[0m No configured anchor peers of Org2MSP for channel mychannel to learn about
+[34m2020-03-19 02:53:04.947 UTC [gossip.gossip] learnAnchorPeers -> INFO 03a[0m Learning about the configured anchor peers of Org1MSP for channel mychannel : [{peer0.org1.example.com 7051}]
+[34m2020-03-19 02:53:04.950 UTC [committer.txvalidator] Validate -> INFO 03b[0m [mychannel] Validated block [1] in 29ms
+[33m2020-03-19 02:53:04.950 UTC [gossip.privdata] getTxInfoFromTransactionBytes -> WARN 03c[0m Invalid transaction type: header type is not an endorser transaction
+[34m2020-03-19 02:53:04.950 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 03d[0m Successfully fetched all eligible collection private write sets for block [1] channel=mychannel
+[34m2020-03-19 02:53:04.961 UTC [comm.grpc.server] 1 -> INFO 03e[0m streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.peer_address=172.20.0.22:41046 grpc.peer_subject="CN=peer0.org1.example.com,L=San Francisco,ST=California,C=US" error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=25.521012139s
+[33m2020-03-19 02:53:05.209 UTC [gossip.gossip] validateMsg -> WARN 03f[0m StateInfo message GossipMessage: Channel: , nonce: 0, tag: CHAN_OR_ORG state_info_message: Timestamp:inc_num:1584586381201976072 seq_num:1584586381208881556 PKI-id:f045b596a31b5689358a2a7dae1d5f59626fa3d5461b5a108bcf241249336650 channel MAC:1225cded0822642e95fc14eb551d9dfa6e960c0a9c862f9339e50dbf53359b70 properties:ledger_height:1 chaincodes:<name:"_lifecycle" version:"1" > , Envelope: 115 bytes, Signature: 70 bytes is found invalid: PKIID wasn't found
+[33m2020-03-19 02:53:05.209 UTC [gossip.gossip] handleMessage -> WARN 040[0m Message GossipMessage: Channel: , nonce: 0, tag: CHAN_OR_ORG state_info_message: Timestamp:inc_num:1584586381201976072 seq_num:1584586381208881556 PKI-id:f045b596a31b5689358a2a7dae1d5f59626fa3d5461b5a108bcf241249336650 channel MAC:1225cded0822642e95fc14eb551d9dfa6e960c0a9c862f9339e50dbf53359b70 properties:ledger_height:1 chaincodes:<name:"_lifecycle" version:"1" > , Envelope: 115 bytes, Signature: 70 bytes isn't valid
+[34m2020-03-19 02:53:05.911 UTC [kvledger] CommitLegacy -> INFO 041[0m [mychannel] Committed block [1] with 1 transaction(s) in 961ms (state_validation=4ms block_and_pvtdata_commit=305ms state_commit=560ms) commitHash=[47dc540c94ceb704a23875c11273e16bb0b8a87aed84de911f2133568115f254]
+[34m2020-03-19 02:53:08.070 UTC [gossip.privdata] StoreBlock -> INFO 042[0m [mychannel] Received block [2] from buffer
+[34m2020-03-19 02:53:08.083 UTC [gossip.gossip] JoinChan -> INFO 043[0m Joining gossip network of channel mychannel with 2 organizations
+[34m2020-03-19 02:53:08.083 UTC [gossip.gossip] learnAnchorPeers -> INFO 044[0m Learning about the configured anchor peers of Org2MSP for channel mychannel : [{peer0.org2.example.com 17051}]
+[34m2020-03-19 02:53:08.083 UTC [gossip.gossip] learnAnchorPeers -> INFO 045[0m Learning about the configured anchor peers of Org1MSP for channel mychannel : [{peer0.org1.example.com 7051}]
+[34m2020-03-19 02:53:08.087 UTC [committer.txvalidator] Validate -> INFO 046[0m [mychannel] Validated block [2] in 16ms
+[33m2020-03-19 02:53:08.087 UTC [gossip.privdata] getTxInfoFromTransactionBytes -> WARN 047[0m Invalid transaction type: header type is not an endorser transaction
+[34m2020-03-19 02:53:08.087 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 048[0m Successfully fetched all eligible collection private write sets for block [2] channel=mychannel
+[33m2020-03-19 02:53:08.101 UTC [gossip.comm] func1 -> WARN 049[0m peer0.org1.example.com:7051, PKIid:2ef2c22cef6d27852f219ed68b8b560dcd1cf5a74b8ffc75221c17a80425f48f isn't responsive: EOF
+[33m2020-03-19 02:53:08.101 UTC [gossip.discovery] expireDeadMembers -> WARN 04a[0m Entering [2ef2c22cef6d27852f219ed68b8b560dcd1cf5a74b8ffc75221c17a80425f48f]
+[33m2020-03-19 02:53:08.101 UTC [gossip.discovery] expireDeadMembers -> WARN 04b[0m Closing connection to Endpoint: peer0.org1.example.com:7051, InternalEndpoint: peer0.org1.example.com:7051, PKI-ID: 2ef2c22cef6d27852f219ed68b8b560dcd1cf5a74b8ffc75221c17a80425f48f, Metadata: 
+[33m2020-03-19 02:53:08.101 UTC [gossip.discovery] expireDeadMembers -> WARN 04c[0m Exiting
+[34m2020-03-19 02:53:08.130 UTC [comm.grpc.server] 1 -> INFO 04d[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2020-03-19T02:53:10.13Z grpc.peer_address=172.20.0.25:54126 grpc.peer_subject="CN=peer0.org2.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=88.187µs
+[34m2020-03-19 02:53:08.198 UTC [gossip.channel] reportMembershipChanges -> INFO 04e[0m [[mychannel] Membership view has changed. peers went offline:  [[peer0.org1.example.com:7051]] , current view:  [[peer2.org1.example.com:9051]]]
+[34m2020-03-19 02:53:08.297 UTC [comm.grpc.server] 1 -> INFO 04f[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2020-03-19T02:53:10.297Z grpc.peer_address=172.20.0.22:41216 grpc.peer_subject="CN=peer0.org1.example.com,L=San Francisco,ST=California,C=US" grpc.code=OK grpc.call_duration=104.614µs
+[34m2020-03-19 02:53:08.895 UTC [kvledger] CommitLegacy -> INFO 050[0m [mychannel] Committed block [2] with 1 transaction(s) in 808ms (state_validation=0ms block_and_pvtdata_commit=263ms state_commit=428ms) commitHash=[5f88b61407b149a48413433f4670c46531e5c4a8febdc339a9536ff8716a559e]
+[34m2020-03-19 02:53:13.197 UTC [gossip.channel] reportMembershipChanges -> INFO 051[0m [[mychannel] Membership view has changed. peers went online:  [[peer2.org2.example.com:19051 ] [peer0.org2.example.com:17051 ] [peer1.org2.example.com:18051 ] [peer0.org1.example.com:7051]] , current view:  [[peer2.org2.example.com:19051 ] [peer2.org1.example.com:9051] [peer0.org2.example.com:17051 ] [peer1.org2.example.com:18051 ] [peer0.org1.example.com:7051]]]
+[34m2020-03-19 02:54:40.879 UTC [lifecycle] InstallChaincode -> INFO 052[0m Successfully installed chaincode with package ID 'fabcarv1:45097293189158aadd0deab44a9a91a2d536128ab7abfe058ee37eb74539db85'
+[34m2020-03-19 02:54:40.879 UTC [endorser] callChaincode -> INFO 053[0m finished chaincode: _lifecycle duration: 43792ms channel= txID=d49e08a9
+[34m2020-03-19 02:54:40.879 UTC [comm.grpc.server] 1 -> INFO 054[0m unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=172.20.0.26:34932 grpc.code=OK grpc.call_duration=43.793059442s
+[34m2020-03-19 02:54:46.855 UTC [gossip.privdata] StoreBlock -> INFO 055[0m [mychannel] Received block [3] from buffer
+[34m2020-03-19 02:54:46.857 UTC [committer.txvalidator] Validate -> INFO 056[0m [mychannel] Validated block [3] in 1ms
+[34m2020-03-19 02:54:46.872 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 057[0m Successfully fetched all eligible collection private write sets for block [3] channel=mychannel
+[34m2020-03-19 02:54:47.603 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 058[0m Created state database mychannel_lscc
+[34m2020-03-19 02:54:48.542 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 059[0m Created state database mychannel__lifecycle$$h_implicit_org_$org1$m$s$p
+[34m2020-03-19 02:54:49.464 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 05a[0m Created state database mychannel__lifecycle$$p_implicit_org_$org1$m$s$p
+[34m2020-03-19 02:54:50.065 UTC [kvledger] CommitLegacy -> INFO 05b[0m [mychannel] Committed block [3] with 1 transaction(s) in 3193ms (state_validation=1809ms block_and_pvtdata_commit=320ms state_commit=1015ms) commitHash=[fe0ae343dc08680b1ed41f149981cb651bb18ffe2ceefdb08d4fc020f338c3df]
+[34m2020-03-19 02:56:24.727 UTC [gossip.privdata] StoreBlock -> INFO 05c[0m [mychannel] Received block [4] from buffer
+[34m2020-03-19 02:56:24.728 UTC [committer.txvalidator] Validate -> INFO 05d[0m [mychannel] Validated block [4] in 1ms
+[34m2020-03-19 02:56:24.729 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 05e[0m Successfully fetched all eligible collection private write sets for block [4] channel=mychannel
+[34m2020-03-19 02:56:25.424 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 05f[0m Created state database mychannel__lifecycle$$h_implicit_org_$org2$m$s$p
+[34m2020-03-19 02:56:26.529 UTC [kvledger] CommitLegacy -> INFO 060[0m [mychannel] Committed block [4] with 1 transaction(s) in 1800ms (state_validation=816ms block_and_pvtdata_commit=323ms state_commit=561ms) commitHash=[0d6422a91bb4cf108af426791c13c91d05571fafbb9b77f3bcb289fc991b8e2c]
+[34m2020-03-19 02:56:29.810 UTC [gossip.privdata] StoreBlock -> INFO 061[0m [mychannel] Received block [5] from buffer
+[34m2020-03-19 02:56:29.812 UTC [committer.txvalidator] Validate -> INFO 062[0m [mychannel] Validated block [5] in 1ms
+[34m2020-03-19 02:56:29.812 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 063[0m Successfully fetched all eligible collection private write sets for block [5] channel=mychannel
+[34m2020-03-19 02:56:29.830 UTC [lifecycle] update -> INFO 064[0m Updating cached definition for chaincode 'fabcar' on channel 'mychannel'
+[34m2020-03-19 02:56:29.917 UTC [lifecycle] update -> INFO 065[0m Chaincode with package ID 'fabcarv1:45097293189158aadd0deab44a9a91a2d536128ab7abfe058ee37eb74539db85' now available on channel mychannel for chaincode definition fabcar:1.0
+[34m2020-03-19 02:56:29.917 UTC [cceventmgmt] HandleStateUpdates -> INFO 066[0m Channel [mychannel]: Handling deploy or update of chaincode [fabcar]
+[34m2020-03-19 02:56:32.726 UTC [kvledger] CommitLegacy -> INFO 067[0m [mychannel] Committed block [5] with 1 transaction(s) in 2913ms (state_validation=115ms block_and_pvtdata_commit=1513ms state_commit=1159ms) commitHash=[4a2dae288556d5345a1e9c4e3e06faf51935e1bbd35cd282b473340c41c8fe1d]
+[34m2020-03-19 02:56:41.777 UTC [gossip.privdata] StoreBlock -> INFO 068[0m [mychannel] Received block [6] from buffer
+[34m2020-03-19 02:56:41.810 UTC [committer.txvalidator] Validate -> INFO 069[0m [mychannel] Validated block [6] in 32ms
+[34m2020-03-19 02:56:41.810 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 06a[0m Successfully fetched all eligible collection private write sets for block [6] channel=mychannel
+[34m2020-03-19 02:56:43.137 UTC [couchdb] CreateDatabaseIfNotExist -> INFO 06b[0m Created state database mychannel_fabcar
+[34m2020-03-19 02:56:43.689 UTC [kvledger] CommitLegacy -> INFO 06c[0m [mychannel] Committed block [6] with 1 transaction(s) in 1878ms (state_validation=0ms block_and_pvtdata_commit=343ms state_commit=1468ms) commitHash=[dcb39fc2e3455a970c6e5bc370fa87403b7dfa0fd66c54b0c370b87028823258]
+[34m2020-03-19 02:56:44.584 UTC [endorser] callChaincode -> INFO 06d[0m finished chaincode: fabcar duration: 37ms channel=mychannel txID=916f62a7
+[34m2020-03-19 02:56:44.585 UTC [comm.grpc.server] 1 -> INFO 06e[0m unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=172.20.0.26:35468 grpc.code=OK grpc.call_duration=39.021401ms
+[34m2020-03-19 02:58:41.212 UTC [gossip.privdata] StoreBlock -> INFO 06f[0m [mychannel] Received block [7] from buffer
+[34m2020-03-19 02:58:41.213 UTC [committer.txvalidator] Validate -> INFO 070[0m [mychannel] Validated block [7] in 0ms
+[34m2020-03-19 02:58:41.213 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 071[0m Successfully fetched all eligible collection private write sets for block [7] channel=mychannel
+[34m2020-03-19 02:58:42.274 UTC [kvledger] CommitLegacy -> INFO 072[0m [mychannel] Committed block [7] with 1 transaction(s) in 1060ms (state_validation=0ms block_and_pvtdata_commit=516ms state_commit=437ms) commitHash=[75960047774dd39383a1da9d633851e36a0a573bd89a33ed03ba61613969b695]
+[34m2020-03-19 02:58:42.279 UTC [comm.grpc.server] 1 -> INFO 073[0m streaming call completed grpc.service=protos.Deliver grpc.method=DeliverFiltered grpc.peer_address=172.20.0.1:60416 grpc.peer_subject="CN=fabric-common" error="context finished before block retrieved: context canceled" grpc.code=Unknown grpc.call_duration=3.469799537s
+[34m2020-03-19 02:59:09.519 UTC [gossip.privdata] StoreBlock -> INFO 074[0m [mychannel] Received block [8] from buffer
+[34m2020-03-19 02:59:09.520 UTC [committer.txvalidator] Validate -> INFO 075[0m [mychannel] Validated block [8] in 0ms
+[34m2020-03-19 02:59:09.520 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 076[0m Successfully fetched all eligible collection private write sets for block [8] channel=mychannel
+[34m2020-03-19 02:59:10.280 UTC [kvledger] CommitLegacy -> INFO 077[0m [mychannel] Committed block [8] with 1 transaction(s) in 759ms (state_validation=0ms block_and_pvtdata_commit=281ms state_commit=370ms) commitHash=[d95d9d77a14d3063a7f0ef937728f5da85300ea13997ff3914faf8d9e6aa4deb]
+[34m2020-03-19 02:59:10.377 UTC [comm.grpc.server] 1 -> INFO 078[0m streaming call completed grpc.service=protos.Deliver grpc.method=DeliverFiltered grpc.peer_address=172.20.0.1:60696 grpc.peer_subject="CN=fabric-common" error="context finished before block retrieved: context canceled" grpc.code=Unknown grpc.call_duration=3.246565015s
+[34m2020-03-19 02:59:43.158 UTC [endorser] callChaincode -> INFO 079[0m finished chaincode: fabcar duration: 47ms channel=mychannel txID=eb3a53c2
+[34m2020-03-19 02:59:43.158 UTC [comm.grpc.server] 1 -> INFO 07a[0m unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=172.20.0.1:60930 grpc.peer_subject="CN=fabric-common" grpc.code=OK grpc.call_duration=49.424857ms
+[34m2020-03-19 02:59:45.586 UTC [gossip.privdata] StoreBlock -> INFO 07b[0m [mychannel] Received block [9] from buffer
+[34m2020-03-19 02:59:45.587 UTC [committer.txvalidator] Validate -> INFO 07c[0m [mychannel] Validated block [9] in 0ms
+[34m2020-03-19 02:59:45.587 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 07d[0m Successfully fetched all eligible collection private write sets for block [9] channel=mychannel
+[34m2020-03-19 02:59:46.398 UTC [kvledger] CommitLegacy -> INFO 07e[0m [mychannel] Committed block [9] with 1 transaction(s) in 810ms (state_validation=0ms block_and_pvtdata_commit=292ms state_commit=418ms) commitHash=[ac9e26049dbf2bf06367227f8eb305a5e900ad556e373b9352a0bfc6874c4540]
+[34m2020-03-19 02:59:46.404 UTC [comm.grpc.server] 1 -> INFO 07f[0m streaming call completed grpc.service=protos.Deliver grpc.method=DeliverFiltered grpc.peer_address=172.20.0.1:60950 grpc.peer_subject="CN=fabric-common" error="context finished before block retrieved: context canceled" grpc.code=Unknown grpc.call_duration=3.212189727s
+[34m2020-03-19 03:00:26.390 UTC [endorser] callChaincode -> INFO 080[0m finished chaincode: fabcar duration: 7ms channel=mychannel txID=518b900a
+[34m2020-03-19 03:00:26.391 UTC [comm.grpc.server] 1 -> INFO 081[0m unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=172.20.0.1:32958 grpc.peer_subject="CN=fabric-common" grpc.code=OK grpc.call_duration=8.541327ms
+[34m2020-03-19 03:00:28.755 UTC [gossip.privdata] StoreBlock -> INFO 082[0m [mychannel] Received block [10] from buffer
+[34m2020-03-19 03:00:28.756 UTC [committer.txvalidator] Validate -> INFO 083[0m [mychannel] Validated block [10] in 0ms
+[34m2020-03-19 03:00:28.756 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 084[0m Successfully fetched all eligible collection private write sets for block [10] channel=mychannel
+[34m2020-03-19 03:00:29.617 UTC [kvledger] CommitLegacy -> INFO 085[0m [mychannel] Committed block [10] with 1 transaction(s) in 860ms (state_validation=0ms block_and_pvtdata_commit=316ms state_commit=436ms) commitHash=[03eecbee2a764e3174b34b75393ffe3ef395e3e225b6e6d3a8d98354645ce83d]
+[34m2020-03-19 03:00:29.623 UTC [comm.grpc.server] 1 -> INFO 086[0m streaming call completed grpc.service=protos.Deliver grpc.method=DeliverFiltered grpc.peer_address=172.20.0.1:32986 grpc.peer_subject="CN=fabric-common" error="context finished before block retrieved: context canceled" grpc.code=Unknown grpc.call_duration=3.211130102s
+[34m2020-03-19 03:00:48.104 UTC [endorser] callChaincode -> INFO 087[0m finished chaincode: fabcar duration: 12ms channel=mychannel txID=7b2754c4
+[34m2020-03-19 03:00:48.105 UTC [comm.grpc.server] 1 -> INFO 088[0m unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=172.20.0.1:33184 grpc.peer_subject="CN=fabric-common" grpc.code=OK grpc.call_duration=13.427273ms
+[34m2020-03-19 03:00:50.510 UTC [gossip.privdata] StoreBlock -> INFO 089[0m [mychannel] Received block [11] from buffer
+[34m2020-03-19 03:00:50.511 UTC [committer.txvalidator] Validate -> INFO 08a[0m [mychannel] Validated block [11] in 0ms
+[34m2020-03-19 03:00:50.511 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 08b[0m Successfully fetched all eligible collection private write sets for block [11] channel=mychannel
+[34m2020-03-19 03:00:51.246 UTC [kvledger] CommitLegacy -> INFO 08c[0m [mychannel] Committed block [11] with 1 transaction(s) in 735ms (state_validation=0ms block_and_pvtdata_commit=199ms state_commit=436ms) commitHash=[88c48140f3ac7ab1bef06d5e8922747ed457f551ec3224e83fe353a511b21b15]
+[34m2020-03-19 03:00:51.259 UTC [comm.grpc.server] 1 -> INFO 08d[0m streaming call completed grpc.service=protos.Deliver grpc.method=DeliverFiltered grpc.peer_address=172.20.0.1:33200 grpc.peer_subject="CN=fabric-common" error="context finished before block retrieved: context canceled" grpc.code=Unknown grpc.call_duration=3.104604843s
+[34m2020-03-19 03:02:10.265 UTC [gossip.privdata] StoreBlock -> INFO 08e[0m [mychannel] Received block [12] from buffer
+[34m2020-03-19 03:02:10.266 UTC [committer.txvalidator] Validate -> INFO 08f[0m [mychannel] Validated block [12] in 0ms
+[34m2020-03-19 03:02:10.266 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 090[0m Successfully fetched all eligible collection private write sets for block [12] channel=mychannel
+[34m2020-03-19 03:02:11.243 UTC [kvledger] CommitLegacy -> INFO 091[0m [mychannel] Committed block [12] with 1 transaction(s) in 977ms (state_validation=0ms block_and_pvtdata_commit=291ms state_commit=645ms) commitHash=[439b221f7f48c0be1a91d5b0bb107e965ed2aba4fed5f44cd0c5fa358840e695]
+[34m2020-03-19 03:02:11.247 UTC [comm.grpc.server] 1 -> INFO 092[0m streaming call completed grpc.service=protos.Deliver grpc.method=DeliverFiltered grpc.peer_address=172.20.0.1:33532 grpc.peer_subject="CN=fabric-common" error="context finished before block retrieved: context canceled" grpc.code=Unknown grpc.call_duration=3.398499944s
+[34m2020-03-19 03:02:39.822 UTC [gossip.privdata] StoreBlock -> INFO 093[0m [mychannel] Received block [13] from buffer
+[34m2020-03-19 03:02:39.823 UTC [committer.txvalidator] Validate -> INFO 094[0m [mychannel] Validated block [13] in 0ms
+[34m2020-03-19 03:02:39.823 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 095[0m Successfully fetched all eligible collection private write sets for block [13] channel=mychannel
+[34m2020-03-19 03:02:40.591 UTC [kvledger] CommitLegacy -> INFO 096[0m [mychannel] Committed block [13] with 1 transaction(s) in 768ms (state_validation=0ms block_and_pvtdata_commit=282ms state_commit=419ms) commitHash=[62f6f750a2ee97a4ed900153889d92158ad6de81ea929b6782c0c7ffafa7548c]
+[34m2020-03-19 03:02:40.665 UTC [comm.grpc.server] 1 -> INFO 097[0m streaming call completed grpc.service=protos.Deliver grpc.method=DeliverFiltered grpc.peer_address=172.20.0.1:33768 grpc.peer_subject="CN=fabric-common" error="context finished before block retrieved: context canceled" grpc.code=Unknown grpc.call_duration=3.291827319s
+[34m2020-03-19 03:03:00.128 UTC [endorser] callChaincode -> INFO 098[0m finished chaincode: fabcar duration: 14ms channel=mychannel txID=163b770d
+[34m2020-03-19 03:03:00.129 UTC [comm.grpc.server] 1 -> INFO 099[0m unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=172.20.0.1:34014 grpc.peer_subject="CN=fabric-common" grpc.code=OK grpc.call_duration=15.848517ms
+[34m2020-03-19 03:03:02.602 UTC [gossip.privdata] StoreBlock -> INFO 09a[0m [mychannel] Received block [14] from buffer
+[34m2020-03-19 03:03:02.603 UTC [committer.txvalidator] Validate -> INFO 09b[0m [mychannel] Validated block [14] in 0ms
+[34m2020-03-19 03:03:02.603 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 09c[0m Successfully fetched all eligible collection private write sets for block [14] channel=mychannel
+[34m2020-03-19 03:03:03.497 UTC [kvledger] CommitLegacy -> INFO 09d[0m [mychannel] Committed block [14] with 1 transaction(s) in 893ms (state_validation=0ms block_and_pvtdata_commit=349ms state_commit=444ms) commitHash=[ae345d649dc7a7950dceb3a33cc3f86b6945bc527d0e7e538dbc212d423b7103]
+[34m2020-03-19 03:03:03.503 UTC [comm.grpc.server] 1 -> INFO 09e[0m streaming call completed grpc.service=protos.Deliver grpc.method=DeliverFiltered grpc.peer_address=172.20.0.1:34018 grpc.peer_subject="CN=fabric-common" error="context finished before block retrieved: context canceled" grpc.code=Unknown grpc.call_duration=3.322231567s
+[34m2020-03-19 03:03:30.934 UTC [gossip.privdata] StoreBlock -> INFO 09f[0m [mychannel] Received block [15] from buffer
+[34m2020-03-19 03:03:30.935 UTC [committer.txvalidator] Validate -> INFO 0a0[0m [mychannel] Validated block [15] in 0ms
+[34m2020-03-19 03:03:30.935 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 0a1[0m Successfully fetched all eligible collection private write sets for block [15] channel=mychannel
+[34m2020-03-19 03:03:31.628 UTC [kvledger] CommitLegacy -> INFO 0a2[0m [mychannel] Committed block [15] with 1 transaction(s) in 693ms (state_validation=0ms block_and_pvtdata_commit=257ms state_commit=344ms) commitHash=[0849e248f13abaaa5d4b35c7961dab2e74c1205325ec38cc77c3e0e8ddbf80c0]
+[34m2020-03-19 03:03:31.633 UTC [comm.grpc.server] 1 -> INFO 0a3[0m streaming call completed grpc.service=protos.Deliver grpc.method=DeliverFiltered grpc.peer_address=172.20.0.1:34232 grpc.peer_subject="CN=fabric-common" error="context finished before block retrieved: context canceled" grpc.code=Unknown grpc.call_duration=3.105531831s
+[34m2020-03-19 03:03:52.233 UTC [endorser] callChaincode -> INFO 0a4[0m finished chaincode: fabcar duration: 6ms channel=mychannel txID=e254be86
+[34m2020-03-19 03:03:52.233 UTC [comm.grpc.server] 1 -> INFO 0a5[0m unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=172.20.0.1:34456 grpc.peer_subject="CN=fabric-common" grpc.code=OK grpc.call_duration=7.835285ms
+[34m2020-03-19 03:03:54.605 UTC [gossip.privdata] StoreBlock -> INFO 0a6[0m [mychannel] Received block [16] from buffer
+[34m2020-03-19 03:03:54.606 UTC [committer.txvalidator] Validate -> INFO 0a7[0m [mychannel] Validated block [16] in 0ms
+[34m2020-03-19 03:03:54.606 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 0a8[0m Successfully fetched all eligible collection private write sets for block [16] channel=mychannel
+[34m2020-03-19 03:03:55.308 UTC [kvledger] CommitLegacy -> INFO 0a9[0m [mychannel] Committed block [16] with 1 transaction(s) in 702ms (state_validation=0ms block_and_pvtdata_commit=274ms state_commit=343ms) commitHash=[edc03f4334a5e87bd12485532e42fe97eb382d62783acdfa4c7e695b8f0bbe6b]
+[34m2020-03-19 03:03:55.379 UTC [comm.grpc.server] 1 -> INFO 0aa[0m streaming call completed grpc.service=protos.Deliver grpc.method=DeliverFiltered grpc.peer_address=172.20.0.1:34472 grpc.peer_subject="CN=fabric-common" error="context finished before block retrieved: context canceled" grpc.code=Unknown grpc.call_duration=3.087991675s
