@@ -13,3 +13,5 @@
 vendor/
 .vscode
 .gradle
+venv/
+env/
