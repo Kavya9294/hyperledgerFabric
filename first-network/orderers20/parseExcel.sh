@@ -13,7 +13,7 @@ docker logs orderer2.ord2.example.com 2>&1 | grep orderer.consensus.etcd | grep 
 docker logs orderer3.ord2.example.com 2>&1 | grep orderer.consensus.etcd | grep -v byfn-sys-channel >> sample.txt
 docker logs orderer4.ord2.example.com 2>&1 | grep orderer.consensus.etcd | grep -v byfn-sys-channel >> sample.txt
 docker logs orderer5.ord2.example.com 2>&1 | grep orderer.consensus.etcd | grep -v byfn-sys-channel >> sample.txt
-docker logs orderer6.ord2.example.com 2>&1 | grep orderer.consensus.etcd | grep -v byfn-sys-channel >> sample.txt
+docker logs orderer6.ord2.example.cm 2>&1 | grep orderer.consensus.etcd | grep -v byfn-sys-channel >> sample.txt
 docker logs orderer7.ord2.example.com 2>&1 | grep orderer.consensus.etcd | grep -v byfn-sys-channel >> sample.txt
 docker logs orderer8.ord2.example.com 2>&1 | grep orderer.consensus.etcd | grep -v byfn-sys-channel >> sample.txt
 
