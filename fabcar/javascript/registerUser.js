@@ -8,11 +8,14 @@ const { Wallets } = require('fabric-network');
 const FabricCAServices = require('fabric-ca-client');
 const fs = require('fs');
 const path = require('path');
+//const data1 = require("/Users/kavyaub/Downloads/data1.json");
+//var parsedData = JSON.parse(data1);
 
 async function main() {
     try {
+        //console.log(parsedData[1])
         // load the network configuration
-        const ccpPath = path.resolve(__dirname, '..', '..', 'first-network/orderers14', 'connection-org1.json');
+        const ccpPath = path.resolve(__dirname, '..', '..', 'first-network/addPeers5', 'connection-org1.json');
         const ccp = JSON.parse(fs.readFileSync(ccpPath, 'utf8'));
 
         // Create a new CA client for interacting with the CA.
